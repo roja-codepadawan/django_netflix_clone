@@ -1,9 +1,10 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.views import View
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .forms import ProfileForm
-from .models import Movie, Profile
+from .models import Movie, Profile, Category 
+from uuid import UUID #  fail
 
 class Home(View):
     def get(self,request,*args, **kwargs):
@@ -44,7 +45,7 @@ class ProfileCreate(View):
             profile = Profile.objects.create(**form.cleaned_data)
             if profile:
                 request.user.profiles.add(profile)
-                return redirect(f'/watch/{profile.uuid}')
+                return redirect(f'/watch/{profile.uuid}') #uuid
 
         return render(request,'profileCreate.html',{
             'form':form
@@ -58,6 +59,10 @@ class Watch(View):
 
             movies=Movie.objects.filter(age_limit=profile.age_limit)
 
+            categories = Category.objects.all() # category=Category.objects.all()
+
+            # context = {'categories': categories}
+
             try:
                 showcase=movies[0]
             except :
@@ -68,8 +73,9 @@ class Watch(View):
                 return redirect(to='core:profile_list')
             return render(request,'movieList.html',{
             'movies':movies,
+            'categories':categories,
             'show_case':showcase
-            })
+            }) 	# , context)
         except Profile.DoesNotExist:
             return redirect(to='core:profile_list')
 
@@ -102,3 +108,13 @@ class ShowMovie(View):
             })
         except Movie.DoesNotExist:
             return redirect('core:profile_list')
+
+
+# def category_movies(request, category_id):
+#     selected_category = get_object_or_404(Category, pk=category_id)
+#     movies_in_category = Movie.objects.filter(categories=selected_category)
+    
+#     return render(request, 'category_movies.html', {
+#         'selected_category': selected_category,
+#         'movies_in_category': movies_in_category
+#     })

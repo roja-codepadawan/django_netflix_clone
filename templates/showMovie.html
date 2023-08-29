@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Netflix - Movie
+PHILFLIX - Movie
 {% endblock title %}
 
 {% block content %}
@@ -23,6 +23,7 @@ Netflix - Movie
         
         const video_param = parseInt(url.searchParams.get("epi")) ? parseInt(url.searchParams.get("epi")) : 0
 
-        videoEl.setAttribute('src',`http:/localhost:8000/media/${movie_data[video_param].file}`)
+        videoEl.setAttribute('src',`http:/media/${movie_data[video_param].file}`)
+	<!-- [28/Jul/2023 08:22:08] "GET /localhost:8000/media/movies/SampleVideo_720x480_1mb.mp4 HTTP/1.1" 404 3705 -->
     </script>
 {% endblock content %}

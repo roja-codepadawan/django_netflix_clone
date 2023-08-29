@@ -9,9 +9,11 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
+from dotenv import load_dotenv
 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,12 +22,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$d6%u-0b2yym)nqvd#^jxk@m@rqn8bfbhxh2*kz!tbivh9&-c0'
+# SECRET_KEY = '$d6%u-0b2yym)nqvd#^jxk@m@rqn8bfbhxh2*kz!tbivh9&-c0'
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG") == "True"  # Convert to boolean if needed
+
+try:
+    SECRET_KEY = os.environ["SECRET_KEY"]
+except KeyError as e:
+    raise RuntimeError("Could not find a SECRET_KEY in environment") from e
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True # True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+	'134.176.98.126',
+	'.fb07dida-jarvis.didaktik.physik.uni-giessen.de'
+]
 
 
 # Application definition
@@ -43,7 +57,7 @@ INSTALLED_APPS = [
     # thir party apps
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
+    # 'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -71,12 +85,16 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
+                'django.template.context_processors.static', # ----
+		        'django.template.context_processors.media', # ---
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'django_netflix.wsgi.application'
+
 
 
 # Database
@@ -125,15 +143,25 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+# Set the directory where static files will be collected for deployment
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR/'static_root'
+STATIC_ROOT = BASE_DIR/'static_root' # STATIC_ROOT = BASE_DIR/'static_root'  
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Media files (uploads)
 MEDIA_ROOT=BASE_DIR/'media'
 MEDIA_URL='/media/'
 
+# Set the directory where your project-specific static files are located
 STATICFILES_DIRS=[
-    BASE_DIR/'static'
+    BASE_DIR/'static', #  os.path.join(BASE_DIR, "static")
 ]
+
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
 
 # Auth stting
 AUTH_USER_MODEL='core.CustomUser'
@@ -153,7 +181,36 @@ SITE_ID=1
 
 ACCOUNT_AUTHENTICATION_METHOD='email'
 ACCOUNT_EMAIL_REQUIRED=True
-ACCOUNT_EMAIL_VERIFICATION='none'
+ACCOUNT_UNIQUE_EMAIL=True
+EMAIL_CONFIRMATION_SINGUP=True
+#Account email verification: This option can be used to set whether an email verification is necessary for a user to log in after he registers an account. You can use ‘mandatory’ to block a user from logging in until the email gets verified. You can set options for sending the email but allowing the user to log in without an email. You can also set none to send no verification email. (Not Recommended)
+ACCOUNT_EMAIL_VERIFICATION='mandatory'   
+# ACCOUNT_EMAIL_VERIFICATION='none'
+#Email confirmation expiry: Sets the number of days within which an account should be activated.
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS=7
 ACCOUNT_USERNAME_REQUIRED=False
+
+
+# Emailing settings
+# SMTP backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# Console backend
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.uni-giessen.de'# 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'ron.rupp@sowi.uni-giessen.de' 
+EMAIL_HOST_USER =  'g32049' 
+EMAIL_HOST_PASSWORD = 'C22@G3-mia#true' 
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'# 'smtp.uni-giessen.de'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'ronrupp92@gmail.com' # 
+# EMAIL_HOST_USER =  'ronrupp92@gmail.com' # 
+# EMAIL_HOST_PASSWORD = 'szxqvcwqamromazv' # 
+
+
 
 LOGIN_REDIRECT_URL='/'

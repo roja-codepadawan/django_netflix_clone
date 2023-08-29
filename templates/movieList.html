@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-Netflix 
+PHILFLIX
 {% endblock title %}
 
 {% block others %}
@@ -49,26 +49,99 @@ Netflix
         </section> 
         <section class='bg-primary_black  min-h-screen flex justify-center py-10'>
             <div class="p-8 w-10/12 relative" >
+                <!-- 
+                    
+                <h1 class="text-gray-200 text-2xl font-medium">
+                    By Category
+                </h1>
+		        <br>
+		        {% for category in categories %}
+		            <h2 class="text-gray-200 text-2xl font-medium">
+                        {{ category.category  }}
+                    </h2>
+		        <br>
+                <div class="inline-block   items-center min-w-full  movie_lis">
+			        {% for movie in movies %}
+                        <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                            <div class=" h-40 m-4  bg-blue-500 overflow-hidden flex-shrink-0 rounded-md cursor-pointer w-40">
+                                <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
+                           	</div>
+                       	</a>
+                   	 {% endfor %}   
+		        {% endfor %}
+                -->
+
+                <h1 class="text-gray-200 text-2xl font-medium">
+                    By Category
+                </h1>
+                {% for category in categories %}
+    <h2 class="text-gray-200 font-medium">{{ category.category }}</h2>
+    <div class="movies-in-category">
+        
+
+                {% for movie in movies %}
+                    
+       
+                    <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                        <div class="h-40 m-4 bg-blue-500 overflow-hidden flex-shrink-0 rounded-md cursor-pointer w-40">
+                            <img src="{{ movie.flyer.url }}" class="w-full h-full" alt="">
+                        </div>
+                    </a>
+                    
+                    {% endfor %}
+        
+                </div>
+            {% endfor %}
+        <!--
+        {% for movie in category.movie_set.all %}
+        {% if profile.age_limit <= movie.age_limit %}
+            <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                <div class="h-40 m-4 bg-blue-500 overflow-hidden flex-shrink-0 rounded-md cursor-pointer w-40">
+                    <img src="{{ movie.flyer.url }}" class="w-full h-full" alt="">
+                </div>
+            </a>
+        {% endif %}    
+        {% endfor %}
+        -->
+
+                <!--
+                <h1>Movies in {{ selected_category }}</h1>
+    
+                    {% for movie in movies_in_category %}
+                        <div class="movie">
+                            <h2>{{ movie.title }}</h2>
+                            <p>{{ movie.description }}</p>
+                            <img src="{{ movie.flyer.url }}" alt="{{ movie.title }}">
+                        </div>
+                {% endfor %}
+                -->
+                   
+            </div>
+        </section>
+
+	<section class='bg-primary_black  min-h-screen flex justify-center py-10'>
+            <div class="p-8 w-10/12 relative" >
                 <h2 class="text-gray-200 text-2xl font-medium">
                     Popular on Netflix
                 </h2>
                 <div class="flex   items-center min-w-full  movie_lis">
                     {% for movie in movies %}
-                    
+
                         <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
-                            <div class=" h-40 m-4  bg-blue-500 overflow-hidden flex-shrink-0 rounded-md cursor-pointer w-40">
+                            <div class=" h-40 m-4  bg-blue-500 overflow-hidden flex-shrink-0 rounded->
                                 <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
                             </div>
-                        
+
                         </a>
                     {% endfor %}
 
-                   
 
-                
+
+
                 </div>
-            </div>
         </section>
+		
+
         
     </main>
 {% endblock content %}

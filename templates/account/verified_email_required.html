@@ -5,22 +5,38 @@
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Verify Your E-mail Address" %}</h1>
-
-{% url 'account_email' as email_url %}
-
-<p>{% blocktrans %}This part of the site requires us to verify that
-you are who you claim to be. For this purpose, we require that you
-verify ownership of your e-mail address. {% endblocktrans %}</p>
-
-<p>{% blocktrans %}We have sent an e-mail to you for
-verification. Please click on the link inside that e-mail. If you do not see the verification e-mail in your main inbox, check your spam folder. Otherwise
-contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+{% include '../partials/navbar.html' with AUTH='false' %}
+   <header class="min-h-screen w-full bg-black bg-opacity-75 showcase relative border-gray-600 border-b-8 flex justify-center py-20 bg-cover"  style="background-image: url('{% static 'background_netflix.jpg' %}');">
 
 
-<br>
 
-<p>{% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}">change your e-mail address</a>.{% endblocktrans %}</p>
+      <div class="z-10 h-full py-32 md:py-0 text-gray-100 w-6/12  flex items-center flex-col">
+            
+         <form method='POST' class="bg-black bg-opacity-70 py-8 px-4 w-8/12 rounded-md" >
 
+            <h1 class="text-4xl font-semibold text-center ">{% trans "Verify Your E-mail Address" %}</h1>
+            
+            <br>
 
+            {% url 'account_email' as email_url %}
+
+            <br>
+
+            <p class='text-lg font-medium mb-3'>{% blocktrans %}This part of the site requires us to verify that
+            you are who you claim to be. For this purpose, we require that you
+            verify ownership of your e-mail address. {% endblocktrans %}</p>
+            
+            <br>
+
+            <p class='text-lg font-medium mb-3'>{% blocktrans %}We have sent an e-mail to you for
+            verification. Please click on the link inside that e-mail. If you do not see the verification e-mail in your main inbox, check your spam folder. Otherwise
+            contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+
+            <br>
+
+            <p class='text-lg font-medium mb-3'>{% blocktrans %}<strong>Note:</strong> you can still <a class="text-sky-700" href="{{ email_url }}">change your e-mail address</a>.{% endblocktrans %}</p>
+
+         </form>
+      </div>
+   </header>
 {% endblock %}

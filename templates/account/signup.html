@@ -1,7 +1,7 @@
 {% extends '../base.html' %}
 {% load static %}
 {% block title %}
-Philflix Sign Up
+PHIL II FLIX - Sign Up
 {% endblock title %}
 
 {% block other %}
@@ -12,54 +12,72 @@ Philflix Sign Up
 {% block content %}
 
     {% include '../partials/navbar.html' %}
-    <header class="min-h-screen w-full bg-black bg-opacity-75 showcase relative border-gray-600 border-b-8 flex justify-center py-20 bg-no-repeat"  style="background-image: url('{% static 'background_netflix.jpg' %}');">
+    <header class="min-h-screen w-full bg-black bg-opacity-75 showcase relative border-gray-600 border-b-8 flex justify-center py-20 bg-cover"  style="background-image: url('{% static 'background_netflix.jpg' %}');">
         <div class="z-10 min-h-full py-32 md:py-0 text-gray-100 w-6/12  flex items-center flex-col">
             <form method='POST' class="bg-black bg-opacity-70 min-h-full py-8 px-4 w-8/12 rounded-md" >
-                <h1 class="text-4xl font-semibold text-center ">
-                    Sign Up
+                <h1 class="text-5xl font-black text-center ">
+                    Konto erstellen
                 </h1>
                 {% csrf_token %}
                 {% if form.errors %}
                 
-                <div class=" text-center my-4 text-primary_red">
+                <!-- <div class=" text-center my-4 text-primary_red">
                     {{form.errors.email}}
                     {{form.errors.password1}}
                     {{form.errors.password2}}
                     
-                </div>
+                </div> -->
                 {% endif %}
                 
+                <!-- <form method="post">
+                    {% csrf_token %}
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"  placeholder="E-Mail" value="{{ email }}" readonly>
+                    Add other signup fields here 
+                    <button type="submit">Signup</button>
+                </form>
+                    -->
+
                 <div> 
                     <Label class='text-lg font-medium mb-3'>
-                        Email
+                        E-Mail 
                     </Label>
-                    <input class="p-2 bg-gray-200 rounded-sm text-gray-900 outline-none block w-full" type="email" name="email" id="id_email" placeholder="Your Email">
+                    <input class="p-2 bg-gray-200 rounded-sm text-gray-900 outline-none block w-full" type="email" name="email" id="id_email" placeholder="E-Mail">
+                    <div class=" text-center my-4 text-primary_red">
+                        {{form.errors.email}}
+                    </div>
                 </div>
                 <div class='my-3'> 
                     <Label class='text-lg font-medium mb-3'>
-                        Password
+                        Passwort
                     </Label>
-                    <input class="p-2 bg-gray-200 rounded-sm text-gray-900 outline-none block w-full" type="password" name="password1" id="id_password1" placeholder="Password">
+                    <input class="p-2 bg-gray-200 rounded-sm text-gray-900 outline-none block w-full" type="password" name="password1" id="id_password1" placeholder="Passwort">
+                    <div class=" text-center my-4 text-primary_red">
+                        {{form.errors.password1}}
+                    </div>
                 </div>
                 <div class='my-3'> 
                     <Label class='text-lg font-medium mb-3'>
-                        Confirm Password
+                        Passwort bestätigen
                     </Label>
-                    <input class="p-2 bg-gray-200 rounded-sm text-gray-900 outline-none block w-full" type="password" name="password2" id="id_password2" placeholder="Password">
+                    <input class="p-2 bg-gray-200 rounded-sm text-gray-900 outline-none block w-full" type="password" name="password2" id="id_password2" placeholder="Passwort">
+                    <div class=" text-center my-4 text-primary_red">
+                        {{form.errors.password2}}
+                    </div>
                 </div>
                 {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
                 <div class="flex justify-center items-center">
                     <!-- bg-primary_red -->
-                    <button class="py-2 px-4 bg-blue-500 text-gray-100 font-medium text-lg rounded-md">
-                        Sign Up
+                    <button class="py-2 px-4 bg-sky-700 text-gray-100 font-extrabold text-lg rounded-md">
+                        Jetzt registrieren
                     </button>
                 </div>
 
-                <div class="text-center mt-4">
+                <div class="text-center mt-4 font-extrabold text-lg">
                     <p>
-                        Have account already ? <a href="{% url 'account_login' %}" class="text-blue-600"> Log In</a>
+                        Haben Sie bereits ein Konto? <a href="{% url 'account_login' %}" class="text-sky-700 font-extrabold text-lg"> Einloggen</a>
                     </p>
                 </div>
             </form>

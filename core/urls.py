@@ -1,4 +1,4 @@
-from core.views import Home, ProfileList, ProfileCreate,Watch,ShowMovieDetail,ShowMovie
+from core.views import Home, ProfileList, ProfileCreate,Watch,ShowMovieDetail,ShowMovie # ,Login, Signup
 from django.urls import path
 
 app_name='core'
@@ -9,7 +9,10 @@ urlpatterns = [
     path('profile/create/',ProfileCreate.as_view(),name='profile_create'),
     path('watch/<str:profile_id>/',Watch.as_view(),name='watch'),
     path('movie/detail/<str:movie_id>/',ShowMovieDetail.as_view(),name='show_det'),
-    path('movie/play/<str:movie_id>/',ShowMovie.as_view(),name='play')
+    path('movie/play/<str:movie_id>/',ShowMovie.as_view(),name='play'),
+    
+    # path('login/<str:email>/', Home.as_view()),
+    # path('signup/<str:email>/', Signup.as_view(), name='signup_page'),
 ]
 
 

@@ -2,7 +2,7 @@
     {% load static %}
     {% block title %}
     
-    Philflix - Verify Your E-mail
+    PHIL II FLIX - Verify Your E-mail
     {% endblock title %}
     
     {% block others %}
@@ -16,26 +16,40 @@
 {% block content %}
 
     {% include '../partials/navbar.html' with AUTH='false' %}
-    <header class="min-h-screen w-full bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center py-20 bg-no-repeat"  style="background-image: url('{% static 'background_netflix.jpg' %}');">
+    <header class="min-h-screen w-full bg-black bg-opacity-75 showcase relative border-gray-600 border-b-8 flex justify-center py-20 bg-cover"  style="background-image: url('{% static 'background_netflix.jpg' %}');">
 
         
 
         <div class="z-10 h-full py-32 md:py-0 text-gray-100 w-6/12  flex items-center flex-col">
             
             <form method='POST' class="bg-black bg-opacity-70 py-8 px-4 w-8/12 rounded-md" >
-                <h1 class="text-4xl font-semibold text-center ">{% trans "Verify Your E-mail Address" %}</h1>
-                
-                <br>
-                
-                <p class="text-lg font-medium mb-3">{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. If you do not see the verification e-mail in your main inbox, check your spam folder. Please contact us if you do not receive the verification e-mail within a few minutes.{% endblocktrans %}</p>
-                
-                <br>
 
-                <p class='text-lg font-medium mb-3'>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}" class="text-blue-600">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
+                <h1 class="text-5xl font-black text-center ">{% trans "Überprüfen Sie Ihre E-Mail-Adresse" %}</h1>
+                
+                <br>
+                
+                <p class="text-lg font-medium mb-3">{% blocktrans %}Wir haben Ihnen eine E-Mail zur Überprüfung geschickt. Folgen Sie dem bereitgestellten Link, um den Anmeldevorgang abzuschließen. Wenn Sie die Bestätigungs-E-Mail nicht in Ihrem Posteingang sehen, überprüfen Sie Ihren Spam-Ordner. Bitte kontaktieren Sie uns, wenn Sie die Bestätigungs-E-Mail nicht erhalten.{% endblocktrans %}</p>
+                
+                <!--
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.9/css/${0|uikit,uikit-core,uikit-rtl,uikit-core-rtl|}.min.css"/>
+                    <p class='text-lg font-medium mb-3'>{% blocktrans %}<strong class="text-primary_red">Hinweis:</strong> Sie können Ihre <a href="{{ email_url }}" class="text-sky-700 font-extrabold text-lg">E-Mail-Adresse ändern</a>.{% endblocktrans %}</p>
+                -->
+
+                <!-- 
+                    <h1 class="text-4xl font-semibold text-center ">{% trans "Verify Your E-mail Address" %}</h1>
+                
+                    <br>
+                
+                    <p class="text-lg font-medium mb-3">{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. If you do not see the verification e-mail in your main inbox, check your spam folder. Please contact us if you do not receive the verification e-mail within a few minutes.{% endblocktrans %}</p>
+                
+                    <br>
+
+                    <p class='text-lg font-medium mb-3'>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}" class="text-sky-700">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
     
-                <br>
+                    <br>
 
-                <p class='text-lg font-medium mb-3'>{% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}" class="text-blue-600">change your e-mail address</a>.{% endblocktrans %}</p>
+                    <p class='text-lg font-medium mb-3'>{% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}" class="text-sky-700">change your e-mail address</a>.{% endblocktrans %}</p>
+                -->
                 
             </form>
         </div>

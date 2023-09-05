@@ -5,12 +5,68 @@ from django.utils.decorators import method_decorator
 from .forms import ProfileForm
 from .models import Movie, Profile, Category 
 from uuid import UUID #  fail
+from core.models import CustomUser
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 
+
+
+# class Home(View):
+#     def get(self,request,*args, **kwargs):
+#         if request.user.is_authenticated:
+#             return redirect(to='/profile/')
+#         return render(request,'index.html',)
+    
 class Home(View):
-    def get(self,request,*args, **kwargs):
+    def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             return redirect(to='/profile/')
-        return render(request,'index.html')
+        return render(request, 'index.html')
+
+        # Verwende URL-Parameter
+    def post(self, request, *args, **kwargs):
+        try:
+            email = request.POST.get('email')
+            user_exists = CustomUser.objects.filter(email=email).exists()
+
+            if user_exists:
+                return redirect(f'/accounts/login?email={email}')
+            else:
+                return redirect(f'/accounts/signup?email={email}')
+
+        except Exception as e:
+            print("Error:", str(e))
+
+        return render(request, 'index.html')
+
+# class Login(View):
+#     def get(self, request, email):
+#         return render(request, 'login.html', {'email': email})
+    
+#     def post(self, request, email):
+#         # Hier kannst du den Code für die Verarbeitung des Login-Formulars hinzufügen
+#         # Zum Beispiel die Überprüfung von Anmeldeinformationen und Weiterleitungen
+#         # basierend auf dem Ergebnis
+#         return render(request, 'login.html', {'email': email})
+
+# class Signup(View):
+#     def get(self, request, email):
+#         return render(request, 'signup.html', {'email': email})
+    
+#     def post(self, request, email):
+#         # Hier kannst du den Code für die Verarbeitung des Signup-Formulars hinzufügen
+#         # Zum Beispiel das Erstellen eines neuen Benutzers und Weiterleitungen
+#         # basierend auf dem Ergebnis
+#         return render(request, 'signup.html', {'email': email})
+
+    
+# def account_signup(request):
+#     email = request.GET.get('email')  # Hier wird der Wert des 'email'-Parameters abgerufen
+
+#     print("Received email:", email)
+    
+#     context = {'email': email}
+#     return render(request, 'signup.html', context)
 
 @method_decorator(login_required,name='dispatch')
 class ProfileList(View):
@@ -108,13 +164,3 @@ class ShowMovie(View):
             })
         except Movie.DoesNotExist:
             return redirect('core:profile_list')
-
-
-# def category_movies(request, category_id):
-#     selected_category = get_object_or_404(Category, pk=category_id)
-#     movies_in_category = Movie.objects.filter(categories=selected_category)
-    
-#     return render(request, 'category_movies.html', {
-#         'selected_category': selected_category,
-#         'movies_in_category': movies_in_category
-#     })

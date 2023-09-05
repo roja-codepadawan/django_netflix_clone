@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-PHILFLIX
+PHIL II FLIX
 {% endblock title %}
 
 {% block others %}
@@ -18,7 +18,7 @@ PHILFLIX
                 <h2 class="text-6xl font-semibold text-white my-4">
                     {{show_case.title}}
                 </h2>
-                <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
+                <p class=" w-11/12 md:w-5/12 font-bold text-white my-4">
                     {{show_case.description | slice:":50"}}...
                     {% lorem 1 %}
                 </p>
@@ -27,7 +27,7 @@ PHILFLIX
                     
                         <button class="flex items-center bg-white py-2 px-5 rounded-md" style='color:black;'>
                             <ion-icon name="play" class="text-2xl"></ion-icon>
-                            <span class="ml-3 font-medium " >
+                            <span class="ml-3 font-bold" >
                                 Play
                             </span>
                         </button>
@@ -37,7 +37,7 @@ PHILFLIX
                         <button class="ml-4 text-white flex items-center bg-gray-500 bg-opacity-80 py-2 px-5 rounded-md">
                         
                             <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
-                            <span class="ml-3 font-medium">
+                            <span class="ml-3 font-bold">
                                 More Info
                             </span>
                         </button>
@@ -71,7 +71,7 @@ PHILFLIX
 		        {% endfor %}
                 -->
 
-                <h1 class="text-gray-200 text-2xl font-medium">
+                <h1 class="text-gray-200 text-2xl font-bold">
                     By Category
                 </h1>
                 {% for category in categories %}
@@ -83,7 +83,7 @@ PHILFLIX
                     
        
                     <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
-                        <div class="h-40 m-4 bg-blue-500 overflow-hidden flex-shrink-0 rounded-md cursor-pointer w-40">
+                        <div class="h-40 m-4 bg-sky-700 overflow-hidden flex-shrink-0 rounded-md cursor-pointer w-40">
                             <img src="{{ movie.flyer.url }}" class="w-full h-full" alt="">
                         </div>
                     </a>
@@ -121,14 +121,14 @@ PHILFLIX
 
 	<section class='bg-primary_black  min-h-screen flex justify-center py-10'>
             <div class="p-8 w-10/12 relative" >
-                <h2 class="text-gray-200 text-2xl font-medium">
+                <h2 class="text-gray-200 text-2xl font-bold">
                     Popular on Netflix
                 </h2>
                 <div class="flex   items-center min-w-full  movie_lis">
                     {% for movie in movies %}
 
                         <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
-                            <div class=" h-40 m-4  bg-blue-500 overflow-hidden flex-shrink-0 rounded->
+                            <div class=" h-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded->
                                 <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
                             </div>
 

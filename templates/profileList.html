@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-PHILFLIX - Profile
+PHIL II FLIX - Profile
 {% endblock title %}
 
 {% block content %}
@@ -11,7 +11,7 @@ PHILFLIX - Profile
 
 
     <section class='bg-primary_black min-h-screen py-20 md:py-0 flex-col flex justify-center items-center'>
-        <h2 class="text-center font-medium text-5xl my-4 text-gray-100">
+        <h2 class="text-center font-bold text-5xl my-4 text-gray-100">
             Who's watching ?
         </h2>
 
@@ -20,7 +20,7 @@ PHILFLIX - Profile
         {% for profile in profiles %}
             <a href="{% url 'core:watch' profile_id=profile.uuid %}">
             
-                <div class="w-32 h-32 m-4  bg-blue-500 flex justify-center items-center flex-col rounded-md cursor-pointer">
+                <div class="w-32 h-32 m-4  bg-sky-700 flex justify-center items-center flex-col rounded-md cursor-pointer">
                     <p class='text-6xl'>
                         {{profile.name | slice:":1"}}
                     </p>

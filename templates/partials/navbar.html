@@ -3,7 +3,7 @@
         <div class="w-6/12">
             <a href='/'>
             
-            <img src="{% static 'logo-PhilIIFlix.png' %}" alt="logo" class="w-5/12 md:w-2/12">
+            <img src="{% static 'Phil-II-flix_Logo.png' %}" alt="logo" class="w-5/12 md:w-2/12">
             </a>
         </div>
 
@@ -12,8 +12,8 @@
             <div>
             <form action="{% url 'account_logout' %}" method="post">
                 {% csrf_token %}
-                <button class='bg-blue-500 py-1 px-3 text-white md:text-lg rounded-md'>
-                    Logout
+                <button class='py-2 px-4 bg-sky-700 text-gray-100 font-extrabold text-lg rounded-md'>
+                    Abmelden
                 </button>
             </form>
             </div>
@@ -21,8 +21,8 @@
             <div>
             <a href="{% url 'account_login' %}">
                 <!-- bg-primary_red -->
-                <button class='bg-blue-500 py-1 px-3 text-white md:text-lg rounded-md'>
-                    Sign In 
+                <button class='py-2 px-4 bg-sky-700 text-gray-100 font-extrabold text-lg rounded-md'>
+                    Einloggen
                 </button>
             </a>
             </div>

@@ -9,27 +9,43 @@
 
 
 {% block content %}
-<h1>{% trans "Confirm E-mail Address" %}</h1>
 
-{% if confirmation %}
+    {% include '../partials/navbar.html' with AUTH='false' %}
+    <header class="min-h-screen w-full bg-black bg-opacity-75 showcase relative border-gray-600 border-b-8 flex justify-center py-20 bg-cover"  style="background-image: url('{% static 'background_netflix.jpg' %}');">
 
-{% user_display confirmation.email_address.user as user_display %}
+    
 
-<p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
+        <div class="z-10 h-full py-32 md:py-0 text-gray-100 w-6/12  flex items-center flex-col">
+            
+            <form method='POST' class="bg-black bg-opacity-70 py-8 px-4 w-8/12 rounded-md" >
+                <h1 class="text-4xl font-semibold text-center ">{% trans "E-Mail-Adresse bestätigen" %}</h1>
 
-<form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
-{% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
-</form>
+                {% if confirmation %}
 
-{% else %}
+                {% user_display confirmation.email_address.user as user_display %}
 
-{% url 'account_email' as email_url %}
+                <br>
 
-<br>
+                <p class='text-lg font-medium mb-3'>{% blocktrans with confirmation.email_address.email as email %}Bitte bestätigen Sie das <a class="text-sky-700"href="mailto:{{ email }}">{{ email }}</a> die E-Mail-Adresse für den Benutzer <strong class="text-sky-700 font-extrabold text-lg">{{ user_display }}</strong>.{% endblocktrans %}</p>
 
-<p>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
+                <br>
 
-{% endif %}
+                <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                {% csrf_token %}
+                <button class="py-2 px-4 bg-sky-700 text-gray-100 font-extrabold text-lg rounded-md" type="submit">{% trans 'Bestätigen' %}</button>
+                </form>
 
+                {% else %}
+
+                {% url 'account_email' as email_url %}
+
+                <br>
+
+                <p class='text-lg font-medium mb-3'>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a class="text-sky-700" href="{{ email_url }}">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
+
+                {% endif %}
+
+            </form>
+        </div>
+    </header>
 {% endblock %}

@@ -9,13 +9,34 @@ from core.models import CustomUser
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
+from django.contrib.auth.forms import AuthenticationForm, UsernameField
+from django import forms
 
+# class UserLoginForm(AuthenticationForm):
+#     def __init__(self, *args, **kwargs):
+#         super(UserLoginForm, self).__init__(*args, **kwargs)
 
-# class Home(View):
-#     def get(self,request,*args, **kwargs):
-#         if request.user.is_authenticated:
-#             return redirect(to='/profile/')
-#         return render(request,'index.html',)
+#     # @sensitive_post_parameters_m
+#     # def dispatch(self, request, *args, **kwargs):
+#     #     return super().dispatch(request, *args, **kwargs)
+
+#     def get_initial(self):
+#         initial = super().get_initial()
+#         email = self.kwargs.get('email')
+#         if email:
+#             initial['login'] = email
+#         return initial
+
+    
+#  def dispatch(self, request, *args, **kwargs):
+#         email = request.session.get('email', None)
+#         if email:
+#             # ...
+#          / user_exists:
+#            #   return redirect(f'/accounts/login?email={email}')
+#           else:
+#               return redirect(f'/accounts/signup?email={email}')
+#         return super(LoginView, self).dispatch(request, *args, **kwargs)    
     
 class Home(View):
     def get(self, request, *args, **kwargs):
@@ -38,6 +59,13 @@ class Home(View):
             print("Error:", str(e))
 
         return render(request, 'index.html')
+
+
+# class Home(View):
+#     def get(self,request,*args, **kwargs):
+#         if request.user.is_authenticated:
+#             return redirect(to='/profile/')
+#         return render(request,'index.html',)
 
 # class Login(View):
 #     def get(self, request, email):

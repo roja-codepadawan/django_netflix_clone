@@ -8,7 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('core.urls',namespace='core')),
     path('accounts/', include('allauth.urls')), # , views.account_signup, name='account_signup'
-    #path('account/signup/', views.account_signup, name='account_signup'), #
+    # path('account/signup/', views.account_signup, name='account_signup'), #
     path("i18n/", include("django.conf.urls.i18n")),
     
 

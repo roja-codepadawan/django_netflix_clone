@@ -10,29 +10,9 @@ PHIL II FLIX - Movie
     <main class='bg-primary_black h-full w-full '>
 
         {{ movie|json_script:"movie_data" }}
-        <!-- {{ movie_data|json_script:"movie_data" }} -->
         
-        <video  controls class="w-full h-screen player">
-
-            <!-- <source src="{{ video_file_url }}" type="video/mp4">
-    Your browser does not support the video tag. -->
-        </video>
-
-        
-        <!-- Im showMovie.html Template -->
-        <!-- <h1>{{ movie_data.title }}</h1>
-        <p>{{ movie_data.description }}</p> -->
-        <!-- {% if video_title %}
-    <h2>Video Title: {{ video_title }}</h2>
-{% endif %}
-{% if video_file %}
-    <video controls class="w-full h-screen player">
-        <source src="{{ video_file.url }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-{% endif %} -->
-
-        
+        <video  controls class="w-full h-screen player"></video>
+     
     </main>
     <script>
         const videoEl=document.querySelector('video')

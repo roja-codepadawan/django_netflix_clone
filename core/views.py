@@ -8,7 +8,7 @@ from .models import Movie, Profile #, Category
 from core.models import CustomUser
 # from django.urls import reverse
 # from django.http import HttpResponseRedirect
-from django.db.models import F
+from django.db.models import Q
 
 # from django.contrib.auth.forms import AuthenticationForm, UsernameField
 # from django import forms
@@ -136,20 +136,49 @@ class ProfileCreate(View):
             'form':form
         })
 
+# @method_decorator(login_required,name='dispatch')
+# class Watch(View):
+#     def get(self,request,profile_id,*args, **kwargs):
+#         try:
+#             # profile=Profile.objects.get(uuid=profile_id)
+#             profile=Profile.objects.get(uuid=profile_id)
+#             # age_limit = profile.age_limit
+#             # categories = profile.categories
+#             # institutes = profile.group_institutes
+
+#             movies=Movie.objects.filter(age_limit=profile.age_limit)
+#             # Filtern Sie Filme nach age_limit, categories und institutes
+#             # movies = Movie.objects.filter(
+#             #     Q(age_limit=age_limit) |
+#             #     Q(categories=categories) |
+#             #     Q(group_institutes=institutes)
+#             # )#.distinct()
+            
+
+#             try:
+#                 showcase=movies[0]
+#             except :
+#                 showcase=None
+            
+
+#             if profile not in request.user.profiles.all():
+#                 return redirect(to='core:profile_list')
+#             return render(request,'movieList.html',{
+#             'movies':movies,
+           
+#             'show_case':showcase
+#             })
+#         except Profile.DoesNotExist:
+#             return redirect(to='core:profile_list')
+"""
+"""
 @method_decorator(login_required,name='dispatch')
 class Watch(View):
     def get(self,request,profile_id,*args, **kwargs):
         try:
-            # profile=Profile.objects.get(uuid=profile_id)
             profile=Profile.objects.get(uuid=profile_id)
-            # user=CustomUser.objects.get(uuid=customuser_id)
-            movies=Movie.objects.filter(age_limit=profile.age_limit)
-            # movies=Movie.objects.filter(age_limit=user.age_limit)
-            #movies=Movie.objects.filter(age_limit=CustomUser.age_limit)
-            
-            # categories = Category.objects.all() # category=Category.objects.all()
 
-            # context = {'categories': categories}
+            movies=Movie.objects.filter(age_limit=profile.age_limit)
 
             try:
                 showcase=movies[0]
@@ -161,9 +190,8 @@ class Watch(View):
                 return redirect(to='core:profile_list')
             return render(request,'movieList.html',{
             'movies':movies,
-            # 'categories':categories,
             'show_case':showcase
-            }) 	# , context)
+            })
         except Profile.DoesNotExist:
             return redirect(to='core:profile_list')
 

@@ -21,8 +21,9 @@ PHIL II FLIX - Profile
                         Create A Profile
                     </h1>
                     {% csrf_token %}
-                
-                    {{form.errors}}
+                    <div class=" text-center my-4 text-primary_red"> 
+                        {{form.errors}}
+                    </div>
                     <div class="my-4"> 
                         <Label class='text-lg text-gray-200 font-bold mb-3'>
                             Profile Name
@@ -34,9 +35,9 @@ PHIL II FLIX - Profile
                             Maturity Level
                         </Label>
                         <select class="p-2 bg-gray-500 rounded-sm text-gray-200 outline-none block w-full"  name="age_limit" id="id_age_limit" >
-                            <option value="All">All</option>
+                            <!-- <option value="All">All</option>
                             <option value="Kids">Kids</option>
-			                <option value="Prof">Prof</option>
+			                <option value="Prof">Prof</option> -->
 			                <option value="Studi">Studi</option>                        
                         </select>
                     </div>

@@ -4,6 +4,12 @@ import uuid
 #from uuid import UUID
 
 
+"""
+null=True: um sicherzustellen, dass das Feld nicht NULL (leer) sein kann
+blank=True: um sicherzustellen, dass das Feld im Formular nicht leer gelassen werden kann
+editable=False: wird verwendet, um anzugeben, ob ein Feld in einem Modell bearbeitbar (editierbar) sein soll oder nicht
+"""
+
 AGE_CHOICES=(
     ('All','All'),
     ('Kids','Kids'),
@@ -28,44 +34,56 @@ MOVIE_CATEGORIES=(
 
 class CustomUser(AbstractUser):
     profiles = models.ManyToManyField('Profile')  # Ändern Sie das related_name , related_name='custom_users
-    age = models.CharField(max_length=10, choices=AGE_CHOICES, default='Studi')
-    group_institutes = models.CharField(max_length=5, choices=GROUP_INSTITUTES, blank=True)
+    # age = models.CharField(max_length=10, choices=AGE_CHOICES, default='Studi')
+    # group_institutes = models.CharField(max_length=5, choices=GROUP_INSTITUTES, blank=True)
 
     # def __str__(self):
     #     return f"{self.username} - {self.age} - {self.group_institutes}"
 
 class Profile(models.Model):
     name = models.CharField(max_length=225)
-    age_limit = models.CharField(max_length=10, choices=AGE_CHOICES, null=True, default='Studi')
     uuid = models.UUIDField(default=uuid.uuid4, unique=True)
+    age_limit = models.CharField(max_length=10, choices=AGE_CHOICES, null=True, default='Studi')
     # user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Ändern Sie das related_name , related_name='user_profiles
 
     # def save(self, *args, **kwargs):
     #     # Stellen Sie sicher, dass das Alterslimit mit dem Alter des Benutzers übereinstimmt
     #     self.age_limit = self.user.age
     #     super().save(*args, **kwargs)
-
+    
+    # categories  = models.CharField(max_length=10, choices=MOVIE_CATEGORIES,default='Physik')
+    # group_institutes = models.CharField(max_length=10, choices=GROUP_INSTITUTES,default='IDP')
+    
     def __str__(self):
-        return f"{self.name} - {self.age_limit}"
+        return f"{self.name} - {self.age_limit}"# - {self.categories} - {self.group_institutes}"
 
 class Movie(models.Model):
-    title:str = models.CharField(max_length=225,blank=True,null=True)
-    description:str=models.TextField()
+    title:str = models.CharField(max_length=225,null=True)
+    description:str=models.TextField(null=True)
     created =models.DateTimeField(auto_now_add=True)
     uuid=models.UUIDField(default=uuid.uuid4,unique=True)
     
+    # Define fields for videos directly in the Movie model
     video_file = models.FileField(upload_to='movies', blank=True, null=True)
     flyer=models.ImageField(upload_to='flyers',blank=True,null=True)
     
     type=models.CharField(max_length=10,choices=MOVIE_TYPE)
     
-    age_limit=models.CharField(max_length=5,choices=AGE_CHOICES,blank=True,null=True)
-    group_institutes=models.CharField(max_length=5,choices=GROUP_INSTITUTES,blank=True,null=True)
-    categories=models.CharField(max_length=10,choices=MOVIE_CATEGORIES,blank=True,null=True)
+    age_limit=models.CharField(max_length=10,choices=AGE_CHOICES,blank=True,null=True)
     
+    # group_institutes=models.CharField(max_length=5,choices=GROUP_INSTITUTES,blank=True,null=True)
+    # categories=models.CharField(max_length=10,choices=MOVIE_CATEGORIES,blank=True,null=True)
+    
+    def __str__(self):
+        return f"{self.title}"
+    # Das Feld für das Hochladen von mehreren Video-Dateien
     # videos=models.ManyToManyField('Video')
+    # class Video(models.Model):
+    # title:str = models.CharField(max_length=225,blank=True,null=True)
+    # file=models.FileField(upload_to='movies')
     
-    # Define fields for videos directly in the Movie model
+    
+    
     # Spalte "video_id" für die Video-Beziehung
     # video_id = models.PositiveIntegerField(blank=True, null=True)
     # video_title = models.CharField(max_length=225, blank=True, null=True)

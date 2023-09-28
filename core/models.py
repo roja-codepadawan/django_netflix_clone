@@ -51,11 +51,12 @@ class Profile(models.Model):
     #     self.age_limit = self.user.age
     #     super().save(*args, **kwargs)
     
-    # categories  = models.CharField(max_length=10, choices=MOVIE_CATEGORIES,default='Physik')
-    # group_institutes = models.CharField(max_length=10, choices=GROUP_INSTITUTES,default='IDP')
+    categories  = models.CharField(max_length=10, choices=MOVIE_CATEGORIES,default='Physik')
+    group_institutes = models.CharField(max_length=10, choices=GROUP_INSTITUTES,default='IDP')
     
     def __str__(self):
         return f"{self.name} - {self.age_limit}"# - {self.categories} - {self.group_institutes}"
+    
 
 class Movie(models.Model):
     title:str = models.CharField(max_length=225,null=True)
@@ -71,8 +72,8 @@ class Movie(models.Model):
     
     age_limit=models.CharField(max_length=10,choices=AGE_CHOICES,blank=True,null=True)
     
-    # group_institutes=models.CharField(max_length=5,choices=GROUP_INSTITUTES,blank=True,null=True)
-    # categories=models.CharField(max_length=10,choices=MOVIE_CATEGORIES,blank=True,null=True)
+    group_institutes=models.CharField(max_length=5,choices=GROUP_INSTITUTES,blank=True,null=True)
+    categories=models.CharField(max_length=10,choices=MOVIE_CATEGORIES,blank=True,null=True)
     
     def __str__(self):
         return f"{self.title}"

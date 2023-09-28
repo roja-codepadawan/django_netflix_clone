@@ -58,7 +58,7 @@ PHIL II FLIX
                     {% for movie in movies %}
 
                         <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
-                            <div class=" h-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded->
+                            <div class=" h-40 w-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded-md">
                                 <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
                             </div>
 

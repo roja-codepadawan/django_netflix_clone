@@ -37,31 +37,8 @@ from django.db.models import Q
 #            #   return redirect(f'/accounts/login?email={email}')
 #           else:
 #               return redirect(f'/accounts/signup?email={email}')
-#         return super(LoginView, self).dispatch(request, *args, **kwargs)    
+#         return super(LoginView, self).dispatch(request, *args, **kwargs)
     
-class Home(View):
-    def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return redirect(to='/profile/')
-        return render(request, 'index.html')
-
-        # Verwende URL-Parameter
-    def post(self, request, *args, **kwargs):
-        try:
-            email = request.POST.get('email')
-            user_exists = CustomUser.objects.filter(email=email).exists()
-
-            if user_exists:
-                return redirect(f'/accounts/login?email={email}')
-            else:
-                return redirect(f'/accounts/signup?email={email}')
-
-        except Exception as e:
-            print("Error:", str(e))
-        return render(request, 'index.html')
-
-
-
 # class Home(View):
 #     def get(self,request,*args, **kwargs):
 #         if request.user.is_authenticated:
@@ -96,6 +73,28 @@ class Home(View):
     
 #     context = {'email': email}
 #     return render(request, 'signup.html', context)
+    
+class Home(View):
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect(to='/profile/')
+        return render(request, 'index.html')
+
+        # Verwende URL-Parameter
+    def post(self, request, *args, **kwargs):
+        try:
+            email = request.POST.get('email')
+            user_exists = CustomUser.objects.filter(email=email).exists()
+
+            if user_exists:
+                return redirect(f'/accounts/login?email={email}')
+            else:
+                return redirect(f'/accounts/signup?email={email}')
+
+        except Exception as e:
+            print("Error:", str(e))
+        return render(request, 'index.html')
+
 
 @method_decorator(login_required,name='dispatch')
 class ProfileList(View):
@@ -136,41 +135,43 @@ class ProfileCreate(View):
             'form':form
         })
 
-# @method_decorator(login_required,name='dispatch')
-# class Watch(View):
-#     def get(self,request,profile_id,*args, **kwargs):
-#         try:
-#             # profile=Profile.objects.get(uuid=profile_id)
-#             profile=Profile.objects.get(uuid=profile_id)
-#             # age_limit = profile.age_limit
-#             # categories = profile.categories
-#             # institutes = profile.group_institutes
+@method_decorator(login_required,name='dispatch')
+class Watch(View):
+    def get(self,request,profile_id,*args, **kwargs):
+        try:
+            # profile=Profile.objects.get(uuid=profile_id)
+            profile=Profile.objects.get(uuid=profile_id)
+            age_limit = profile.age_limit
+            categories = profile.categories
+            institutes = profile.group_institutes
+            print(profile)
+            
+            # movies=Movie.objects.filter(age_limit=profile.age_limit)
+            # Filtern Sie Filme nach age_limit, categories und institutes
+            movies = Movie.objects.filter(
+                Q(age_limit=age_limit) &  # Filme, die dem Alterslimit entsprechen
+                Q(categories=categories) &  # Filme, die der Kategorie entsprechen
+                Q(group_institutes=institutes)  # Filme, die dem Institut entsprechen
+            ).distinct()
+            
+            print(movies)
 
-#             movies=Movie.objects.filter(age_limit=profile.age_limit)
-#             # Filtern Sie Filme nach age_limit, categories und institutes
-#             # movies = Movie.objects.filter(
-#             #     Q(age_limit=age_limit) |
-#             #     Q(categories=categories) |
-#             #     Q(group_institutes=institutes)
-#             # )#.distinct()
+            try:
+                showcase=movies[0]
+            except :
+                showcase=None
             
 
-#             try:
-#                 showcase=movies[0]
-#             except :
-#                 showcase=None
-            
-
-#             if profile not in request.user.profiles.all():
-#                 return redirect(to='core:profile_list')
-#             return render(request,'movieList.html',{
-#             'movies':movies,
+            if profile not in request.user.profiles.all():
+                return redirect(to='core:profile_list')
+            return render(request,'movieList.html',{
+            'movies':movies,
            
-#             'show_case':showcase
-#             })
-#         except Profile.DoesNotExist:
-#             return redirect(to='core:profile_list')
-"""
+            'show_case':showcase
+            })
+        except Profile.DoesNotExist:
+            return redirect(to='core:profile_list')
+        
 """
 @method_decorator(login_required,name='dispatch')
 class Watch(View):
@@ -194,6 +195,7 @@ class Watch(View):
             })
         except Profile.DoesNotExist:
             return redirect(to='core:profile_list')
+"""
 
 
 @method_decorator(login_required,name='dispatch')

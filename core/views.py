@@ -3,14 +3,15 @@ from django.views import View
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .forms import ProfileForm
-from .models import Movie, Profile, Category 
-from uuid import UUID #  fail
+from .models import Movie, Profile #, Category 
+# from uuid import UUID #  fail
 from core.models import CustomUser
-from django.urls import reverse
-from django.http import HttpResponseRedirect
+# from django.urls import reverse
+# from django.http import HttpResponseRedirect
+from django.db.models import F
 
-from django.contrib.auth.forms import AuthenticationForm, UsernameField
-from django import forms
+# from django.contrib.auth.forms import AuthenticationForm, UsernameField
+# from django import forms
 
 # class UserLoginForm(AuthenticationForm):
 #     def __init__(self, *args, **kwargs):
@@ -57,8 +58,8 @@ class Home(View):
 
         except Exception as e:
             print("Error:", str(e))
-
         return render(request, 'index.html')
+
 
 
 # class Home(View):
@@ -139,11 +140,14 @@ class ProfileCreate(View):
 class Watch(View):
     def get(self,request,profile_id,*args, **kwargs):
         try:
+            # profile=Profile.objects.get(uuid=profile_id)
             profile=Profile.objects.get(uuid=profile_id)
-
+            # user=CustomUser.objects.get(uuid=customuser_id)
             movies=Movie.objects.filter(age_limit=profile.age_limit)
-
-            categories = Category.objects.all() # category=Category.objects.all()
+            # movies=Movie.objects.filter(age_limit=user.age_limit)
+            #movies=Movie.objects.filter(age_limit=CustomUser.age_limit)
+            
+            # categories = Category.objects.all() # category=Category.objects.all()
 
             # context = {'categories': categories}
 
@@ -157,7 +161,7 @@ class Watch(View):
                 return redirect(to='core:profile_list')
             return render(request,'movieList.html',{
             'movies':movies,
-            'categories':categories,
+            # 'categories':categories,
             'show_case':showcase
             }) 	# , context)
         except Profile.DoesNotExist:
@@ -181,14 +185,43 @@ class ShowMovieDetail(View):
 class ShowMovie(View):
     def get(self,request,movie_id,*args, **kwargs):
         try:
-            
-            movie=Movie.objects.get(uuid=movie_id)
+            # original 
+            # movie=Movie.objects.get(uuid=movie_id)
+            # Erstellen eines QuerySet  
+            # movie=movie.videos.values()
+            # # movie=movie.video_file.values()
 
-            movie=movie.videos.values()
+            # print(movie)
+            # return render(request,'showMovie.html',{
+            #     'movie':list(movie)
+            # })
+            # end orignial
             
+            movie = Movie.objects.get(uuid=movie_id)
+            
+            # Extrahieren der URL der Videodatei
+            file_url = movie.video_file.url
 
-            return render(request,'showMovie.html',{
-                'movie':list(movie)
+            # Entfernt '/media/' aus der URL
+            cleaned_file_url = file_url.replace('/media', '')
+
+            # Wählen Sie die Felder aus, die Sie serialisieren möchten
+            movie_data = [{
+                'id': movie.video_id,
+                # 'title': movie.video_title,
+                'title': movie.title,
+                # 'file': file_url,
+                'file': cleaned_file_url,
+                # 'file': movie.video_file.url,
+                # Fügen Sie weitere Felder hinzu, die Sie benötigen
+            }]
+            # movie=movie_data
+            
+            print(movie_data)
+            return render(request, 'showMovie.html', {
+                # 'movie': movie
+                # 'movie':list(movie)
+                'movie': movie_data,
             })
         except Movie.DoesNotExist:
             return redirect('core:profile_list')

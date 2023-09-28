@@ -42,8 +42,8 @@ except KeyError as e:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG") == False  # Convert to boolean if needed False
-#DEBUG = True # True
+# DEBUG = os.getenv("DEBUG") == False  # Convert to boolean if needed False
+DEBUG = True # True
 
 
 # Lade die sensiblen Informationen aus credentials.json

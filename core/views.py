@@ -185,18 +185,8 @@ class ShowMovieDetail(View):
 class ShowMovie(View):
     def get(self,request,movie_id,*args, **kwargs):
         try:
-            # original 
-            # movie=Movie.objects.get(uuid=movie_id)
-            # Erstellen eines QuerySet  
-            # movie=movie.videos.values()
-            # # movie=movie.video_file.values()
-
-            # print(movie)
-            # return render(request,'showMovie.html',{
-            #     'movie':list(movie)
-            # })
-            # end orignial
             
+            # 'movie'-Objekt mit der angegebenen UUID
             movie = Movie.objects.get(uuid=movie_id)
             
             # Extrahieren der URL der Videodatei
@@ -205,9 +195,10 @@ class ShowMovie(View):
             # Entfernt '/media/' aus der URL
             cleaned_file_url = file_url.replace('/media', '')
 
+            # Erstellen Sie die movie_data-Liste
             # Wählen Sie die Felder aus, die Sie serialisieren möchten
             movie_data = [{
-                'id': movie.video_id,
+                'id': str(movie.uuid),
                 # 'title': movie.video_title,
                 'title': movie.title,
                 # 'file': file_url,
@@ -215,13 +206,28 @@ class ShowMovie(View):
                 # 'file': movie.video_file.url,
                 # Fügen Sie weitere Felder hinzu, die Sie benötigen
             }]
-            # movie=movie_data
             
+             # Kontrolle: Ausgabe von movie_data
             print(movie_data)
+            
+            # Rendern Sie die HTML-Seite und übergeben Sie die movie_data
             return render(request, 'showMovie.html', {
-                # 'movie': movie
-                # 'movie':list(movie)
                 'movie': movie_data,
             })
+            
+            """
+            Original 
+            
+            movie=Movie.objects.get(uuid=movie_id)
+            Erstellen eines QuerySet  
+            movie=movie.videos.values()
+            # movie=movie.video_file.values()
+
+            print(movie)
+            return render(request,'showMovie.html',{
+                'movie':list(movie)
+            })
+            """
+            
         except Movie.DoesNotExist:
             return redirect('core:profile_list')

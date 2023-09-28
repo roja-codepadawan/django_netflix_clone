@@ -48,8 +48,31 @@ class Profile(models.Model):
     def __str__(self):
         return f"{self.name} - {self.age_limit}"
 
-
-
+class Movie(models.Model):
+    title:str = models.CharField(max_length=225,blank=True,null=True)
+    description:str=models.TextField()
+    created =models.DateTimeField(auto_now_add=True)
+    uuid=models.UUIDField(default=uuid.uuid4,unique=True)
+    
+    video_file = models.FileField(upload_to='movies', blank=True, null=True)
+    flyer=models.ImageField(upload_to='flyers',blank=True,null=True)
+    
+    type=models.CharField(max_length=10,choices=MOVIE_TYPE)
+    
+    age_limit=models.CharField(max_length=5,choices=AGE_CHOICES,blank=True,null=True)
+    group_institutes=models.CharField(max_length=5,choices=GROUP_INSTITUTES,blank=True,null=True)
+    categories=models.CharField(max_length=10,choices=MOVIE_CATEGORIES,blank=True,null=True)
+    
+    # videos=models.ManyToManyField('Video')
+    
+    # Define fields for videos directly in the Movie model
+    # Spalte "video_id" für die Video-Beziehung
+    # video_id = models.PositiveIntegerField(blank=True, null=True)
+    # video_title = models.CharField(max_length=225, blank=True, null=True)
+    
+    # file=models.FileField(upload_to='movies',blank=True,default=None, null=True)
+    
+    #categories = models.ForeignKey(Category, on_delete=models.CASCADE)
 """
 
 from django.db import models
@@ -172,27 +195,6 @@ class Video(models.Model):
 
 """
 
-class Movie(models.Model):
-    title:str = models.CharField(max_length=225,blank=True,null=True)
-    description:str=models.TextField()
-    created =models.DateTimeField(auto_now_add=True)
-    type=models.CharField(max_length=10,choices=MOVIE_TYPE)
-    uuid=models.UUIDField(default=uuid.uuid4,unique=True)
-    # videos=models.ManyToManyField('Video')
-    
-    # Define fields for videos directly in the Movie model
-    # Spalte "video_id" für die Video-Beziehung
-    video_id = models.PositiveIntegerField(blank=True, null=True)
-    video_title = models.CharField(max_length=225, blank=True, null=True)
-    video_file = models.FileField(upload_to='movies', blank=True, null=True)
-    
-    # file=models.FileField(upload_to='movies',blank=True,default=None, null=True)
-    flyer=models.ImageField(upload_to='flyers',blank=True,null=True)
-    
-    #categories = models.ForeignKey(Category, on_delete=models.CASCADE)
-    age_limit=models.CharField(max_length=5,choices=AGE_CHOICES,blank=True,null=True)
-    group_institutes=models.CharField(max_length=5,choices=GROUP_INSTITUTES,blank=True,null=True)
-    categories=models.CharField(max_length=10,choices=MOVIE_CATEGORIES,blank=True,null=True)
 
 # class Video(models.Model):
 #     title:str = models.CharField(max_length=225,blank=True,null=True)

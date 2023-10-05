@@ -47,12 +47,12 @@ PHIL II FLIX
                 </div>
             </div>
         </section> 
- 
+ <!-- Popular on PHIL II FLIX 
 
 	    <section class='bg-primary_black  min-h-screen flex justify-center py-10'>
             <div class="p-8 w-10/12 relative" >
                 <h2 class="text-gray-200 text-2xl font-bold">
-                    Popular on Netflix
+                    Popular on PHIL II FLIX
                 </h2>
                 <div class="flex   items-center min-w-full  movie_lis">
                     {% for movie in movies %}
@@ -65,14 +65,242 @@ PHIL II FLIX
                         </a>
                     {% endfor %}
 
+                </div>
+            </div>
+-->
 
 
+	    <section class='bg-primary_black  min-h-screen flex justify-center py-10'>
+    
+            <div class="p-8 w-10/12 relative">
+                <!-- <h2 class="text-gray-200 text-2xl font-bold mb-4">
+                    Filme nach Kategorien
+                </h2> -->
+           
+                    {% for category, movies in movies_by_category.items %}
+                    <h2 class="text-gray-200 text-2xl font-bold mb-4">{{ category }}</h2>
+                    <div class="flex   items-center min-w-full  movie_lis">
+                        {% for movie in movies %}
+                        <div>
+                            <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                                <div class=" h-40 w-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded-md">
+                                    <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
+                                    <p class="text-gray-200 text-lg mt-2 absolute bottom-0 left-0 right-0 text-center">{{ movie.title }}</p>
+                                </div>
+                            </a>
+                            <br> <!-- Hier wird das <br> nach jeder Kategorie hinzugefügt -->
+                            <br> <!-- Hier wird das <br> nach jeder Kategorie hinzugefügt -->
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+            </div>
+        </section>
 
+ <!-- 
+
+
+    <section class='bg-primary_black  min-h-screen flex justify-center py-10'></section>
+
+        <div class="p-8 w-10/12 relative">
+            <h2 class="text-gray-200 text-2xl font-bold mb-4">
+                Filme nach Kategorien
+            </h2>
+       
+                {% for category, movies in movies_by_category.items %}
+                <h3 class="text-gray-200 text-2xl font-bold mb-2">{{ category }}</h3>
+                <div class="flex   items-center min-w-full  movie_lis">
+                    {% for movie in movies %}
+                    <div>
+                        <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                            <div class=" h-40 w-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded-md">
+                                <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
+                            </div>
+                            <p class="text-gray-200 text-lg mt-2">{{ movie.title }}</p>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            
+        </div>
+    </section> 
+    
+    <section class="bg-primary_black min-h-screen py-10">
+        <div class="p-8 w-10/12 mx-auto">
+            <h2 class="text-gray-200 text-2xl font-bold mb-4">
+                Popular on PHIL II FLIX
+            </h2>
+            <div class="flex flex-wrap -mx-4">
+                {% for movie in popular_movies %}
+                <div class="w-1/4 px-4 mb-8">
+                    <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                        <div class="h-40 bg-sky-700 overflow-hidden rounded-md">
+                            <img src="{{movie.flyer.url}}" class="w-full h-full" alt="">
+                        </div>
+                        <p class="text-gray-200 text-lg mt-2">{{ movie.title }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    
+        <div class="p-8 w-10/12 mx-auto">
+            <h2 class="text-gray-200 text-2xl font-bold mb-4">
+                Filme nach Kategorien
+            </h2>
+            {% for category, movies in movies_by_category.items %}
+            <h3 class="text-gray-200 text-2xl font-bold mb-2">{{ category }}</h3>
+            <div class="flex flex-wrap -mx-4">
+                {% for movie in movies %}
+                <div class="w-1/4 px-4 mb-8">
+                    <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                        <div class="h-40 bg-sky-700 overflow-hidden rounded-md">
+                            <img src="{{movie.flyer.url}}" class="w-full h-full" alt="">
+                        </div>
+                        <p class="text-gray-200 text-lg mt-2">{{ movie.title }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </section> 
+
+            <div class="p-8 w-10/12 relative" >
+                <h2 class="text-gray-200 text-2xl font-bold">
+                    Filme nach Kategorien
+                </h2>
+
+                {% for category, movies in movies_by_category.items %}
+                <h3 class="text-gray-200 text-2xl font-bold">{{ category }}</h3>
+                
+                <div class="flex   items-center min-w-full  movie_lis">
+                    {% for movie in movies %}
+
+                        <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                            <div class=" h-40 w-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded-md">
+                                <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
+                            </div>
+                            <p class="text-gray-200 text-lg mt-2">{{ movie.title }}</p>
+                        </a>
+                    {% endfor %}
+                {% endfor %}
+                </div>
+            </div> 
+
+            <div class="p-8 w-10/12 relative">
+                <h2 class="text-gray-200 text-2xl font-bold mb-4">
+                    Filme nach Kategorien
+                </h2>
+           
+                    {% for category, movies in movies_by_category.items %}
+                    <h3 class="text-gray-200 text-2xl font-bold mb-2">{{ category }}</h3>
+                    <div class="flex   items-center min-w-full  movie_lis">
+                        {% for movie in movies %}
+                        <div>
+                            <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                                <div class=" h-40 w-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded-md">
+                                    <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
+                                </div>
+                                <p class="text-gray-200 text-lg mt-2">{{ movie.title }}</p>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                
+            </div>
+
+        <section class="bg-primary_black min-h-screen py-10">
+            <div class="p-8 w-10/12 mx-auto">
+                <h2 class="text-gray-200 text-2xl font-bold mb-4">
+                    Popular on PHIL II FLIX
+                </h2>
+                <div class="flex flex-wrap -mx-4">
+                    {% for movie in popular_movies %}
+                    <div class="w-1/4 px-4 mb-8">
+                        <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                            <div class="h-40 bg-sky-700 overflow-hidden rounded-md">
+                                <img src="{{movie.flyer.url}}" class="w-full h-full" alt="">
+                            </div>
+                            <p class="text-gray-200 text-lg mt-2">{{ movie.title }}</p>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        
+            <div class="p-8 w-10/12 mx-auto">
+                <h2 class="text-gray-200 text-2xl font-bold mb-4">
+                    Filme nach Kategorien
+                </h2>
+                <div class="space-y-4">
+                    {% for category, movies in movies_by_category.items %}
+                    <h3 class="text-gray-200 text-2xl font-bold mb-2">{{ category }}</h3>
+                    <div class="flex flex-wrap -mx-4">
+                        {% for movie in movies %}
+                        <div class="w-1/4 px-4 mb-8">
+                            <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                                <div class="h-40 bg-sky-700 overflow-hidden rounded-md">
+                                    <img src="{{movie.flyer.url}}" class="w-full h-full" alt="">
+                                </div>
+                                <p class="text-gray-200 text-lg mt-2">{{ movie.title }}</p>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
-		
 
+
+
+
+        <div class="p-8 w-10/12 relative">
+                <h2 class="text-gray-200 text-2xl font-bold mb-4">
+                    Filme nach Kategorien
+                </h2>
+           
+                    {% for category, movies in movies_by_category.items %}
+                    <h3 class="text-gray-200 text-2xl font-bold mb-2">{{ category }}</h3>
+                    <div class="flex   items-center min-w-full  movie_lis">
+                        {% for movie in movies %}
+                        <div>
+                            <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                                <div class=" h-40 w-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded-md">
+                                    <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
+                                </div>
+                                <p class="text-gray-200 text-lg mt-2">{{ movie.title }}</p>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                
+            </div>
+
+
+                  <section class="bg-primary_black min-h-screen flex justify-center  py-10">
+            <div class="p-8 w-10/12 realtive">
+                <h2 class="text-gray-200 text-2xl font-bold mb-4">
+                    Popular on PHIL II FLIX
+                </h2>
+                <div class="flex   items-center min-w-full  movie_lis">
+                    {% for movie in popular_movies %}
+       
+                        <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                            <div class=" h-40 w-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded-md">
+                                <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
+                            </div>
+                            <p class="text-gray-200 text-lg mt-2">{{ movie.title }}</p>
+                        </a>
+            
+                    {% endfor %}
+                </div>
+            </div>
+-->	
         
     </main>
 {% endblock content %}

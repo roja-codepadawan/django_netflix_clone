@@ -142,6 +142,33 @@ class Watch(View):
             # profile=Profile.objects.get(uuid=profile_id)
             profile=Profile.objects.get(uuid=profile_id)
             age_limit = profile.age_limit
+            cours = profile.group_courses
+            institut = profile.group_institutes
+            print(profile)
+            
+            # movies=Movie.objects.filter(age_limit=profile.age_limit)
+            # Filtern Sie Filme nach age_limit, categories und institutes
+            movies = Movie.objects.filter(
+                Q(age_limit=age_limit) &  # Filme, die dem Alterslimit entsprechen
+                Q(group_courses=cours) &  # Filme, die der Kategorie entsprechen
+                Q(group_institutes=institut)  # Filme, die dem Institut entsprechen
+            ).distinct()
+            
+             # Alle verfügbaren Kategorien aus der Movie-Tabelle abrufen
+            categories = Movie.objects.values_list('categories', flat=True).distinct()
+        
+            # Eine leere Liste für Filme pro Kategorie erstellen
+            movies_by_category = {}
+        
+            # Filme nach Kategorien gruppieren
+            for category in categories:
+                movies = Movie.objects.filter(categories=category)
+                movies_by_category[category] = movies
+            
+            """ 
+            # profile=Profile.objects.get(uuid=profile_id)
+            profile=Profile.objects.get(uuid=profile_id)
+            age_limit = profile.age_limit
             categories = profile.categories
             institutes = profile.group_institutes
             print(profile)
@@ -153,6 +180,7 @@ class Watch(View):
                 Q(categories=categories) &  # Filme, die der Kategorie entsprechen
                 Q(group_institutes=institutes)  # Filme, die dem Institut entsprechen
             ).distinct()
+            """
             
             print(movies)
 
@@ -167,7 +195,9 @@ class Watch(View):
             return render(request,'movieList.html',{
             'movies':movies,
            
-            'show_case':showcase
+            'show_case':showcase,
+            
+            'movies_by_category': movies_by_category
             })
         except Profile.DoesNotExist:
             return redirect(to='core:profile_list')
@@ -215,6 +245,7 @@ class ShowMovieDetail(View):
 class ShowMovie(View):
     def get(self,request,movie_id,*args, **kwargs):
         try:
+            """
             
             # 'movie'-Objekt mit der angegebenen UUID
             movie = Movie.objects.get(uuid=movie_id)
@@ -246,10 +277,10 @@ class ShowMovie(View):
             })
             
             """
-            Original 
+            # Original 
             
             movie=Movie.objects.get(uuid=movie_id)
-            Erstellen eines QuerySet  
+            # Erstellen eines QuerySet  
             movie=movie.videos.values()
             # movie=movie.video_file.values()
 
@@ -257,7 +288,6 @@ class ShowMovie(View):
             return render(request,'showMovie.html',{
                 'movie':list(movie)
             })
-            """
             
         except Movie.DoesNotExist:
             return redirect('core:profile_list')

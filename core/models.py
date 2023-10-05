@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 import uuid
-#from uuid import UUID
-
 
 """
 null=True: um sicherzustellen, dass das Feld nicht NULL (leer) sein kann

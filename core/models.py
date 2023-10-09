@@ -72,7 +72,7 @@ class Profile(models.Model):
     #     self.age_limit = self.user.age
     #     super().save(*args, **kwargs)
     
-    group_institutes = models.CharField(max_length=20, choices=GROUP_INSTITUTES,default='IDP')
+    group_institutes=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
     group_courses=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
     
     def __str__(self):

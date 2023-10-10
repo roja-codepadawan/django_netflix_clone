@@ -8,6 +8,7 @@ blank=True: um sicherzustellen, dass das Feld im Formular nicht leer gelassen we
 editable=False: wird verwendet, um anzugeben, ob ein Feld in einem Modell bearbeitbar (editierbar) sein soll oder nicht
 """
 
+
 # Altersgruppen oder Altersbeschränkungen
 AGE_CHOICES=(
     ('All','All'),

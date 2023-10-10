@@ -81,6 +81,7 @@ PHIL II FLIX
                     <h2 class="text-gray-200 text-2xl font-bold mb-4">{{ category }}</h2>
                     <div class="flex   items-center min-w-full  movie_lis">
                         {% for movie in movies %}
+                        {% if movie.categories == category %}
                         <div>
                             <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
                                 <div class=" h-40 w-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded-md">
@@ -91,6 +92,7 @@ PHIL II FLIX
                             <br> <!-- Hier wird das <br> nach jeder Kategorie hinzugefügt -->
                             <br> <!-- Hier wird das <br> nach jeder Kategorie hinzugefügt -->
                         </div>
+                        {% endif %}
                         {% endfor %}
                     </div>
                     {% endfor %}

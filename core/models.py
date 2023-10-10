@@ -56,11 +56,24 @@ MOVIE_TYPE=(
 
 class CustomUser(AbstractUser):
     profiles = models.ManyToManyField('Profile')  # Ändern Sie das related_name , related_name='custom_users
-    # age = models.CharField(max_length=10, choices=AGE_CHOICES, default='Studi')
-    # group_institutes = models.CharField(max_length=5, choices=GROUP_INSTITUTES, blank=True)
+    age = models.CharField(max_length=10, choices=AGE_CHOICES, null=True, default='Studi')
+    institut=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
+    cours=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
+    
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        
+        # Update profile age_limit and group_courses
+        profiles = self.profiles.all()
+        for profile in profiles:
+            profile.age_limit = self.age
+            profile.group_institutes = self.institut
+            profile.group_courses = self.cours
+            profile.save()
+    
 
-    # def __str__(self):
-    #     return f"{self.username} - {self.age} - {self.group_institutes}"
+    def __str__(self):
+        return f"{self.username} - {self.age} - {self.institut} - {self.cours}"
 
 class Profile(models.Model):
     name = models.CharField(max_length=225)
@@ -77,7 +90,7 @@ class Profile(models.Model):
     group_courses=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
     
     def __str__(self):
-        return f"{self.name} - {self.age_limit}"# - {self.categories} - {self.group_institutes}"
+        return f"{self.name} - {self.age_limit} - {self.group_institutes} - {self.group_courses}"
     
 
 class Movie(models.Model):
@@ -111,6 +124,36 @@ class Video(models.Model):
     def __str__(self):
         return f"{self.title}"
 """
+
+<----- bevor change Movie, Profile ------>
+
+class CustomUser(AbstractUser):
+    profiles = models.ManyToManyField('Profile')  # Ändern Sie das related_name , related_name='custom_users
+    # age = models.CharField(max_length=10, choices=AGE_CHOICES, default='Studi')
+    # group_institutes = models.CharField(max_length=5, choices=GROUP_INSTITUTES, blank=True)
+
+    # def __str__(self):
+    #     return f"{self.username} - {self.age} - {self.group_institutes}"
+
+class Profile(models.Model):
+    name = models.CharField(max_length=225)
+    uuid = models.UUIDField(default=uuid.uuid4, unique=True)
+    age_limit = models.CharField(max_length=10, choices=AGE_CHOICES, null=True, default='Studi')
+    # user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Ändern Sie das related_name , related_name='user_profiles
+
+    # def save(self, *args, **kwargs):
+    #     # Stellen Sie sicher, dass das Alterslimit mit dem Alter des Benutzers übereinstimmt
+    #     self.age_limit = self.user.age
+    #     super().save(*args, **kwargs)
+    
+    group_institutes=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
+    group_courses=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
+    
+    def __str__(self):
+        return f"{self.name} - {self.age_limit}"# - {self.categories} - {self.group_institutes}"
+        
+<----- end bevor change Movie, Profile ------>        
+        
 
 <----- Movie only -------->
 class Movie(models.Model):

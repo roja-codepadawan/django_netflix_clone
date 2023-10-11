@@ -209,8 +209,8 @@ DEFAULT_CHARSET = "utf-8"
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 # Set the directory where static files will be collected for deployment
-STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR/'static_root' 
+STATIC_URL = '/static/'
 
 # Media files (uploads)
 MEDIA_ROOT=BASE_DIR/'media'

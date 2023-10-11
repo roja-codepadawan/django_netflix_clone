@@ -28,6 +28,7 @@
             <div class="w-full flex justify-center">
                 <div class="flex justify-center items-center w-11/12 md:w-10/12">
 
+                    <!--
                     <form action="{% url 'account_signup' %}" method="GET" class="md:w-1/4">
                         <input type="email" name="email" value="{{ email }}" placeholder="E-Mail adresse">
                         <button type="submit" class="bg-sky-700 md:font-extrabold flex justify-center items-center py-4 px-2 md:px-4 rounded-br-sm rounded-tr-sm md:text-2xl">
@@ -37,7 +38,6 @@
                             <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
                         </button>
                     </form>
-                    <!--
                     <form method="post">
                         {% csrf_token %}
                         <label for="email">Email:</label>
@@ -47,29 +47,38 @@
 
                     <form method="post">
                         {% csrf_token %}
-                        <!-- E-Mail-Eingabefeld -->
-                    <!--
+                         E-Mail-Eingabefeld
+                    
                         <input type="email" name="email" id="id_email" placeholder="E-Mail Adresse" class="md:py-5 py-4 px-2 placeholder-gray-500 rounded-tl-sm rounded-bl-sm outline-none  text-gray-900 bg-gray-50 block w-8/12 md:w-3/4" value="{{ request.POST.email }}">
                         
-                        <!-- Andere Formularfelder hier... -->
-                    <!--   
+                       Andere Formularfelder hier...
+                     
                         <button type="submit" class="bg-sky-700 md:font-extrabold flex justify-center items-center py-4 px-4 md:px-4 rounded-br-sm rounded-tr-sm md:text-2xl">
                             <span>Loslegen</span>
                             <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
                         </button>
                     </form>
                     -->
-
-                    <input type="email" name="" id="" placeholder="E-Mail adresse" class="md:py-5 py-4 px-2 placeholder-gray-500 rounded-tl-sm rounded-bl-sm outline-none  text-gray-900 bg-gray-50 block w-8/12 md:w-3/4">
-                    <a href='{% url "account_signup" %}' class='md:w-1/4'>
-                        <!-- bg-primary_red -->
-                        <button class="bg-sky-700 md:font-extrabold flex justify-center items-center py-4 px-4 md:px-4 rounded-br-sm rounded-tr-sm md:text-2xl">
+                    <a href='{% url "account_signup" %}'>
+                        <button class="bg-sky-700 md:font-extrabold flex justify-center items-center py-4 px-2 md:px-4 rounded-br-sm rounded-tr-sm md:text-2xl">
                             <span>
-                                Loslegen
+                                Registrieren & Loslegen
                             </span>
                             <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
                         </button>
                     </a>
+                    <!--
+                    <input type="email" name="" id="" placeholder="E-Mail adresse" class="md:py-5 py-4 px-2 placeholder-gray-500 rounded-tl-sm rounded-bl-sm outline-none  text-gray-900 bg-gray-50 block w-8/12 md:w-3/4">
+                    <a href='{% url "account_signup" %}' class='md:w-1/4'>
+                        bg-primary_red
+                        <button class="bg-sky-700 md:font-extrabold flex justify-center items-center py-4 px-2 md:px-4 rounded-br-sm rounded-tr-sm md:text-2xl">
+                            <span>
+                                Loslegen & Registrieren
+                            </span>
+                            <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+                        </button>
+                    </a>
+                    -->
                 </div>
             </div>
         </div>

@@ -20,34 +20,27 @@
                     Einloggen
                 </h1>
                 {% csrf_token %}
-                
+
                 {% if form.errors %}
-                
                 <div class=" text-center my-4 text-primary_red">
                 
-                
-                
-                <p class="text-primary_red ">
-                    
-                    {{form.non_field_errors}}
-                </p>
-                
 
-                <form method="post">
-                    {% csrf_token %}
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" value="{{ email }}" readonly>
-                    <!-- Add other login fields here -->
-                    <button type="submit">Login</button>
-                </form>
-                   
+                    <p class="text-primary_red">
+                    
+                        {{form.non_field_errors}}
+                    </p>
+                
                 </div>
                 {% endif %}
-                <div> 
+                
+                <div class='my-3'> 
                     <Label class='text-lg font-medium mb-3'>
                         E-Mail
                     </Label>
-                    <input class="p-2 bg-gray-200 rounded-sm text-gray-900 outline-none block w-full" type="email" name="login" id="id_login" placeholder="E-Mail" value="{{ email }}">
+                    <input class="p-2 bg-gray-200 rounded-sm text-gray-900 outline-none block w-full" type="email" name="login" id="id_login" placeholder="E-Mail">
+                    <div class=" text-center my-4 text-primary_red">
+                        {{form.errors.email}}
+                    </div>
                 </div>
                 <div class='my-3'> 
                     <Label class='text-lg font-medium mb-3'>

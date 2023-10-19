@@ -5,3 +5,6 @@
 
 # Ignoriere die credentials.json-Datei
 credentials.json
+
+# db
+*.sqlite3

@@ -1,4 +1,4 @@
-#!/opt/www/django_netflix_clone/venv/bin/python
+#!/opt/www/django_philflix/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

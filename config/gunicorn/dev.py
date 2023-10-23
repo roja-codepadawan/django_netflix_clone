@@ -3,7 +3,7 @@ import os
 
 
 # Django WSGI application path in pattern MODULE_NAME:VARIABLE_NAME
-wsgi_app = "django_netflix.wsgi.application" # django_netflix.wsgi:application "project.wsgi:application"
+wsgi_app = "django_philflix.wsgi.application" # django_netflix.wsgi:application "project.wsgi:application"
 # The granularity of Error log outputs
 loglevel = "debug"
 # The number of worker processes for handling requests

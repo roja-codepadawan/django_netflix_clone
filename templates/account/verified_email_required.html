@@ -2,7 +2,9 @@
 {% load static %}
 {% load i18n %}
 
-{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+{% block head_title %}
+{% trans "Verify Your E-mail Address" %}
+{% endblock %}
 
 {% block content %}
 {% include '../partials/navbar.html' with AUTH='false' %}

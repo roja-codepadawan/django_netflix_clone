@@ -156,8 +156,11 @@ class Watch(View):
             
             print(movies)
             
-             # Alle verfügbaren Kategorien aus der Movie-Tabelle abrufen
-            movies_by_category = Movie.objects.values_list('categories', flat=True).distinct()
+            # Extrahiere die eindeutigen Kategorien aus der movies-Abfrage
+            movies_by_category = movies.values_list('categories', flat=True).distinct()
+            # Alle verfügbaren Kategorien aus der Movie-Tabelle abrufen
+            # movies_by_category = Movie.objects.values_list('categories', flat=True).distinct()
+            
         
             # Eine leere Liste für Filme pro Kategorie erstellen
             # movies_by_category = {}

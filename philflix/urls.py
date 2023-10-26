@@ -6,6 +6,11 @@ from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url
 
+# Admin Site Config
+admin.site.site_header = 'Phil II Flix site admin'      # default: "Django Administration"
+admin.site.index_title = 'Phil II Flix'     # default: "Site administration"
+admin.site.site_title = 'adminsitration'    # default: "Django site admin"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('core.urls',namespace='core')),
@@ -16,15 +21,16 @@ urlpatterns = [
 
 ]
 
-if settings.DEBUG:
-    urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
-    urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+# if settings.DEBUG:
+#     urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+#     urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 
-# if not settings.DEBUG:
-#     urlpatterns += [
-#         url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-#         url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
-#     ]
-# else:
-#     url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
-#     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+if not settings.DEBUG:
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+        url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
+    ]
+else:
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+    

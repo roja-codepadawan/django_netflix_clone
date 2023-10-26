@@ -57,6 +57,8 @@ ALLOWED_HOSTS = [
 ]
 
 
+
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -129,7 +131,7 @@ TEMPLATES = [
 
 # WSGI_APPLICATION = 'django_pfhilflix.wsgi.application'
 # WSGI_APPLICATION = 'django_netflix.wsgi.application'
-WSGI_APPLICATION = 'pfhilflix.wsgi.application'
+WSGI_APPLICATION = 'philflix.wsgi.application'
 
 
 

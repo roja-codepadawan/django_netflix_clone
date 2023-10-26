@@ -13,14 +13,15 @@ PHIL II FLIX
 
     {% include 'partials/navbar.html' %}
     <main class='bg-primary_black min-h-screen w-full'>
-        <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex  items-end bg-cover" style="background-image: url('{% static 'movie.webp' %}');">
+        <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex  items-end bg-cover" style="background-image: url('{{show_case.flyer.url}}')  ;">
+        <!-- <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex  items-end bg-cover" style="background-image: url('{% static 'movie.webp' %}');"> -->
             <div>
                 <h2 class="text-6xl font-semibold text-white my-4">
                     {{show_case.title}}
                 </h2>
                 <p class=" w-11/12 md:w-5/12 font-bold text-white my-4">
                     {{show_case.description | slice:":50"}}...
-                    {% lorem 1 %}
+                    <!-- {% lorem 1 %} -->
                 </p>
                 <div class="flex my-4">
                     <a href="{% url 'core:play' movie_id=show_case.uuid %}">
@@ -38,7 +39,7 @@ PHIL II FLIX
                         
                             <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
                             <span class="ml-3 font-bold">
-                                More Info
+                                Mehr Infos
                             </span>
                         </button>
                     

@@ -13,18 +13,20 @@
 {% block content %}
 
     {% include "partials/navbar.html" %}
-    <header class="min-h-screen bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-cover"  style="background-image: url('{% static 'background_netflix.jpg' %}');">
+    <header class="min-h-screen bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-cover"  style="background-image: url('{% static 'background_philflix.jpg' %}');">
         <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
             <h1 class="font-semibold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
-                Unlimited movies, TV shows, and more.
+                Zugang zu Video-Lehrinhalten und mehr.
             </h1>
+            <br>
+            <br>
             <h3 class="text-xl md:text-xl py-5">
-                Watch anywhere. Cancel anytime.
+                Streamen Sie wann immer Sie möchten.
             </h3>
             <h4 class="text-sm md:text-lg pb-3">
-                Ready to watch? Enter your email to create or restart your membership.
+                Lokal in der Uni oder über VPN von überall.
             </h4>
-
+            <br>
             <div class="w-full flex justify-center">
                 <div class="flex justify-center items-center w-11/12 md:w-10/12">
 
@@ -87,18 +89,18 @@
     <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
         <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10 ">
             <h2 class="md:text-5xl text-4xl font-semibold mb-4">
-                Enjoy on your TV.
+                Genießen Sie in Hörsälen und Veranstaltungsräumen.
             </h2>
             <h5 class="md:text-xl text-lg">
-                Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+                Schauen Sie auf Smart TVs, Apple TV, auf mobilen Geräten und vielem mehr.
             </h5>
         </div>
         <div class='md:w-1/2 flex justify-center items-center'>
-            <img src="{% static 'tv.png' %}" class="w-8/12" alt="">
+            <img src="{% static 'hoersal_BackgroundRemoved.png' %}" class="w-8/12" alt="">
         </div>
     </section>
 
-    <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <!-- <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
         <div class='md:w-1/2 flex justify-center items-center '>
             <img src="{% static 'mobile-0819.jpg' %}" class="w-8/12" alt="">
         </div>
@@ -112,9 +114,9 @@
             </h5>
         </div>
         
-    </section>
+    </section> -->
 
-    <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <!-- <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
         <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
             <h2 class="md:text-5xl text-4xl font-semibold mb-4">
                 Create profiles for kids.
@@ -126,7 +128,8 @@
         <div class='md:w-1/2 flex justify-center items-center'>
             <img src="{% static 'netflix_kid.png' %}" class="w-8/12" alt="">
         </div>
-    </section>
+    </section> -->
+
     <footer class=" px-5 py-10 ">
         <ul class="flex justify-between items-center">
             

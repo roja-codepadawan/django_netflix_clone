@@ -12,7 +12,7 @@
             <div>
             <form action="{% url 'account_logout' %}" method="post">
                 {% csrf_token %}
-                <button class='py-2 px-4 bg-sky-700 text-gray-100 font-extrabold text-lg rounded-md'>
+                <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md'>
                     Abmelden
                 </button>
             </form>
@@ -21,7 +21,7 @@
             <div>
             <a href="{% url 'account_login' %}">
                 <!-- bg-primary_red -->
-                <button class='py-2 px-4 bg-sky-700 text-gray-100 font-extrabold text-lg rounded-md'>
+                <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md'>
                     Einloggen
                 </button>
             </a>

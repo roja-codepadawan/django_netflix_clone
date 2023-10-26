@@ -22,12 +22,12 @@ GROUP_INSTITUTES=(
     ('IDM', 'IDM')
 )
 
-# Kursgruppen oder Kursnummern
-GROUP_COURSE=(
-    ('Willkommen', 'Willkommen'),
-    ('1','1'),
-    ('2','2'),
-)
+# # Kursgruppen oder Kursnummern
+# GROUP_COURSE=(
+#     ('Willkommen', 'Willkommen'),
+#     ('1','1'),
+#     ('2','2'),
+# )
 
 # Semestergruppen
 # GROUP_SEMSTER=(
@@ -60,7 +60,8 @@ class CustomUser(AbstractUser):
     profiles = models.ManyToManyField('Profile')  # Ändern Sie das related_name , related_name='custom_users
     age = models.CharField(max_length=20, choices=AGE_CHOICES, null=True, default='Studierende')
     institut=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True,default='Willkommen')
-    cours=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True,default='Willkommen')
+    courses=models.ManyToManyField('Course')
+    # course=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True,default='Willkommen')
     
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
@@ -68,19 +69,30 @@ class CustomUser(AbstractUser):
         # Update profile age_limit and group_courses
         profiles = self.profiles.all()
         for profile in profiles:
-            profile.age_limit = self.age
-            profile.group_institutes = self.institut
-            profile.group_courses = self.cours
+            profile.age = self.age
+            profile.group_institut = self.institut
+            profile.group_courses.set(self.courses.all())  # Verwende die set() Methode
+            # profile.group_courses = self.course
             profile.save()
+            
+        """
+        custom_user = CustomUser.objects.get(id=1)
+        # Verwende die set() Methode, um die many-to-many Beziehung zu aktualisieren
+        custom_user.group_courses.set(selected_courses)  # Richtig
+
+        """
     
 
     def __str__(self):
-        return f"{self.username} - Alter: {self.age} - Institut: {self.institut} - Kurs: {self.cours}"
+        # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
+        course_titles = [course.title for course in self.courses.all()]
+        
+        return f"{self.username} - Alter: {self.age} - Institut: {self.institut} - Kurse: {', '.join(course_titles)}"
 
 class Profile(models.Model):
     name = models.CharField(max_length=225)
     uuid = models.UUIDField(default=uuid.uuid4, unique=True)
-    age_limit = models.CharField(max_length=20, choices=AGE_CHOICES,null=True)
+    age = models.CharField(max_length=20, choices=AGE_CHOICES,null=True)
     # user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Ändern Sie das related_name , related_name='user_profiles
 
     # def save(self, *args, **kwargs):
@@ -88,11 +100,18 @@ class Profile(models.Model):
     #     self.age_limit = self.user.age
     #     super().save(*args, **kwargs)
     
-    group_institutes=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
-    group_courses=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
+    group_institut=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
+    group_courses=models.ManyToManyField('Course')
+    # group_course=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
     
     def __str__(self):
-        return f"{self.name} - Alter: {self.age_limit} - Institut: {self.group_institutes} - Kurs: {self.group_courses}"
+        # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
+        course_titles = [course.title for course in self.group_courses.all()]
+        
+        return f"{self.name} - Alter: {self.age} - Institut: {self.group_institut} - Kurse: {', '.join(course_titles)}"
+    
+    class Meta:
+        verbose_name_plural = "Profile"
     
 
 class Movie(models.Model):
@@ -112,12 +131,16 @@ class Movie(models.Model):
     age_limit=models.CharField(max_length=20,choices=AGE_CHOICES,blank=True,null=True)
     
     group_institutes=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
-    group_courses=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
+    group_courses=models.ManyToManyField('Course')
+    # group_courses=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
     
     categories=models.CharField(max_length=20,choices=MOVIE_CATEGORIES,blank=True,null=True)
     
     def __str__(self):
-        return f"{self.title} - Alterslimit: {self.age_limit} - Institut: {self.group_institutes} - Kurs: {self.group_courses}"
+        # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
+        course_titles = [course.title for course in self.group_courses.all()]
+        
+        return f"{self.title} - Alterslimit: {self.age_limit} - Institut: {self.group_institutes} - Kurse: {', '.join(course_titles)}"
     
 class Video(models.Model):
     title:str = models.CharField(max_length=225,blank=True,null=True)
@@ -125,6 +148,17 @@ class Video(models.Model):
     
     def __str__(self):
         return f"{self.title}"
+    
+    
+class Course(models.Model):
+    title:str = models.CharField(max_length=225,blank=True,null=True)
+    
+    def __str__(self):
+        return f"{self.title}"
+    
+    class Meta:
+        verbose_name_plural = "Kurse"
+       
 """
 
 <----- bevor change Movie, Profile ------>

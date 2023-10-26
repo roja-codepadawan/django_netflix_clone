@@ -141,16 +141,18 @@ class Watch(View):
         try:
             # profile=Profile.objects.get(uuid=profile_id)
             profile=Profile.objects.get(uuid=profile_id)
-            age = profile.age_limit
-            cours = profile.group_courses
-            institut = profile.group_institutes
+            age = profile.age
+            courses = profile.group_courses.values_list('id', flat=True)
+            # courses = profile.group_courses
+            institut = profile.group_institut
             print(profile)
             
             # movies=Movie.objects.filter(age_limit=profile.age_limit)
             # Filtern Sie Filme nach age_limit, categories und institutes
             movies = Movie.objects.filter(
                 Q(age_limit=age) &  # Filme, die dem Alterslimit entsprechen
-                Q(group_courses=cours) &  # Filme, die der Kategorie entsprechen
+                Q(group_courses__in=courses) &  # Filme, die der Kategorie entsprechen
+                # Q(group_courses=courses) &  # Filme, die der Kategorie entsprechen
                 Q(group_institutes=institut)  # Filme, die dem Institut entsprechen
             ).distinct()
             

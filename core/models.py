@@ -35,7 +35,10 @@ GROUP_INSTITUTES=(
 #     ('Sommer','SO'),
 # )
 
-# Filmkategorien
+# Filmkategorien class Category(models.Model):
+#     class Meta:
+#         verbose_name = "Kategorie"
+#         verbose_name_plural = "Kategories"
 MOVIE_CATEGORIES=(
     ('Willkommen', 'Willkommen'),
     ('Dokumentarfilm', 'Dokumentarfilm'),
@@ -57,10 +60,10 @@ MOVIE_TYPE=(
 )
 
 class CustomUser(AbstractUser):
-    profiles = models.ManyToManyField('Profile')  # Ändern Sie das related_name , related_name='custom_users
-    age = models.CharField(max_length=20, choices=AGE_CHOICES, null=True, default='Studierende')
-    institut=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True,default='Willkommen')
-    courses=models.ManyToManyField('Course')
+    profiles = models.ManyToManyField('Profile',verbose_name="Profile")
+    age = models.CharField(verbose_name="User Status",max_length=20, choices=AGE_CHOICES,blank=True,null=True,default='Studierende')
+    institut=models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True,default='Willkommen')
+    courses=models.ManyToManyField('Course',verbose_name="Kurse",default='Willkommen')
     # course=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True,default='Willkommen')
     
     def save(self, *args, **kwargs):
@@ -70,8 +73,8 @@ class CustomUser(AbstractUser):
         profiles = self.profiles.all()
         for profile in profiles:
             profile.age = self.age
-            profile.group_institut = self.institut
-            profile.group_courses.set(self.courses.all())  # Verwende die set() Methode
+            profile.institut = self.institut
+            profile.courses.set(self.courses.all())  # Verwende die set() Methode
             # profile.group_courses = self.course
             profile.save()
             
@@ -91,8 +94,8 @@ class CustomUser(AbstractUser):
 
 class Profile(models.Model):
     name = models.CharField(max_length=225)
-    uuid = models.UUIDField(default=uuid.uuid4, unique=True)
-    age = models.CharField(max_length=20, choices=AGE_CHOICES,null=True)
+    uuid = models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
+    age = models.CharField(verbose_name="Profil Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True)
     # user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Ändern Sie das related_name , related_name='user_profiles
 
     # def save(self, *args, **kwargs):
@@ -100,15 +103,15 @@ class Profile(models.Model):
     #     self.age_limit = self.user.age
     #     super().save(*args, **kwargs)
     
-    group_institut=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
-    group_courses=models.ManyToManyField('Course')
+    institut=models.CharField(verbose_name="Institut",max_length=20,blank=True,choices=GROUP_INSTITUTES)
+    courses=models.ManyToManyField('Course',blank=True,verbose_name="Kurse",default='Willkommen')
     # group_course=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
     
     def __str__(self):
         # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
-        course_titles = [course.title for course in self.group_courses.all()]
+        course_titles = [course.title for course in self.courses.all()]
         
-        return f"{self.name} - Alter: {self.age} - Institut: {self.group_institut} - Kurse: {', '.join(course_titles)}"
+        return f"{self.name} - Alter: {self.age} - Institut: {self.institut} - Kurse: {', '.join(course_titles)}"
     
     class Meta:
         verbose_name_plural = "Profile"
@@ -118,7 +121,7 @@ class Movie(models.Model):
     title:str = models.CharField(max_length=225,null=True)
     description:str=models.TextField(null=True)
     created =models.DateTimeField(auto_now_add=True)
-    uuid=models.UUIDField(default=uuid.uuid4,unique=True)
+    uuid=models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
     
     # Das Feld für das Hochladen von mehreren Video-Dateien
     videos=models.ManyToManyField('Video')
@@ -126,21 +129,21 @@ class Movie(models.Model):
     # video_file = models.FileField(upload_to='movies', blank=True, null=True)
     flyer=models.ImageField(upload_to='flyers',blank=True,null=True)
     
-    type=models.CharField(max_length=10,choices=MOVIE_TYPE)
+    type=models.CharField(max_length=10,choices=MOVIE_TYPE,help_text="Einzel Film oder Serie(Veranstaltungsreihe)")
     
-    age_limit=models.CharField(max_length=20,choices=AGE_CHOICES,blank=True,null=True)
+    age_limit=models.CharField(verbose_name="Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True)
     
-    group_institutes=models.CharField(max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
-    group_courses=models.ManyToManyField('Course')
+    institut=models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
+    courses=models.ManyToManyField('Course', verbose_name="Kurse")
     # group_courses=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
     
-    categories=models.CharField(max_length=20,choices=MOVIE_CATEGORIES,blank=True,null=True)
+    categories=models.CharField(verbose_name="Kategorie",max_length=20,choices=MOVIE_CATEGORIES,blank=True,null=True)
     
     def __str__(self):
         # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
-        course_titles = [course.title for course in self.group_courses.all()]
+        course_titles = [course.title for course in self.courses.all()]
         
-        return f"{self.title} - Alterslimit: {self.age_limit} - Institut: {self.group_institutes} - Kurse: {', '.join(course_titles)}"
+        return f"{self.title} - Alterslimit: {self.age_limit} - Institut: {self.institut} - Kurse: {', '.join(course_titles)}"
     
 class Video(models.Model):
     title:str = models.CharField(max_length=225,blank=True,null=True)

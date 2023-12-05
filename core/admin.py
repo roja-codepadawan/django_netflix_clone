@@ -12,7 +12,7 @@ from django.contrib.admin import SimpleListFilter
 
 # User Filter
 class UserAgeFilter(SimpleListFilter):
-   title = _('Alter')
+   title = _('Status')
    parameter_name = 'age'
 
    def lookups(self, request, model_admin):
@@ -128,7 +128,7 @@ class UserCoursFilter(SimpleListFilter):
 
 # Profile Filter
 class ProfileAgeFilter(SimpleListFilter):
-   title = _('Alter')
+   title = _('Status')
    parameter_name = 'age'
    
    def lookups(self, request, model_admin):
@@ -163,12 +163,12 @@ class ProfileAgeFilter(SimpleListFilter):
    #      return queryset  # 'all' and default case
      
 class ProfileInstitutFilter(SimpleListFilter):
-   title = _('Institute')
+   title = _('Institut')
    parameter_name = 'group_institut'
     
    def lookups(self, request, model_admin):
       # Alle eindeutigen Institute aus dem Modell 'CustomUser' abrufen
-      institute = Profile.objects.values_list('group_institut', flat=True).distinct()
+      institute = Profile.objects.values_list('institut', flat=True).distinct()
       # Eine Liste von Tupeln erstellen, wobei der erste Wert das Institut ist
       # und der zweite Wert der Anzeigetext im Filter ist
       institute_choices = [(inst, inst) for inst in institute]
@@ -180,7 +180,7 @@ class ProfileInstitutFilter(SimpleListFilter):
    def queryset(self, request, queryset):
       selected_value = self.value()
       if selected_value:
-         return queryset.filter(group_institut=selected_value)
+         return queryset.filter(institut=selected_value)
       return queryset
 
    #  def lookups(self, request, model_admin):
@@ -218,7 +218,7 @@ class ProfileCoursFilter(SimpleListFilter):
    def queryset(self, request, queryset):
       selected_value = self.value()
       if selected_value:
-         return queryset.filter(group_courses=selected_value)
+         return queryset.filter(courses=selected_value)
       return queryset
    
    #  def lookups(self, request, model_admin):
@@ -240,7 +240,7 @@ class ProfileCoursFilter(SimpleListFilter):
 
 # Movie Filter
 class MovieAgeFilter(SimpleListFilter):
-   title = _('Alter')
+   title = _('Status')
    parameter_name = 'age_limit'
 
    def lookups(self, request, model_admin):
@@ -258,10 +258,10 @@ class MovieAgeFilter(SimpleListFilter):
 
 class MovieInstitutFilter(SimpleListFilter):
    title = _('Institut')
-   parameter_name = 'group_institutes'
+   parameter_name = 'institut'
 
    def lookups(self, request, model_admin):
-      institutes = Movie.objects.values_list('group_institutes', flat=True).distinct()
+      institutes = Movie.objects.values_list('institut', flat=True).distinct()
       institute_choices = [(inst, inst) for inst in institutes]
       return (
          *institute_choices,
@@ -270,12 +270,12 @@ class MovieInstitutFilter(SimpleListFilter):
    def queryset(self, request, queryset):
       selected_value = self.value()
       if selected_value:
-         return queryset.filter(group_institutes=selected_value)
+         return queryset.filter(institut=selected_value)
       return queryset
 
 class MovieCoursFilter(SimpleListFilter):
    title = _('Kurse')
-   parameter_name = 'group_courses'
+   parameter_name = 'courses'
 
    def lookups(self, request, model_admin):
       courses = Course.objects.all()
@@ -287,7 +287,7 @@ class MovieCoursFilter(SimpleListFilter):
    def queryset(self, request, queryset):
       selected_value = self.value()
       if selected_value:
-         return queryset.filter(group_courses=selected_value)
+         return queryset.filter(courses=selected_value)
       return queryset
 
 
@@ -307,7 +307,7 @@ class CustomUserAdmin(admin.ModelAdmin):
    def display_age(self, obj):
       return obj.age
 
-   display_age.short_description = "Alter"
+   display_age.short_description = "Status"
    
    def display_institut(self, obj):
       return obj.institut
@@ -337,15 +337,15 @@ class ProfileAdmin(admin.ModelAdmin):
    def display_profile_age(self, obj):
       return obj.age
     
-   display_profile_age.short_description = "Alter"
+   display_profile_age.short_description = "Status"
     
    def display_profile_institut(self, obj):
-      return obj.group_institut
+      return obj.institut
     
    display_profile_institut.short_description = "Institut"
     
    def display_profile_courses(self, obj):
-      courses = obj.group_courses.all()
+      courses = obj.courses.all()
       if courses:
           return ', '.join([course.title for course in courses])
       else:
@@ -366,15 +366,15 @@ class MovieAdmin(admin.ModelAdmin):
    def display_movie_age(self, obj):
       return obj.age_limit
    
-   display_movie_age.short_description = "Alter"
+   display_movie_age.short_description = "Status"
    
    def display_movie_institute(self, obj):
-      return obj.group_institutes
+      return obj.institut
       
    display_movie_institute.short_description = "Institut"
    
    def display_movie_courses(self, obj):
-      courses = obj.group_courses.all()
+      courses = obj.courses.all()
       if courses:
           return ', '.join([course.title for course in courses])
       else:

@@ -115,6 +115,11 @@ class ProfileList(View):
 class ProfileCreate(View):
     def get(self,request,*args, **kwargs):
         form=ProfileForm()
+        # Erstellen Sie ein neues Profilformular und setzen Sie die Standardwerte
+        # form = ProfileForm(initial={
+        #     'age': 'Studierende',
+        #     'group_institut': 'Willkommen',
+        # })
 
         return render(request,'profileCreate.html',{
             'form':form
@@ -125,8 +130,16 @@ class ProfileCreate(View):
 
        
         if form.is_valid():
+            # cleaned_data = form.cleaned_data
+            # if not cleaned_data.get('age'):
+            #     cleaned_data['age'] = 'Studierende'
+            # if not cleaned_data.get('group_institut'):
+            #     cleaned_data['group_institut'] = 'Willkommen'
+
+            
             print(form.cleaned_data)
             profile = Profile.objects.create(**form.cleaned_data)
+            print(profile)
             if profile:
                 request.user.profiles.add(profile)
                 return redirect(f'/watch/{profile.uuid}') #uuid
@@ -142,21 +155,30 @@ class Watch(View):
             # profile=Profile.objects.get(uuid=profile_id)
             profile=Profile.objects.get(uuid=profile_id)
             age = profile.age
-            courses = profile.group_courses.values_list('id', flat=True)
+            institut = profile.institut
+            courses = profile.courses.values_list('id', flat=True)
             # courses = profile.group_courses
-            institut = profile.group_institut
             print(profile)
             
             # movies=Movie.objects.filter(age_limit=profile.age_limit)
             # Filtern Sie Filme nach age_limit, categories und institutes
             movies = Movie.objects.filter(
                 Q(age_limit=age) &  # Filme, die dem Alterslimit entsprechen
-                Q(group_courses__in=courses) &  # Filme, die der Kategorie entsprechen
+                Q(institut=institut) &  # Filme, die dem Institut entsprechen
+                Q(courses__in=courses) # Filme, die der Kategorie entsprechen
                 # Q(group_courses=courses) &  # Filme, die der Kategorie entsprechen
-                Q(group_institutes=institut)  # Filme, die dem Institut entsprechen
             ).distinct()
             
             print(movies)
+            
+            # Wenn keine Filme mit den Profilwerten gefunden werden
+            # if not movies:
+            #     # Holen Sie Filme mit den Standardwerten
+            #     default_movies = Movie.objects.filter(
+            #         Q(age_limit='Studierende') &
+            #         Q(institut='Willkommen') &
+            #         Q(courses='Willkommen')
+            #     ).distinct()
             
             # Extrahiere die eindeutigen Kategorien aus der movies-Abfrage
             movies_by_category = movies.values_list('categories', flat=True).distinct()

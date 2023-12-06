@@ -101,7 +101,8 @@ class ProfileList(View):
     
     def get(self,request,*args, **kwargs):
 
-        profiles=request.user.profiles.all()
+        profiles = Profile.objects.filter(user=request.user)
+        # profiles=request.user.profiles.all()
 
         print(profiles)
 
@@ -135,7 +136,10 @@ class ProfileCreate(View):
             #     cleaned_data['age'] = 'Studierende'
             # if not cleaned_data.get('group_institut'):
             #     cleaned_data['group_institut'] = 'Willkommen'
-
+            # Set the user field to the current user before saving
+            # profile = form.save(commit=False)
+            # profile.user = request.user
+            # profile.save()
             
             print(form.cleaned_data)
             profile = Profile.objects.create(**form.cleaned_data)
@@ -219,9 +223,12 @@ class Watch(View):
             except :
                 showcase=None
             
-
-            if profile not in request.user.profiles.all():
+            #profiles = Profile.objects.filter(user=request.user)
+            if profile != request.user.profiles:
                 return redirect(to='core:profile_list')
+
+            # if profile not in request.user.profiles.all():
+            #     return redirect(to='core:profile_list')
             return render(request,'movieList.html',{
             'movies':movies,
            

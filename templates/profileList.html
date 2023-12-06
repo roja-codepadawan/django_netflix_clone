@@ -22,17 +22,17 @@ PHIL II FLIX - Profile
             
                 <div class="w-32 h-32 m-4  bg-sky-700 flex justify-center items-center flex-col rounded-md cursor-pointer">
                     <p class='text-6xl'>
-                        {{profile.name | slice:":1"}}
+                        {{profile.name | slice:":1" | capfirst }}
                     </p>
-                    <p class='text-lg'>
+                    <!-- <p class='text-lg'>
                         {{profile.name}}
-                    </p>
+                    </p> -->
                 </div>
             </a>
         {% endfor %}
 
         </div>
-        {% if request.user.profiles.all|length < 5 %}
+        {% if request.user.profiles.all|length < 0 %}
       
             <div class="flex justify-center items-center">
                 <a href="{% url 'core:profile_create' %}">

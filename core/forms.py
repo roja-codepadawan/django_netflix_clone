@@ -1,4 +1,4 @@
-from core.models import Profile
+from core.models import Profile, User
 from django.forms import ModelForm
 
 # class ProfileForm(ModelForm):
@@ -11,7 +11,7 @@ class ProfileForm(ModelForm):
 
     class Meta:
         model = Profile
-        exclude = ['uuid', 'courses']
+        exclude = ['uuid', 'courses', 'user']
 
     # def __init__(self, *args, **kwargs):
     #     super().__init__(*args, **kwargs)

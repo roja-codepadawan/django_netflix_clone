@@ -9,8 +9,10 @@ from django.dispatch import receiver
 null=True: um sicherzustellen, dass das Feld nicht NULL (leer) sein kann
 blank=True: um sicherzustellen, dass das Feld im Formular nicht leer gelassen werden kann
 editable=False: wird verwendet, um anzugeben, ob ein Feld in einem Modell bearbeitbar (editierbar) sein soll oder nicht
-"""
 
+blank=True erlaubt das Leerlassen des Feldes im Formular, und 
+null=True erlaubt es, dass das Feld in der Datenbank NULL sein kann.
+"""
 
 # Altersgruppen oder Altersbeschränkungen
 AGE_CHOICES=(
@@ -42,6 +44,7 @@ GROUP_INSTITUTES=(
 #     class Meta:
 #         verbose_name = "Kategorie"
 #         verbose_name_plural = "Kategories"
+
 MOVIE_CATEGORIES=(
     ('Willkommen', 'Willkommen'),
     ('Dokumentarfilm', 'Dokumentarfilm'),
@@ -63,12 +66,12 @@ MOVIE_TYPE=(
 )
 
 class Profile(models.Model):
-    user = models.OneToOneField('CustomUser', on_delete=models.CASCADE)
     name = models.CharField(max_length=255, blank=True, null=True)
-    
     uuid = models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
+    user = models.OneToOneField('CustomUser', on_delete=models.CASCADE)
     
-    age = models.CharField(max_length=20, choices=AGE_CHOICES, blank=True, null=True, default='Studierende')
+    
+    age = models.CharField(verbose_name="Status", max_length=20, choices=AGE_CHOICES, blank=True, null=True, default='Studierende')
     institut = models.CharField(max_length=20, choices=GROUP_INSTITUTES, blank=True, null=True, default='Willkommen')
     courses = models.ManyToManyField('Course', verbose_name="Kurse")
 
@@ -86,14 +89,11 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 #             instance.name = instance.user.username
 #             instance.save()
 
-
 class CustomUser(AbstractUser):
     profiles = models.OneToOneField(Profile, on_delete=models.CASCADE, null=True, blank=True)
 
-    age = models.CharField(verbose_name="User Status", max_length=20, choices=AGE_CHOICES, blank=True, null=True,
-                           default='Studierende')
-    institut = models.CharField(verbose_name="Institut", max_length=20, choices=GROUP_INSTITUTES, blank=True, null=True,
-                                default='Willkommen')
+    age = models.CharField(verbose_name="Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True,default='Studierende')
+    institut = models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True,default='Willkommen')
     courses = models.ManyToManyField('Course', verbose_name="Kurse")
     
     def save(self, *args, **kwargs):
@@ -117,7 +117,7 @@ class CustomUser(AbstractUser):
         return self.profiles
 
     def __str__(self):
-        return f"{self.username} - Name: {self.get_user_profile().name} - Alter: {self.age} - Institut: {self.institut}"
+        return f"{self.username}" #  - Name: {self.get_user_profile().name} - Alter: {self.age} - Institut: {self.institut} - Kursse: {self.courses}
      
 @receiver(post_save, sender=CustomUser)
 def update_user_profile(sender, instance, **kwargs):
@@ -263,7 +263,7 @@ class Profile(models.Model):
 
 class Movie(models.Model):
     title:str=models.CharField(max_length=225,null=True)
-    description:str=models.TextField()
+    description:str=models.TextField(blank=True, null=True)
     created=models.DateTimeField(auto_now_add=True)
     uuid=models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
     

@@ -1,9 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, User
-import uuid
-
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+import uuid
 
 """
 null=True: um sicherzustellen, dass das Feld nicht NULL (leer) sein kann
@@ -129,138 +128,6 @@ def update_user_profile(sender, instance, **kwargs):
         instance.profiles.courses.set(instance.courses.all())
         instance.profiles.save()
 
-"""
-class CustomUser(AbstractUser):
-    profiles = models.OneToOneField(Profile, on_delete=models.CASCADE)
-    age = models.CharField(verbose_name="User Status", max_length=20, choices=AGE_CHOICES, blank=True, null=True,
-                           default='Studierende')
-    institut = models.CharField(verbose_name="Institut", max_length=20, choices=GROUP_INSTITUTES, blank=True, null=True,
-                                default='Willkommen')
-    courses = models.ManyToManyField('Course', verbose_name="Kurse")
-
-    def save(self, *args, **kwargs):
-        # Hier wird der Benutzer zuerst gespeichert
-        super().save(*args, **kwargs)
-        
-        # Wenn der Benutzer keine Kurse ausgewählt hat, setze den Standardkurs auf "Willkommen"
-        if not self.courses.exists():
-            default_course = Course.objects.filter(title='Willkommen').first()
-            if default_course:
-                self.courses.add(default_course)
-
-    def __str__(self):
-        # Zugriff auf das 'name'-Attribut im Profil
-        return f"{self.username} - Name: {self.profile.name}"
-     
-    @property
-    def profile(self):
-        return self.profiles.first()
-
-@receiver(post_save, sender=CustomUser)
-def update_profile_on_user_save(sender, instance, **kwargs):
-   # Wenn der Benutzer keine Kurse ausgewählt hat, setze den Standardkurs auf "Willkommen"
-   if not instance.courses.exists():
-      default_course = Course.objects.filter(title='Willkommen').first()
-      if default_course:
-         instance.courses.add(default_course)
-   
-   # Nachdem der Benutzer gespeichert wurde, füge ihn zum "profiles"-Feld hinzu
-   from core.models import Profile
-   profile, created = Profile.objects.get_or_create(user=instance)
-   profile.age = instance.age
-   profile.institut = instance.institut
-   profile.courses.set(instance.courses.all())
-   profile.save()
-
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        profile = Profile.objects.create(user=instance)
-        profile.name = instance.username
-        profile.save()
-# @receiver(post_save, sender=User)
-# def create_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         Profile.objects.create(user=instance, name=instance.username)
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
-
-# core/models.py
-class Profile(models.Model):
-    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255)  # Hier wird der Benutzername gespeichert
-    age = models.CharField(max_length=20, choices=AGE_CHOICES, blank=True, null=True, default='Studierende')
-    institut = models.CharField(max_length=20, choices=GROUP_INSTITUTES, blank=True, null=True, default='Willkommen')
-    courses = models.ManyToManyField('Course', verbose_name="Kurse")
-
-    def __str__(self):
-        return f"{self.user.username}'s Profile"
-
-
-"""
-
-
-
-# class CustomUser(AbstractUser):
-#     profiles = models.ManyToManyField('Profile',verbose_name="Profile")
-#     age = models.CharField(verbose_name="User Status",max_length=20, choices=AGE_CHOICES,blank=True,null=True,default='Studierende')
-#     institut=models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True,default='Willkommen')
-#     courses=models.ManyToManyField('Course',verbose_name="Kurse",default='Willkommen')
-#     # course=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True,default='Willkommen')
-    
-#     def save(self, *args, **kwargs):
-#         super().save(*args, **kwargs)
-        
-#         # Update profile age_limit and group_courses
-#         profiles = self.profiles.all()
-#         for profile in profiles:
-#             profile.age = self.age
-#             profile.institut = self.institut
-#             profile.courses.set(self.courses.all())  # Verwende die set() Methode
-#             # profile.group_courses = self.course
-#             profile.save()
-            
-#         """
-#         custom_user = CustomUser.objects.get(id=1)
-#         # Verwende die set() Methode, um die many-to-many Beziehung zu aktualisieren
-#         custom_user.group_courses.set(selected_courses)  # Richtig
-
-#         """
-    
-
-#     def __str__(self):
-#         # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
-#         course_titles = [course.title for course in self.courses.all()]
-        
-#         return f"{self.username} - Alter: {self.age} - Institut: {self.institut} - Kurse: {', '.join(course_titles)}"
-
-# class Profile(models.Model):
-#     name = models.CharField(max_length=225)
-#     uuid = models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
-#     age = models.CharField(verbose_name="Profil Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True)
-#     # user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Ändern Sie das related_name , related_name='user_profiles
-
-#     # def save(self, *args, **kwargs):
-#     #     # Stellen Sie sicher, dass das Alterslimit mit dem Alter des Benutzers übereinstimmt
-#     #     self.age_limit = self.user.age
-#     #     super().save(*args, **kwargs)
-    
-#     institut=models.CharField(verbose_name="Institut",max_length=20,blank=True,choices=GROUP_INSTITUTES)
-#     courses=models.ManyToManyField('Course',blank=True,verbose_name="Kurse",default='Willkommen')
-#     # group_course=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
-    
-#     def __str__(self):
-#         # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
-#         course_titles = [course.title for course in self.courses.all()]
-        
-#         return f"{self.name} - Alter: {self.age} - Institut: {self.institut} - Kurse: {', '.join(course_titles)}"
-    
-#     class Meta:
-#         verbose_name_plural = "Profile"
-    
-
 class Movie(models.Model):
     title:str=models.CharField(max_length=225,null=True)
     description:str=models.TextField(blank=True, null=True)
@@ -305,10 +172,53 @@ class Course(models.Model):
     
     class Meta:
         verbose_name_plural = "Kurse"
+
+
        
 """
 
 <----- bevor change Movie, Profile ------>
+
+#         custom_user = CustomUser.objects.get(id=1)
+#         # Verwende die set() Methode, um die many-to-many Beziehung zu aktualisieren
+#         custom_user.group_courses.set(selected_courses)  # Richtig
+
+#         
+    
+
+#     def __str__(self):
+#         # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
+#         course_titles = [course.title for course in self.courses.all()]
+        
+#         return f"{self.username} - Alter: {self.age} - Institut: {self.institut} - Kurse: {', '.join(course_titles)}"
+
+# class Profile(models.Model):
+#     name = models.CharField(max_length=225)
+#     uuid = models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
+#     age = models.CharField(verbose_name="Profil Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True)
+#     # user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Ändern Sie das related_name , related_name='user_profiles
+
+#     # def save(self, *args, **kwargs):
+#     #     # Stellen Sie sicher, dass das Alterslimit mit dem Alter des Benutzers übereinstimmt
+#     #     self.age_limit = self.user.age
+#     #     super().save(*args, **kwargs)
+    
+#     institut=models.CharField(verbose_name="Institut",max_length=20,blank=True,choices=GROUP_INSTITUTES)
+#     courses=models.ManyToManyField('Course',blank=True,verbose_name="Kurse",default='Willkommen')
+#     # group_course=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
+    
+#     def __str__(self):
+#         # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
+#         course_titles = [course.title for course in self.courses.all()]
+        
+#         return f"{self.name} - Alter: {self.age} - Institut: {self.institut} - Kurse: {', '.join(course_titles)}"
+    
+#     class Meta:
+#         verbose_name_plural = "Profile"
+
+
+
+
 
 class CustomUser(AbstractUser):
     profiles = models.ManyToManyField('Profile')  # Ändern Sie das related_name , related_name='custom_users
@@ -521,4 +431,96 @@ class Video(models.Model):
     title:str = models.CharField(max_length=225,blank=True,null=True)
     file=models.FileField(upload_to='movies')
 
+
+
+
+
+class CustomUser(AbstractUser):
+    profiles = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    age = models.CharField(verbose_name="User Status", max_length=20, choices=AGE_CHOICES, blank=True, null=True,
+                           default='Studierende')
+    institut = models.CharField(verbose_name="Institut", max_length=20, choices=GROUP_INSTITUTES, blank=True, null=True,
+                                default='Willkommen')
+    courses = models.ManyToManyField('Course', verbose_name="Kurse")
+
+    def save(self, *args, **kwargs):
+        # Hier wird der Benutzer zuerst gespeichert
+        super().save(*args, **kwargs)
+        
+        # Wenn der Benutzer keine Kurse ausgewählt hat, setze den Standardkurs auf "Willkommen"
+        if not self.courses.exists():
+            default_course = Course.objects.filter(title='Willkommen').first()
+            if default_course:
+                self.courses.add(default_course)
+
+    def __str__(self):
+        # Zugriff auf das 'name'-Attribut im Profil
+        return f"{self.username} - Name: {self.profile.name}"
+     
+    @property
+    def profile(self):
+        return self.profiles.first()
+
+@receiver(post_save, sender=CustomUser)
+def update_profile_on_user_save(sender, instance, **kwargs):
+   # Wenn der Benutzer keine Kurse ausgewählt hat, setze den Standardkurs auf "Willkommen"
+   if not instance.courses.exists():
+      default_course = Course.objects.filter(title='Willkommen').first()
+      if default_course:
+         instance.courses.add(default_course)
+   
+   # Nachdem der Benutzer gespeichert wurde, füge ihn zum "profiles"-Feld hinzu
+   from core.models import Profile
+   profile, created = Profile.objects.get_or_create(user=instance)
+   profile.age = instance.age
+   profile.institut = instance.institut
+   profile.courses.set(instance.courses.all())
+   profile.save()
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        profile = Profile.objects.create(user=instance)
+        profile.name = instance.username
+        profile.save()
+# @receiver(post_save, sender=User)
+# def create_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         Profile.objects.create(user=instance, name=instance.username)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
+
+# core/models.py
+class Profile(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)  # Hier wird der Benutzername gespeichert
+    age = models.CharField(max_length=20, choices=AGE_CHOICES, blank=True, null=True, default='Studierende')
+    institut = models.CharField(max_length=20, choices=GROUP_INSTITUTES, blank=True, null=True, default='Willkommen')
+    courses = models.ManyToManyField('Course', verbose_name="Kurse")
+
+    def __str__(self):
+        return f"{self.user.username}'s Profile"
+
+
+# class CustomUser(AbstractUser):
+#     profiles = models.ManyToManyField('Profile',verbose_name="Profile")
+#     age = models.CharField(verbose_name="User Status",max_length=20, choices=AGE_CHOICES,blank=True,null=True,default='Studierende')
+#     institut=models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True,default='Willkommen')
+#     courses=models.ManyToManyField('Course',verbose_name="Kurse",default='Willkommen')
+#     # course=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True,default='Willkommen')
+    
+#     def save(self, *args, **kwargs):
+#         super().save(*args, **kwargs)
+        
+#         # Update profile age_limit and group_courses
+#         profiles = self.profiles.all()
+#         for profile in profiles:
+#             profile.age = self.age
+#             profile.institut = self.institut
+#             profile.courses.set(self.courses.all())  # Verwende die set() Methode
+#             # profile.group_courses = self.course
+#             profile.save()
+            
 """

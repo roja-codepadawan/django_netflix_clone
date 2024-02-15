@@ -80,19 +80,19 @@ class Home(View):
             return redirect(to='/profile/')
         return render(request, 'index.html')
 
-        # Verwende URL-Parameter
-    def post(self, request, *args, **kwargs):
-        try:
-            email = request.POST.get('email')
-            user_exists = CustomUser.objects.filter(email=email).exists()
+    #     # Verwende URL-Parameter
+    # def post(self, request, *args, **kwargs):
+    #     try:
+    #         email = request.POST.get('email')
+    #         user_exists = CustomUser.objects.filter(email=email).exists()
 
-            if user_exists:
-                return redirect(f'/accounts/login?email={email}')
-            else:
-                return redirect(f'/accounts/signup?email={email}')
+    #         if user_exists:
+    #             return redirect(f'/accounts/login?email={email}')
+    #         else:
+    #             return redirect(f'/accounts/signup?email={email}')
 
-        except Exception as e:
-            print("Error:", str(e))
+        # except Exception as e:
+        #     print("Error:", str(e))
         return render(request, 'index.html')
 
 
@@ -217,7 +217,6 @@ class Watch(View):
             ).distinct()
             """
             
-
             try:
                 showcase=movies[0]
             except :

@@ -23,7 +23,8 @@ AGE_CHOICES=(
 GROUP_INSTITUTES=(
     ('Willkommen', 'Willkommen'),
     ('IDP', 'IDP'), 
-    ('IDM', 'IDM')
+    ('IDM', 'IDM'),
+    ('IDB', 'IDB'),
 )
 
 # # Kursgruppen oder Kursnummern

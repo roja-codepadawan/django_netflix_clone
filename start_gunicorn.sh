@@ -1,8 +1,8 @@
 #!/bin/bash
 
-NAME="philflix"                                      # Name of the application
+NAME="phil2flix"                                      # Name of the application
 DJANGODIR=/opt/www/django_philflix                    # Django project directory
-SOCKFILE=/opt/www/django_philflix/gunicorn.sock       # we will communicate using this unix socket
+SOCKFILE=/opt/www/django_philflix/philflix/gunicorn.sock       # we will communicate using this unix socket
 USER=iron-man                                        # the user to run as
 GROUP=iron-man                                       # the group to run as
 NUM_WORKERS=3                                        # how many worker processes should Gunicorn spawn
@@ -33,7 +33,7 @@ exec gunicorn $DJANGO_WSGI_MODULE:application \
   --log-level=debug \
   --log-file=-
 
-
+# philflix.wsgi:application --name phil2flix --workers 3 --user=iron --group=iron --bind=unix:/opt/www/django_philflix/philflix/gunicorn_phil2flix.sock --log-level=debug --log-file=-
 
 # Aktivieren Sie Ihre Python-Virtualenv
 #source /opt/www/django_philflix/venv/bin/activate

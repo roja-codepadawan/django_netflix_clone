@@ -13,31 +13,38 @@ See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 from django.utils.translation import gettext_lazy as _
 import json
-
-
 
 ####################
 #       CORE       #
 ####################
 
+# load the environment variables from your .env file into your settings.py
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
-try:
-    SECRET_KEY = os.environ["SECRET_KEY"]
-except KeyError as e:
-    raise RuntimeError("Could not find a SECRET_KEY in environment") from e
+# Versuche, die SECRET_KEY aus der Umgebungsvariable zu lesen
+SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = os.environ["SECRET_KEY"]
+# SECRET_KEY = os.getenv("SECRET_KEY")
 
+# Wenn die Umgebungsvariable nicht gefunden wird, wirf einen Fehler
+if not SECRET_KEY:
+    raise RuntimeError("Could not find a SECRET_KEY in environment")
+# SECRET_KEY = os.getenv("SECRET_KEY")
+# try:
+#     SECRET_KEY = os.environ["SECRET_KEY"]
+# except KeyError as e:
+#     raise RuntimeError("Could not find a SECRET_KEY in environment") from e
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.getenv("DEBUG") == False  # Convert to boolean if needed False
 DEBUG = False # True
-
 
 # Lade die sensiblen Informationen aus credentials.json
 with open('credentials.json') as f:
@@ -53,10 +60,9 @@ EMAIL_PASSWORD = credentials.get('EMAIL_PASSWORD')
 ALLOWED_HOSTS = [
     'localhost',
 	'134.176.98.126',
-	'.fb07dida-jarvis.didaktik.physik.uni-giessen.de'
+	'.fb07dida-jarvis.didaktik.physik.uni-giessen.de',
+    '.phil2flix.uni-giessen.de',
 ]
-
-
 
 
 # Application definition
@@ -204,7 +210,8 @@ DEFAULT_CHARSET = "utf-8"
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 # Set the directory where static files will be collected for deployment
-STATIC_ROOT = BASE_DIR/'static_root' 
+# STATIC_ROOT = BASE_DIR/'static_root/' 
+STATIC_ROOT = '/opt/www/django_philflix/static/'
 STATIC_URL = '/static/'
 
 # Media files (uploads)
@@ -215,7 +222,7 @@ MEDIA_URL='/media/'
 # A list of locations of additional static files
 # Set the directory where your project-specific static files are located
 STATICFILES_DIRS=[
-    BASE_DIR/'static',
+    BASE_DIR/'static/',
 ]
 
 # The default file storage backend used during the build process

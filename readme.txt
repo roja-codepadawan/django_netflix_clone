@@ -11,7 +11,7 @@ python manage.py collectstatic
 
 python3 manage.py inspectdb
 python3 manage.py dbshell
-.tabeles
+.tables
 python manage.py shell
 python manage.py flush
 

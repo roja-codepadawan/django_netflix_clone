@@ -67,20 +67,51 @@ class Watch(View):
         try:
             # profile=Profile.objects.get(uuid=profile_id)
             profile=Profile.objects.get(uuid=profile_id)
-            age = profile.age
-            institut = profile.institut
-            courses = profile.courses.values_list('id', flat=True)
+            age_profile = profile.age
+            institute_profile = profile.institut
+            # courses_profile = profile.courses.values_list('id', flat=True)
+            courses_profile = list(profile.courses.values_list('id', flat=True))
+            courses_profile.append(1)
             # courses = profile.group_courses
             print(profile)
             
-            # movies=Movie.objects.filter(age_limit=profile.age_limit)
+            with open('output.txt', 'a') as f:
+                now = datetime.datetime.now()  # Get the current date and time
+                f.write(f"\n----{now}----\n")  # Write the date and time to the file
+                
+                # # Write the properties of the Movie object to the file
+                # for key, value in movie_obj.__dict__.items():
+                #     f.write(f'{key}: {value}\n')
+                f.write(f"\n--------\n") # Add a newline to separate the blocks
+                # Write the URL of the video to the file
+                f.write(f"status liste : {str(age_profile)}\n")
+                f.write(f"\n--------\n") # Add a newline to separate the blocks
+                # Write the URL of the video to the file
+                f.write(f"inst liste : {str(institute_profile)}\n")
+                f.write(f"\n--------\n") # Add a newline to separate the blocks
+                # Write the URL of the video to the file
+                f.write(f"cours liste : {str(courses_profile)}\n")
+            
+            # Filter movies based on age limit, categories and institutes
             # Filtern Sie Filme nach age_limit, categories und institutes
             movies = Movie.objects.filter(
-                Q(age_limit=age) &  # Filme, die dem Alterslimit entsprechen
-                Q(institut=institut) &  # Filme, die dem Institut entsprechen
-                Q(courses__in=courses) # Filme, die der Kategorie entsprechen
-                # Q(group_courses=courses) &  # Filme, die der Kategorie entsprechen
+                Q(age_limit=age_profile) &  # Filme, die dem Alterslimit entsprechen
+                Q(institut=institute_profile) &  # Filme, die dem Institut entsprechen
+                Q(courses__in=courses_profile) #| # Filme, die der Kategorie entsprechen
+                # Q(institut='Willkommen') # | # Filme, die dem Institut "Willkommen" entsprechen
+                # Q(courses='Willkommen')  # Filme, die dem Kurs "Willkommen" entsprechen
             ).distinct()
+            
+            # # Get movies with institut and course "Willkommen"
+            # welcome_movies = Movie.objects.filter(
+            #     Q(institut='Willkommen') |  # Filme, die dem Institut "Willkommen" entsprechen
+            #     Q(courses__title='Willkommen')  # Filme, die dem Kurs "Willkommen" entsprechen
+            # ).distinct()
+
+            # # Combine the two QuerySets
+            # # final_movies = movies.union(welcome_movies)
+            # final_movies = movies | welcome_movies
+            
             
             print(movies)
             

@@ -1783,3 +1783,828 @@ url: /media/movies/media_root.mp4
 full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
 
 ----End of Block----
+
+----2024-04-04 09:40:08.149676----
+_state: <django.db.models.base.ModelState object at 0x7f3ae4b585b0>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 09:40:14.701191----
+_state: <django.db.models.base.ModelState object at 0x7f3ae4b97cd0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 09:56:21.969032----
+_state: <django.db.models.base.ModelState object at 0x7fe7feff0520>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 10:04:21.184514----
+_state: <django.db.models.base.ModelState object at 0x7fe7fef39f00>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 10:07:41.072195----
+_state: <django.db.models.base.ModelState object at 0x7fe7fed9fd30>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 10:07:42.826268----
+_state: <django.db.models.base.ModelState object at 0x7fe7fef69300>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 10:07:50.801638----
+_state: <django.db.models.base.ModelState object at 0x7fe7fed9dae0>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 10:08:36.718148----
+_state: <django.db.models.base.ModelState object at 0x7f1aa1b8f040>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 10:08:45.601223----
+_state: <django.db.models.base.ModelState object at 0x7f1aa1c20ac0>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 10:09:31.001825----
+_state: <django.db.models.base.ModelState object at 0x7f1aa191d510>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 10:27:32.529552----
+_state: <django.db.models.base.ModelState object at 0x7f6c26f74580>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 10:27:40.782874----
+_state: <django.db.models.base.ModelState object at 0x7f6c26fceef0>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 10:36:21.856339----
+
+--------
+url: <QuerySet [1, 2, 3, 4, 5]>
+
+----2024-04-04 10:36:22.695167----
+
+--------
+url: <QuerySet [1, 2, 3, 4, 5]>
+
+----2024-04-04 10:36:25.700933----
+
+--------
+url: <QuerySet [1, 2, 3, 4, 5]>
+
+----2024-04-04 10:47:11.500827----
+
+--------
+url: <QuerySet [1, 2, 3, 4, 5]>
+
+----2024-04-04 10:50:26.200413----
+
+--------
+url: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 10:50:26.936601----
+
+--------
+url: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:00:55.871849----
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:00:58.814793----
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:01:40.975787----
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:01:43.021931----
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:01:45.672985----
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:02:38.043536----
+
+--------
+inst liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:02:38.543202----
+
+--------
+inst liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:02:39.153382----
+
+--------
+inst liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:02:39.603798----
+
+--------
+inst liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:02:40.101485----
+
+--------
+inst liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:02:40.381433----
+
+--------
+inst liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:02:41.136009----
+
+--------
+inst liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:02:41.873032----
+
+--------
+inst liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [2, 1]
+
+----2024-04-04 11:04:50.529452----
+
+--------
+status liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [1, 1]
+
+----2024-04-04 11:04:55.032950----
+
+--------
+status liste : Studierende
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [1, 1]
+
+----2024-04-04 11:05:23.223005----
+
+--------
+status liste : Studierende
+
+--------
+inst liste : Willkommen
+
+--------
+cours liste : [1, 1]
+
+----2024-04-04 11:07:56.312605----
+
+--------
+status liste : Studierende
+
+--------
+inst liste : IDP Willkommen
+
+--------
+cours liste : [1, 1]
+
+----2024-04-04 11:08:13.808954----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP Willkommen
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:09:28.496429----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP Willkommen
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:09:29.767902----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP Willkommen
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:10:11.487436----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : ['I', 'D', 'P', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:14:43.622331----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:14:44.170820----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:15:11.317252----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:15:38.309833----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:15:39.068914----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:16:02.954544----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:16:03.828298----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:16:04.529221----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:16:29.083776----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:16:29.471770----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:16:29.616399----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:16:50.077748----
+
+--------
+status liste : Studierende
+
+--------
+
+----2024-04-04 11:18:18.089242----
+
+--------
+status liste : Studierende
+
+--------
+
+----2024-04-04 11:18:59.087015----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:19:39.832566----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:19:40.364337----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:19:52.582277----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:20:21.474041----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:20:26.055006----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:20:26.824930----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:20:27.226411----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:20:35.727270----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:20:47.840598----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:20:52.645292----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:20:59.866066----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:21:00.674541----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:21:05.350075----
+
+--------
+status liste : Studierende
+
+--------
+
+----2024-04-04 11:21:06.198741----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:21:14.490756----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:21:15.155806----
+
+--------
+status liste : Mitarbeiter
+
+--------
+
+----2024-04-04 11:21:20.376715----
+
+--------
+inst liste : IDP
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:21:24.183131----
+_state: <django.db.models.base.ModelState object at 0x7f11a716f010>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 11:21:41.534186----
+_state: <django.db.models.base.ModelState object at 0x7f11a70fae30>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 11:21:57.940519----
+_state: <django.db.models.base.ModelState object at 0x7f11a70fbbb0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 11:22:23.087627----
+_state: <django.db.models.base.ModelState object at 0x7f11a6fe91b0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 11:22:25.798720----
+
+--------
+inst liste : IDP
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:22:34.232887----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]

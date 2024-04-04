@@ -2823,3 +2823,24 @@ inst liste : ['IDP', 'Willkommen']
 
 --------
 cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 12:43:26.613611----
+_state: <django.db.models.base.ModelState object at 0x7fe703d8bb50>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----

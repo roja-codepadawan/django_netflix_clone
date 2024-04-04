@@ -1615,3 +1615,171 @@ url: /media/movies/media_root.mp4
 full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
 
 ----End of Block----
+
+----2024-04-04 09:13:44.649646----
+_state: <django.db.models.base.ModelState object at 0x7f713398ef80>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 09:13:51.674134----
+_state: <django.db.models.base.ModelState object at 0x7f7133a21000>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 09:14:00.292132----
+_state: <django.db.models.base.ModelState object at 0x7f7133888a90>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 09:14:07.923123----
+_state: <django.db.models.base.ModelState object at 0x7f71338cc1f0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 09:22:43.863969----
+_state: <django.db.models.base.ModelState object at 0x7f71338c3c70>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 09:22:51.821698----
+_state: <django.db.models.base.ModelState object at 0x7f7133aebca0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 09:27:05.033676----
+_state: <django.db.models.base.ModelState object at 0x7f71338c3310>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 09:38:48.104256----
+_state: <django.db.models.base.ModelState object at 0x7f97f1978ac0>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----

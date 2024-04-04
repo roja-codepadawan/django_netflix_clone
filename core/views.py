@@ -126,7 +126,25 @@ class ShowMovieDetail(View):
 
 @method_decorator(login_required,name='dispatch')
 class ShowMovie(View):
+    """
+    A class-based view that handles the rendering of a movie page.
+
+    Methods:
+    - get: Handles the GET request and renders the movie page.
+    """
+
     def get(self,request,movie_id,*args, **kwargs):
+        """
+        Handles the GET request and renders the movie page.
+
+        Parameters:
+        - request: The HTTP request object.
+        - movie_id: The ID of the movie to be displayed.
+
+        Returns:
+        - If the movie and video exist, renders the 'showMovie.html' template with the full video URL.
+        - If the movie or video does not exist, renders the 'error.html' template with the corresponding error message.
+        """
         try:
             # Holen des Movie-Objekts anhand der übergebenen movie_id
             movie_obj = get_object_or_404(Movie, uuid=movie_id)

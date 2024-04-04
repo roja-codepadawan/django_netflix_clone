@@ -1489,3 +1489,129 @@ url: /media/movies/media_root.mp4
 full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
 
 ----End of Block----
+
+----2024-04-04 08:28:51.850190----
+_state: <django.db.models.base.ModelState object at 0x7f5e34473550>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 08:29:08.633359----
+_state: <django.db.models.base.ModelState object at 0x7f5e3471ac20>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 08:29:26.016912----
+_state: <django.db.models.base.ModelState object at 0x7f5e3439fee0>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 08:31:06.244981----
+_state: <django.db.models.base.ModelState object at 0x7f5e343939d0>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 08:40:14.362055----
+_state: <django.db.models.base.ModelState object at 0x7f5e343226b0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 08:44:23.833169----
+_state: <django.db.models.base.ModelState object at 0x7efe1b88efb0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----

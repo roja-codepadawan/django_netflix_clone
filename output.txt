@@ -2608,3 +2608,218 @@ inst liste : IDP
 
 --------
 cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:23:39.217744----
+_state: <django.db.models.base.ModelState object at 0x7fbcb0dffaf0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 11:24:09.370334----
+_state: <django.db.models.base.ModelState object at 0x7f4fe9678610>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 11:34:27.514045----
+_state: <django.db.models.base.ModelState object at 0x7f4fe9679ed0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 11:35:08.708949----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:36:16.129364----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['I', 'D', 'P']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:36:29.257349----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : []
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:36:49.910323----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:37:04.348056----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 11:37:28.161972----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 12:41:16.702793----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 12:41:26.618457----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 12:42:12.017954----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 12:42:42.845330----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 12:42:46.993000----
+_state: <django.db.models.base.ModelState object at 0x7fe703ed2ef0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 12:42:51.271481----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]

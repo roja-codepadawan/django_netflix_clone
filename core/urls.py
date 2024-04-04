@@ -14,5 +14,3 @@ urlpatterns = [
     # path('login/<str:email>/', Home.as_view()),
     # path('signup/<str:email>/', Signup.as_view(), name='signup_page'),
 ]
-
-

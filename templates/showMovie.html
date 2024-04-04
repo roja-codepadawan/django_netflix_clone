@@ -2,43 +2,32 @@
 {% block title %} 
 PHIL II FLIX - Movie 
 {% endblock title %}
+
+
 {% block content %}
+{% include 'partials/navbar.html' %}
 
-<!--{% include 'partials/navbar.html' %}-->
-<main class="bg-primary_black h-full w-full">
-  {{ movie|json_script:"movie_data" }}
+    {% if full_video_url %}
+      <video id="video-player" src="{{ full_video_url }}" controls class="w-full h-screen player"></video>
+    {% else %}
+      <!-- Code to execute if full_video_url does not exist  -->
+    {% endif %}
 
-  <video controls class="w-full h-screen player"></video>
-  <button
-    id="back-button"
-    class="bg-red-500 text-white px-2 py-1 rounded-lg"
-    style="position: fixed; top: 35px; left: 10px"
-  >
-    ❮ Zurück
-  </button>
-</main>
-<script>
-  const videoEl = document.querySelector("video");
-  const movie_data = JSON.parse(
-    document.getElementById("movie_data").textContent
-  );
-  const url = new URL(location.href);
-  const video_param = parseInt(url.searchParams.get("epi"))
-    ? parseInt(url.searchParams.get("epi"))
-    : 0;
-  const backButton = document.getElementById("back-button");
+    
 
-  // Funktion zum Zurückkehren zur vorherigen Seite
-  function goBack() {
-    window.history.back();
-  }
+    <!-- <main class='bg-primary_black h-full w-full '>
+        <video id="video-player" src="{{ full_video_url }}" controls class="w-full h-screen player" ></video>
+    </main> -->
 
-  // Klick-Ereignis für den Zurück-Button hinzufügen
-  backButton.addEventListener("click", goBack);
+    <!-- {% include 'partials/navbar.html' %}
+    <main class='bg-primary_black h-full w-full '>
 
-  videoEl.setAttribute("src", `http:/media/${movie_data[video_param].file}`);
-</script>
-<!-- 
+        {{ movie|json_script:"movie_data" }}
+        
+        <video  controls class="w-full h-screen player"></video>
+        
+    </main>
+    <script>
         const videoEl=document.querySelector('video')
         const movie_data = JSON.parse(document.getElementById('movie_data').textContent);
         
@@ -47,8 +36,6 @@ PHIL II FLIX - Movie
         
         const video_param = parseInt(url.searchParams.get("epi")) ? parseInt(url.searchParams.get("epi")) : 0
 
-        videoEl.setAttribute('src',`http:/media/${movie_data[video_param].file}`)
-
-     -->
-<!-- [28/Jul/2023 08:22:08] "GET /localhost:8000/media/movies/SampleVideo_720x480_1mb.mp4 HTTP/1.1" 404 3705 -->
+        videoEl.setAttribute('src',`http:/localhost:8000/media/${movie_data[video_param].file}`)
+    </script> -->
 {% endblock content %}

@@ -17,16 +17,17 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')), # , views.account_signup, name='account_signup'
     # path('account/signup/', views.account_signup, name='account_signup'), #
     path("i18n/", include("django.conf.urls.i18n")),
-]
+] # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-if settings.DEBUG:
-    urlpatterns += [
-        re_path(r"^static/(?P<path>.*)$", views.serve),
-    ]
-    
+
 # if settings.DEBUG:
-#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#     urlpatterns += [
+#         re_path(r"^static/(?P<path>.*)$", views.serve),
+#     ]
+    
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # else:
 #     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 #     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -10,6 +10,9 @@ python manage.py migrate --run-syncdb
 python manage.py collectstatic
 
 python3 manage.py inspectdb
+python3 manage.py dbshell
+.tabeles
+python manage.py shell
 python manage.py flush
 
 

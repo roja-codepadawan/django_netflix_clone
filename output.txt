@@ -2844,3 +2844,651 @@ url: /media/movies/media_root.mp4
 full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
 
 ----End of Block----
+
+----2024-04-04 12:50:01.060793----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 12:50:05.474682----
+_state: <django.db.models.base.ModelState object at 0x7fe703dfdc60>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 12:50:14.735794----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 12:54:14.978416----
+_state: <django.db.models.base.ModelState object at 0x7ff7f3f5b850>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 12:54:28.521261----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 12:54:34.185792----
+_state: <django.db.models.base.ModelState object at 0x7ff7f408aef0>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 13:12:49.762074----
+
+--------
+status liste : Studierende
+
+--------
+inst liste : Willkommen
+inst liste : ['Willkommen', 'Willkommen']
+
+--------
+cours liste : [1, 1]
+
+----2024-04-04 13:14:35.358945----
+_state: <django.db.models.base.ModelState object at 0x7f72730e32b0>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-filipp-romanovski-16347928_UXODRKO.jpg
+type: single
+age_limit: Studierende
+institut: Willkommen
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-04 13:23:19.553063----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 13:23:24.073665----
+_state: <django.db.models.base.ModelState object at 0x7f72730f13c0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 13:23:27.389702----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 13:23:31.100630----
+_state: <django.db.models.base.ModelState object at 0x7f7273101660>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 13:25:35.997949----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 13:27:38.557656----
+
+--------
+status liste : Mitarbeiter
+
+--------
+inst liste : IDP
+inst liste : ['IDP', 'Willkommen']
+
+--------
+cours liste : [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 13:28:20.277126----
+_state: <django.db.models.base.ModelState object at 0x7f9a3944cee0>
+id: 11
+title: media
+description: meida test
+created: 2024-04-02 07:18:36.687865+00:00
+uuid: c63a4d2e-ede8-4ff2-baa8-abcee3c4af89
+flyer: flyers/44839257-764F-4B8D-84A7-9D55B5B40661.jpeg
+type: single
+age_limit: Mitarbeiter
+institut: IDP
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 13:28:24.015537----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: IDP
+institute profile list: ['IDP', 'Willkommen']
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 13:55:57.303297----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: IDP
+institute profile list: ['IDP', 'Willkommen']
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:13:35.297933----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: core.Institute.None
+institute profile list: [<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x7f2e0a375e70>, 'Willkommen']
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:20:07.772167----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: core.Institute.None
+institute profile list: [<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x7fdc20cdd5a0>, 'Willkommen']
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:27:01.269549----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: core.Institute.None
+institute profile list: [<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x7fd519132da0>, 'Willkommen']
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:27:02.757085----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: core.Institute.None
+institute profile list: [<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x7fd51918aa70>, 'Willkommen']
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:28:15.846679----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: core.Institute.None
+institute profile list: [<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x7f58fd1e2da0>, 'Willkommen']
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:28:16.462789----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: core.Institute.None
+institute profile list: [<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x7f58fd0dda50>, 'Willkommen']
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:28:43.279017----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: core.Institute.None
+institute profile list: [<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x7f50dd81ada0>]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:31:25.183085----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: core.Institute.None
+institute profile list: [[1, 2, 3, 4]]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:32:41.513344----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [1, 2, 3, 4, 1]
+
+----2024-04-04 14:33:11.111654----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [1, 2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4, 1]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:33:26.180706----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [1, 2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4, 1]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:33:44.644178----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [1, 2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4, 1]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:33:46.324564----
+_state: <django.db.models.base.ModelState object at 0x7f8e3a782f50>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 14:33:49.215890----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [1, 2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4, 1]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:35:05.635653----
+_state: <django.db.models.base.ModelState object at 0x7f8e3a8fca60>
+id: 2
+title: M_W_2
+description: 
+created: 2023-12-06 12:57:22.191434+00:00
+uuid: 04c04151-9b43-4982-a2d9-2d53fcd3ec6c
+flyer: flyers/pexels-mathias-reding-18026958.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-asia-culture-center-5552640.jpg
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-asia-culture-center-5552640.jpg
+
+----End of Block----
+
+----2024-04-04 14:35:09.542048----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [1, 2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4, 1]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:35:13.413373----
+_state: <django.db.models.base.ModelState object at 0x7f8e3a76bb80>
+id: 12
+title: media_root base
+description: base/dir
+created: 2024-04-02 09:15:37.920410+00:00
+uuid: 191b3f85-a016-4583-b0fb-c40e3927f25a
+flyer: flyers/pexels-florian-eckerle-17715085_K5OFyII.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Willkommen
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 14:39:04.402158----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [1, 2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4, 1]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:39:32.585897----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [1, 2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4, 1]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:41:01.399846----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [1, 2, 3, 4]
+institute profile list: [1, 2, 3, 4]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:42:20.730817----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+
+----2024-04-04 14:43:56.752504----
+_state: <django.db.models.base.ModelState object at 0x7fcf5116d750>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-04 14:44:01.264783----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4]
+
+--------
+courses profile: [1, 2, 3, 4, 5]
+
+----2024-04-04 14:47:10.045392----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+courses profile: [1, 2, 3, 4, 5]
+
+----2024-04-04 14:47:49.502705----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile: [2, 3, 4, 1]
+institute profile list: [1, 2, 3, 4]
+
+--------
+courses profile: [1, 2, 3, 4, 5, 1]
+courses profile: [1, 2, 3, 4, 5]
+
+----2024-04-04 14:48:43.975882----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [2, 3, 4, 1]
+institute profile set): [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set): [1, 2, 3, 4, 5]
+
+----2024-04-04 14:49:00.128019----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]

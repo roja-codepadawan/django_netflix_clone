@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CustomUser,Profile,Movie,Video,Course#,Category
+from .models import CustomUser,Profile,Movie,Video,Course,Institute #,Category
 from django.utils.translation import gettext_lazy as _
 from django.contrib.admin import SimpleListFilter
 
@@ -261,12 +261,12 @@ class MovieInstitutFilter(SimpleListFilter):
    parameter_name = 'institut'
 
    def lookups(self, request, model_admin):
-      institutes = Movie.objects.values_list('institut', flat=True).distinct()
-      institute_choices = [(inst, inst) for inst in institutes]
+      institute = Institute.objects.all()
+      institute_choices = [(inst.id, inst.title) for inst in institute]
       return (
-         *institute_choices,
+          *institute_choices,
       )
-
+   
    def queryset(self, request, queryset):
       selected_value = self.value()
       if selected_value:
@@ -369,7 +369,11 @@ class MovieAdmin(admin.ModelAdmin):
    display_movie_age.short_description = "Status"
    
    def display_movie_institute(self, obj):
-      return obj.institut
+      institute = obj.institut.all()
+      if institute:
+         return ', '.join([institute.title for institute in institute])
+      else:
+         return "Kein Institut ausgewählt"
       
    display_movie_institute.short_description = "Institut"
    
@@ -388,6 +392,10 @@ class MovieAdmin(admin.ModelAdmin):
 
 @admin.register(Video)
 class VideoAdmin(admin.ModelAdmin):
+   pass
+
+@admin.register(Institute)
+class InstituteAdmin(admin.ModelAdmin):
    pass
 
 @admin.register(Course)

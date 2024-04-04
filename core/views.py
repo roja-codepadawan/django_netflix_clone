@@ -68,13 +68,18 @@ class Watch(View):
             # profile=Profile.objects.get(uuid=profile_id)
             profile=Profile.objects.get(uuid=profile_id)
             age_profile = profile.age
-            institute_profile = profile.institut
-            institute_profile_list = list()
-            institute_profile_list.append(institute_profile)
-            institute_profile_list.append('Willkommen')
+            # institute_profile = profile.institut
+            
+            institute_profile = list(profile.institut.values_list('id', flat=True))
+            institute_profile.append(1)
+            institute_profile_list = list(set(institute_profile))
+
+            # institute_profile_list = list()
+            # institute_profile_list.append('Willkommen')
             # courses_profile = profile.courses.values_list('id', flat=True)
             courses_profile = list(profile.courses.values_list('id', flat=True))
             courses_profile.append(1)
+            courses_profile_list = list(set(courses_profile))
             # courses = profile.group_courses
             print(profile)
             
@@ -82,26 +87,29 @@ class Watch(View):
                 now = datetime.datetime.now()  # Get the current date and time
                 f.write(f"\n----{now}----\n")  # Write the date and time to the file
                 
-                # # Write the properties of the Movie object to the file
-                # for key, value in movie_obj.__dict__.items():
-                #     f.write(f'{key}: {value}\n')
+                # Write the profile information to the file
+                f.write(f"profil: {str(profile)}\n")
                 f.write(f"\n--------\n") # Add a newline to separate the blocks
-                # Write the URL of the video to the file
-                f.write(f"status liste : {str(age_profile)}\n")
+                
+                # Write the age profile information to the file
+                f.write(f"age profile: {str(age_profile)}\n")
                 f.write(f"\n--------\n") # Add a newline to separate the blocks
-                # Write the URL of the video to the file
-                f.write(f"inst liste : {str(institute_profile)}\n")
-                f.write(f"inst liste : {str(institute_profile_list)}\n")
+                
+                # Write the institute profile information to the file
+                f.write(f"institute profile liste: {str(institute_profile)}\n")
+                f.write(f"institute profile set: {str(institute_profile_list)}\n")
                 f.write(f"\n--------\n") # Add a newline to separate the blocks
-                # Write the URL of the video to the file
-                f.write(f"cours liste : {str(courses_profile)}\n")
+                
+                # Write the courses profile information to the file
+                f.write(f"courses profile liste: {str(courses_profile)}\n")
+                f.write(f"courses profile set: {str(courses_profile_list)}\n")
             
             # Filter movies based on age limit, categories and institutes
             # Filtern Sie Filme nach age_limit, categories und institutes
             movies = Movie.objects.filter(
                 Q(age_limit=age_profile) &  # Filme, die dem Alterslimit entsprechen
-                Q(institut=institute_profile) &  # Filme, die dem Institut entsprechen
-                Q(courses__in=courses_profile) #| # Filme, die der Kategorie entsprechen
+                Q(institut__in=institute_profile_list) &  # Filme, die dem Institut entsprechen
+                Q(courses__in=courses_profile_list) #| # Filme, die der Kategorie entsprechen
                 # Q(institut='Willkommen') # | # Filme, die dem Institut "Willkommen" entsprechen
                 # Q(courses='Willkommen')  # Filme, die dem Kurs "Willkommen" entsprechen
             ).distinct()

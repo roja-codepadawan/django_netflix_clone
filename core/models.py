@@ -72,7 +72,8 @@ class Profile(models.Model):
     
     
     age = models.CharField(verbose_name="Status", max_length=20, choices=AGE_CHOICES, blank=True, null=True, default='Studierende')
-    institut = models.CharField(max_length=20, choices=GROUP_INSTITUTES, blank=True, null=True, default='Willkommen')
+    institut=models.ManyToManyField('Institute', verbose_name="Institute")
+    # institut = models.CharField(max_length=20, choices=GROUP_INSTITUTES, blank=True, null=True, default='Willkommen')
     courses = models.ManyToManyField('Course', verbose_name="Kurse")
 
 
@@ -93,7 +94,8 @@ class CustomUser(AbstractUser):
     profiles = models.OneToOneField(Profile, on_delete=models.CASCADE, null=True, blank=True)
 
     age = models.CharField(verbose_name="Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True,default='Studierende')
-    institut = models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True,default='Willkommen')
+    institut=models.ManyToManyField('Institute', verbose_name="Institute")
+    # institut = models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True,default='Willkommen')
     courses = models.ManyToManyField('Course', verbose_name="Kurse")
     
     def save(self, *args, **kwargs):
@@ -125,7 +127,7 @@ def update_user_profile(sender, instance, **kwargs):
         # Wenn das Profil existiert, aktualisieren Sie die entsprechenden Felder
         instance.profiles.name = instance.username
         instance.profiles.age = instance.age
-        instance.profiles.institut = instance.institut
+        instance.profiles.institut.set(instance.institut.all()) # = instance.institut
         instance.profiles.courses.set(instance.courses.all())
         instance.profiles.save()
 
@@ -145,17 +147,20 @@ class Movie(models.Model):
     
     age_limit=models.CharField(verbose_name="Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True)
     
-    institut=models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
+    institut=models.ManyToManyField('Institute', verbose_name="Institute")
+    # institut=models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
     courses=models.ManyToManyField('Course', verbose_name="Kurse")
     # group_courses=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
     
     categories=models.CharField(verbose_name="Kategorie",max_length=20,choices=MOVIE_CATEGORIES,blank=True,null=True)
     
     def __str__(self):
+        # Erstelle eine Liste der Institut-Titel aus den zugeordneten Instituten
+        institute_titles = [institute.title for institute in self.institut.all()]
         # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
         course_titles = [course.title for course in self.courses.all()]
         
-        return f"{self.title} - Alterslimit: {self.age_limit} - Institut: {self.institut} - Kurse: {', '.join(course_titles)}"
+        return f"{self.title} - Alterslimit: {self.age_limit} - Institute: {', '.join(institute_titles)} - Kurse: {', '.join(course_titles)}"
     
 class Video(models.Model):
     title:str = models.CharField(max_length=225,blank=True,null=True)
@@ -173,4 +178,13 @@ class Course(models.Model):
     
     class Meta:
         verbose_name_plural = "Kurse"
-
+        
+        
+class Institute(models.Model):
+    title:str = models.CharField(max_length=225,blank=True,null=True)
+    
+    def __str__(self):
+        return f"{self.title}"
+    
+    class Meta:
+        verbose_name_plural = "Institute"

@@ -210,6 +210,28 @@ class CustomUserAdmin(admin.ModelAdmin):
    list_filter = (UserAgeFilter, UserInstitutFilter, UserCoursFilter)
    search_fields = ["username"]
    
+   # def get_fieldsets(self, request, obj=None):
+   #    fieldsets = super().get_fieldsets(request, obj)
+   #    if not request.user.is_superuser or not request.user.is_staff:
+   #       return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
+   #    return fieldsets
+
+   # def get_readonly_fields(self, request, obj=None):
+   #    readonly_fields = super().get_readonly_fields(request, obj)
+   #    if not request.user.is_superuser or not request.user.groups.filter(name='Support-Admins').exists() or not request.user.groups.filter(name='admins').exists():
+   #       return readonly_fields + ('is_superuser',)
+   #    return readonly_fields
+
+   # def has_delete_permission(self, request, obj=None):
+   #    if request.user.is_superuser and (request.user.groups.filter(name='Support-Admins').exists() or request.user.groups.filter(name='admins').exists()):
+   #       return True
+   #    return super().has_delete_permission(request, obj)
+
+   # def has_change_permission(self, request, obj=None):
+   #    if request.user.is_superuser and request.user.groups.filter(name='Admins').exists():
+   #       return True
+   #    return super().has_change_permission(request, obj)
+   
    def get_fieldsets(self, request, obj=None):
     fieldsets = super().get_fieldsets(request, obj)
     if not obj or not (obj.is_superuser or obj.is_staff):

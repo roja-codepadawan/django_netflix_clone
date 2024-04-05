@@ -6,7 +6,7 @@ from django.contrib.admin import SimpleListFilter
 ###################
 #  Search Filter  #
 ###################
-#User Filter
+# User Filter
 class UserAgeFilter(SimpleListFilter):
    title = _('Status')
    parameter_name = 'age'

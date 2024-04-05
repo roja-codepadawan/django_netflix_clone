@@ -19,13 +19,13 @@ AGE_CHOICES=(
     ('Mitarbeiter', 'Mitarbeiter')
 )
 
-# mögliche Institute oder Gruppen von Instituten
-GROUP_INSTITUTES=(
-    ('Willkommen', 'Willkommen'),
-    ('IDP', 'IDP'), 
-    ('IDM', 'IDM'),
-    ('IDB', 'IDB'),
-)
+# # mögliche Institute oder Gruppen von Instituten
+# GROUP_INSTITUTES=(
+#     ('Willkommen', 'Willkommen'),
+#     ('IDP', 'IDP'), 
+#     ('IDM', 'IDM'),
+#     ('IDB', 'IDB'),
+# )
 
 MOVIE_CATEGORIES=(
     ('Willkommen', 'Willkommen'),
@@ -54,7 +54,7 @@ class Profile(models.Model):
     
     age = models.CharField(verbose_name="Status", max_length=20, choices=AGE_CHOICES, blank=True, null=True, default='Studierende')
     institut=models.ManyToManyField('Institute', verbose_name="Institute")
-    # institut = models.CharField(max_length=20, choices=GROUP_INSTITUTES, blank=True, null=True, default='Willkommen')
+
     courses = models.ManyToManyField('Course', verbose_name="Kurse")
 
 
@@ -63,20 +63,14 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created and not instance.name:
         instance.name = instance.user.username
         instance.save()
-# @receiver(post_save, sender=Profile)
-# def create_or_update_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         # Setze den Standardwert für den Namen auf den Benutzernamen
-#         if not instance.name:
-#             instance.name = instance.user.username
-#             instance.save()
+
 
 class CustomUser(AbstractUser):
     profiles = models.OneToOneField(Profile, on_delete=models.CASCADE, null=True, blank=True)
 
     age = models.CharField(verbose_name="Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True,default='Studierende')
     institut=models.ManyToManyField('Institute', verbose_name="Institute")
-    # institut = models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True,default='Willkommen')
+
     courses = models.ManyToManyField('Course', verbose_name="Kurse")
     
     def save(self, *args, **kwargs):
@@ -91,6 +85,13 @@ class CustomUser(AbstractUser):
             self.profiles = profile
             self.save()  # Speichern Sie erneut, um das aktualisierte Profil zu setzen
 
+        # Überprüfen Sie, ob der Benutzer Institute hat
+        if not self.institut.exists():
+            default_institute = Institute.objects.filter(title='Willkommen').first()
+            if default_institute:
+                self.institut.add(default_institute)
+            
+        # Überprüfen Sie, ob der Benutzer Kurse hat
         if not self.courses.exists():
             default_course = Course.objects.filter(title='Willkommen').first()
             if default_course:
@@ -113,35 +114,73 @@ def update_user_profile(sender, instance, **kwargs):
         instance.profiles.save()
 
 class Movie(models.Model):
-    title:str=models.CharField(max_length=225,null=True)
-    description:str=models.TextField(blank=True, null=True)
-    created=models.DateTimeField(auto_now_add=True)
-    uuid=models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
-    
-    # Das Feld für das Hochladen von mehreren Video-Dateien
-    videos=models.ManyToManyField('Video')
-    # Define fields for videos directly in the Movie model
-    # video_file = models.FileField(upload_to='movies', blank=True, null=True)
-    flyer=models.ImageField(upload_to='flyers',blank=True,null=True)
-    
-    type=models.CharField(max_length=10,choices=MOVIE_TYPE,help_text="Einzel Film oder Serie(Veranstaltungsreihe)")
-    
-    age_limit=models.CharField(verbose_name="Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True)
-    
-    institut=models.ManyToManyField('Institute', verbose_name="Institute")
-    # institut=models.CharField(verbose_name="Institut",max_length=20,choices=GROUP_INSTITUTES,blank=True,null=True)
-    courses=models.ManyToManyField('Course', verbose_name="Kurse")
-    # group_courses=models.CharField(max_length=20,choices=GROUP_COURSE,blank=True,null=True)
-    
-    categories=models.CharField(verbose_name="Kategorie",max_length=20,choices=MOVIE_CATEGORIES,blank=True,null=True)
-    
+    """
+    Represents a movie in the application.
+
+    Attributes:
+        title (str): The title of the movie.
+        description (str): The description of the movie.
+        created (DateTimeField): The date and time when the movie was created.
+        uuid (UUIDField): The unique identifier for the movie.
+        videos (ManyToManyField): The videos associated with the movie.
+        flyer (ImageField): The flyer image for the movie.
+        type (str): The type of the movie (e.g., single film or series).
+        age_limit (str): The age limit for the movie.
+        institut (ManyToManyField): The institutes associated with the movie.
+        courses (ManyToManyField): The courses associated with the movie.
+        categories (str): The categories of the movie.
+
+    Methods:
+        __str__(): Returns a string representation of the movie.
+    """
+
+    title = models.CharField(max_length=225, null=True)
+    description = models.TextField(blank=True, null=True)
+    created = models.DateTimeField(auto_now_add=True)
+    uuid = models.UUIDField(default=uuid.uuid4, unique=True, editable=None)
+    videos = models.ManyToManyField('Video', help_text="Eine oder mehrere Videos hochladen - ")
+    flyer = models.ImageField(upload_to='flyers', blank=True, null=True, help_text="Vorschaubild für den Film -")
+    type = models.CharField(max_length=10, choices=MOVIE_TYPE, help_text="Einzel Film oder Serie(Veranstaltungsreihe)")
+    age_limit = models.CharField(verbose_name="Status", max_length=20, choices=AGE_CHOICES, blank=True, null=True)
+    institut = models.ManyToManyField('Institute', verbose_name="Institute")
+    courses = models.ManyToManyField('Course', verbose_name="Kurse")
+    categories = models.CharField(verbose_name="Kategorie", max_length=20, choices=MOVIE_CATEGORIES, blank=True, null=True)
+
     def __str__(self):
-        # Erstelle eine Liste der Institut-Titel aus den zugeordneten Instituten
         institute_titles = [institute.title for institute in self.institut.all()]
-        # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
         course_titles = [course.title for course in self.courses.all()]
-        
         return f"{self.title} - Alterslimit: {self.age_limit} - Institute: {', '.join(institute_titles)} - Kurse: {', '.join(course_titles)}"
+    
+    
+# class Movie(models.Model):
+#     title:str=models.CharField(max_length=225,null=True)
+#     description:str=models.TextField(blank=True, null=True)
+#     created=models.DateTimeField(auto_now_add=True)
+#     uuid=models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
+    
+#     # Das Feld für das Hochladen von mehreren Video-Dateien
+#     videos=models.ManyToManyField('Video', help_text="Eine oder mehre Videos hochladen")
+#     # Define fields for videos directly in the Movie model
+#     flyer=models.ImageField(upload_to='flyers',blank=True,null=True, help_text="Vorschaubild für den Film")
+    
+#     type=models.CharField(max_length=10,choices=MOVIE_TYPE,help_text="Einzel Film oder Serie(Veranstaltungsreihe)")
+    
+#     age_limit=models.CharField(verbose_name="Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True)
+    
+#     institut=models.ManyToManyField('Institute', verbose_name="Institute")
+ 
+#     courses=models.ManyToManyField('Course', verbose_name="Kurse")
+  
+    
+#     categories=models.CharField(verbose_name="Kategorie",max_length=20,choices=MOVIE_CATEGORIES,blank=True,null=True)
+    
+#     def __str__(self):
+#         # Erstelle eine Liste der Institut-Titel aus den zugeordneten Instituten
+#         institute_titles = [institute.title for institute in self.institut.all()]
+#         # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
+#         course_titles = [course.title for course in self.courses.all()]
+        
+#         return f"{self.title} - Alterslimit: {self.age_limit} - Institute: {', '.join(institute_titles)} - Kurse: {', '.join(course_titles)}"
     
 class Video(models.Model):
     title:str = models.CharField(max_length=225,blank=True,null=True)

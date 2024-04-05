@@ -12889,3 +12889,15 @@ Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/django/templatetags/i18n.py", line 141, in render
     raise TemplateSyntaxError(
 django.template.exceptions.TemplateSyntaxError: 'counter' argument to 'blocktranslate' tag must be a number.
+
+----------
+WARNING 2024-04-05 11:54:21,295 log Not Found: /apple-touch-icon-precomposed.png
+
+----------
+WARNING 2024-04-05 11:54:21,416 log Not Found: /apple-touch-icon.png
+
+----------
+WARNING 2024-04-05 11:54:46,957 log Not Found: /apple-touch-icon-precomposed.png
+
+----------
+WARNING 2024-04-05 11:54:47,064 log Not Found: /apple-touch-icon.png

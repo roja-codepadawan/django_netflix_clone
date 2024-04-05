@@ -198,7 +198,8 @@ class CustomUserAdmin(admin.ModelAdmin):
    
    fieldsets = (
       ("Personal Information", {"fields": ("username", "age")}),
-      ("Education", {
+      # Institue & Kurse für die Autorisierung des Zugriffs aus die Inhalte
+      ("Education - Inhalt Zugriffssteuerung basierend auf Instituten und Kursen für den Benutzer (User)", {
          "fields": ("institut", "courses"),
          "classes": ("collapse",),
       }),
@@ -250,7 +251,8 @@ class ProfileAdmin(admin.ModelAdmin):
    
    fieldsets = (
       ("Personal Information", {"fields": ("name", "age")}),
-      ("Education", {
+      # Institue & Kurse für die Autorisierung des Zugriffs aus die Inhalte
+      ("Education - Inhalt Zugriffssteuerung basierend auf Instituten und Kursen den Benutzer (Profil)", {
          "fields": ("institut", "courses"),
          "classes": ("collapse",),
       }),
@@ -286,50 +288,90 @@ class ProfileAdmin(admin.ModelAdmin):
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
+   """
+   Admin class for managing Movie model in the Django admin interface.
+   """
+
    list_display = ("display_title", "display_movie_age", "display_movie_institute", "display_movie_courses")
    list_filter = (MovieAgeFilter ,MovieInstitutFilter, MovieCoursFilter)
    
    fieldsets = (
-        ("Movie Information", {
-           "fields": ("title", "description")
-         }),
-        ("Movie file", {"fields": ("videos", "flyer")
-         }),
-        ("Genre", {
-            "fields": ("categories", "type"), 
-            "classes": ("expanded",)
-         }),
-        ("Additional Information - Zugriffsschutz/Autorisierung welche Benutzer auf welche Inhalte zugreifen können.", {
-            "fields": ("age_limit", "courses", "institut"),
-            "classes": ("expanded",),
-         }),
-    )
+      ("Movie Information", {
+         "fields": ("title", "description")
+      }),
+      ("Movie file", {"fields": ("videos", "flyer")
+      }),
+      ("Genre", {
+         "fields": ("categories", "type"), 
+         "classes": ("expanded",)
+      }),
+      ("Additional Information - Zugriffsschutz/Autorisierung welche Benutzer auf welche Inhalte zugreifen können.", {
+         "fields": ("age_limit", "courses", "institut"),
+         "classes": ("expanded",),
+      }),
+   )
    
    def display_title(self, obj):
+      """
+      Returns the title of the movie.
+      
+      Args:
+         obj (Movie): The Movie object.
+      
+      Returns:
+         str: The title of the movie.
+      """
       return obj.title
    
    display_title.short_description = "Title"
    
    def display_movie_age(self, obj):
+      """
+      Returns the age limit status of the movie.
+      
+      Args:
+         obj (Movie): The Movie object.
+      
+      Returns:
+         str: The age limit status of the movie.
+      """
       return obj.age_limit
    
    display_movie_age.short_description = "Status"
    
    def display_movie_institute(self, obj):
+      """
+      Returns the institutes associated with the movie.
+      
+      Args:
+         obj (Movie): The Movie object.
+      
+      Returns:
+         str: The institutes associated with the movie.
+      """
       institute = obj.institut.all()
       if institute:
          return ', '.join([institute.title for institute in institute])
       else:
          return "Kein Institut ausgewählt"
-      
+     
    display_movie_institute.short_description = "Institut"
    
    def display_movie_courses(self, obj):
+      """
+      Returns the courses associated with the movie.
+      
+      Args:
+         obj (Movie): The Movie object.
+      
+      Returns:
+         str: The courses associated with the movie.
+      """
       courses = obj.courses.all()
       if courses:
-          return ', '.join([course.title for course in courses])
+         return ', '.join([course.title for course in courses])
       else:
-          return "Keine Kurse ausgewählt"
+         return "Keine Kurse ausgewählt"
    
    display_movie_courses.short_description = "Kurse"
 

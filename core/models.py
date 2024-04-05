@@ -27,24 +27,6 @@ GROUP_INSTITUTES=(
     ('IDB', 'IDB'),
 )
 
-# # Kursgruppen oder Kursnummern
-# GROUP_COURSE=(
-#     ('Willkommen', 'Willkommen'),
-#     ('1','1'),
-#     ('2','2'),
-# )
-
-# Semestergruppen
-# GROUP_SEMSTER=(
-#     ('Winter','WI'),
-#     ('Sommer','SO'),
-# )
-
-# Filmkategorien class Category(models.Model):
-#     class Meta:
-#         verbose_name = "Kategorie"
-#         verbose_name_plural = "Kategories"
-
 MOVIE_CATEGORIES=(
     ('Willkommen', 'Willkommen'),
     ('Dokumentarfilm', 'Dokumentarfilm'),
@@ -69,7 +51,6 @@ class Profile(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
     uuid = models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
     user = models.OneToOneField('CustomUser', on_delete=models.CASCADE)
-    
     
     age = models.CharField(verbose_name="Status", max_length=20, choices=AGE_CHOICES, blank=True, null=True, default='Studierende')
     institut=models.ManyToManyField('Institute', verbose_name="Institute")

@@ -189,10 +189,25 @@ class MovieCoursFilter(SimpleListFilter):
 # Register your models here.
 @admin.register(CustomUser)
 class CustomUserAdmin(admin.ModelAdmin):
+   # list_display
    list_display = ("display_name", "display_age", "display_institut", "display_course")
-   # list_filter = ("cours", "age", "institut")
+   # list_filter
    list_filter = (UserAgeFilter, UserInstitutFilter, UserCoursFilter)
-
+   # search_fields
+   search_fields = ["username"]
+   
+   fieldsets = (
+      ("Personal Information", {"fields": ("username", "age")}),
+      ("Education", {
+         "fields": ("institut", "courses"),
+         "classes": ("collapse",),
+      }),
+   )
+   
+   def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        # customize form layout here
+        return form
 
    def display_name(self,obj):
       return obj.username
@@ -221,12 +236,25 @@ class CustomUserAdmin(admin.ModelAdmin):
           return "Keine Kurse ausgewählt"
 
    display_course.short_description = "Kurse"
+   
 
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
+   # list_display
    list_display = ("display_profil", "display_profile_age", "display_profile_institut", "display_profile_courses")
+   # list_filter
    list_filter = (ProfileAgeFilter, ProfileInstitutFilter, ProfileCoursFilter)
+   # search_fields
+   search_fields = ["name"]
+   
+   fieldsets = (
+      ("Personal Information", {"fields": ("name", "age")}),
+      ("Education", {
+         "fields": ("institut", "courses"),
+         "classes": ("collapse",),
+      }),
+   )
     
    def display_profil(self, obj):
       return obj.name
@@ -261,6 +289,22 @@ class MovieAdmin(admin.ModelAdmin):
    list_display = ("display_title", "display_movie_age", "display_movie_institute", "display_movie_courses")
    list_filter = (MovieAgeFilter ,MovieInstitutFilter, MovieCoursFilter)
    
+   fieldsets = (
+        ("Movie Information", {
+           "fields": ("title", "description")
+         }),
+        ("Movie file", {"fields": ("videos", "flyer")
+         }),
+        ("Genre", {
+            "fields": ("categories", "type"), 
+            "classes": ("expanded",)
+         }),
+        ("Additional Information - Zugriffsschutz/Autorisierung welche Benutzer auf welche Inhalte zugreifen können.", {
+            "fields": ("age_limit", "courses", "institut"),
+            "classes": ("expanded",),
+         }),
+    )
+   
    def display_title(self, obj):
       return obj.title
    
@@ -288,10 +332,7 @@ class MovieAdmin(admin.ModelAdmin):
           return "Keine Kurse ausgewählt"
    
    display_movie_courses.short_description = "Kurse"
-   # def display_movie_courses(self, obj):
-   #    return obj.group_courses
-   
-   # display_movie_courses.short_description = "Kurse"
+
 
 @admin.register(Video)
 class VideoAdmin(admin.ModelAdmin):

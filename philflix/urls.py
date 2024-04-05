@@ -18,7 +18,6 @@ from django.views.static import serve
 # from django.conf.urls import include, url
 # import debug_toolbar
 
-
 # Admin Site Config
 admin.site.site_header = 'Phil II Flix site administration'      # default: "Django Administration"
 admin.site.index_title = 'Phil II Flix'     # default: "Site administration"

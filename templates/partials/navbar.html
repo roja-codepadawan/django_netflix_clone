@@ -8,24 +8,36 @@
         </div>
 
         {% if AUTH != 'false'  %}
-            {% if request.user.is_authenticated %}
+        {% if request.user.is_authenticated %}
+        <div class="flex space-x-2"> <!-- Change space-x-16 to space-x-2 here -->
+            {% if request.user.age == 'Mitarbeiter' %}
             <div>
-            <form action="{% url 'account_logout' %}" method="post">
-                {% csrf_token %}
-                <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md'>
-                    Abmelden
-                </button>
-            </form>
-            </div>
-            {% else %}
-            <div>
-            <a href="{% url 'account_login' %}">
-                <!-- bg-primary_red -->
-                <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md'>
-                    Einloggen
+            <a href="{% url 'admin:index' %}">
+                <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md' style='margin: 8px;'> <!-- Add margin here -->
+                    Admin Portal
                 </button>
             </a>
             </div>
             {% endif %}
+            <div> <!-- Remove ml-auto here -->
+            <form action="{% url 'account_logout' %}" method="post">
+                {% csrf_token %}
+                <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md' style='margin: 8px;'> <!-- Add margin here -->
+                    Abmelden
+                </button>
+            </form>
+            </div>
+        </div> <!-- Close the flex div here -->
+        {% else %}
+        <div>
+        <a href="{% url 'account_login' %}">
+            <!-- bg-primary_red -->
+            <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md'>
+                Einloggen
+            </button>
+        </a>
+        </div>
         {% endif %}
-    </nav>
+    {% endif %}
+</nav>
+   

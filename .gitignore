@@ -2,6 +2,7 @@
 
 # Ignoriere die .env-Datei
 .env
+.*
 
 # Ignoriere die credentials.json-Datei
 credentials.json

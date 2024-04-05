@@ -12566,3 +12566,33 @@ Traceback (most recent call last):
   File "/opt/www/django_philflix/core/admin.py", line 265, in <listcomp>
     institute_choices = [(institute.id, institute.title) for inst in institute]
 AttributeError: 'QuerySet' object has no attribute 'id'
+
+----------
+WARNING 2024-04-05 10:19:12,643 base Session data corrupted
+
+----------
+WARNING 2024-04-05 10:19:13,808 base Session data corrupted
+
+----------
+WARNING 2024-04-05 10:19:15,964 base Session data corrupted
+
+----------
+WARNING 2024-04-05 10:26:43,285 base Session data corrupted
+
+----------
+WARNING 2024-04-05 10:26:45,442 base Session data corrupted
+
+----------
+WARNING 2024-04-05 10:26:45,510 base Session data corrupted
+
+----------
+WARNING 2024-04-05 10:26:46,998 base Session data corrupted
+
+----------
+WARNING 2024-04-05 10:26:47,070 base Session data corrupted
+
+----------
+WARNING 2024-04-05 10:26:54,917 base Session data corrupted
+
+----------
+WARNING 2024-04-05 10:27:04,778 base Session data corrupted

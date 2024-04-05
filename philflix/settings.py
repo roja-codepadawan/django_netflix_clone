@@ -46,7 +46,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Pfad zur Datei mit dem Geheimschlüssel
-secret_key_file = '/opt/www/django_philflix/.DJANGO_SECRET_KEY'
+secret_key_file = '/opt/www/django_philflix/.env'
 
 # Prüfe, ob die Datei vorhanden ist und lies den Geheimschlüssel
 if os.path.exists(secret_key_file):
@@ -103,7 +103,6 @@ INSTALLED_APPS = [
     # 'debug_toolbar',
 ]
 
-
 ##############
 # MIDDLEWARE #
 ##############
@@ -123,15 +122,21 @@ MIDDLEWARE = [
 #######################
 # SECURITY MIDDLEWARE #
 #######################
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin"
+# Ensure cookies are sent over HTTPS
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+# Redirect all non-HTTPS requests to HTTPS
+SECURE_SSL_REDIRECT = True
+# Set HSTS settings
+SECURE_HSTS_SECONDS = 31536000  # One year
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_SECONDS = 31536000
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin"
 SECURE_REDIRECT_EXEMPT = []
 SECURE_REFERRER_POLICY = "same-origin"
 SECURE_SSL_HOST = None
-SECURE_SSL_REDIRECT = True
 
 # Add the following line to allow serving static files over HTTPS
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

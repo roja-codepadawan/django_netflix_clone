@@ -19,13 +19,6 @@ AGE_CHOICES=(
     ('Mitarbeiter', 'Mitarbeiter')
 )
 
-# # mögliche Institute oder Gruppen von Instituten
-# GROUP_INSTITUTES=(
-#     ('Willkommen', 'Willkommen'),
-#     ('IDP', 'IDP'), 
-#     ('IDM', 'IDM'),
-#     ('IDB', 'IDB'),
-# )
 
 MOVIE_CATEGORIES=(
     ('Willkommen', 'Willkommen'),
@@ -151,36 +144,6 @@ class Movie(models.Model):
         course_titles = [course.title for course in self.courses.all()]
         return f"{self.title} - Alterslimit: {self.age_limit} - Institute: {', '.join(institute_titles)} - Kurse: {', '.join(course_titles)}"
     
-    
-# class Movie(models.Model):
-#     title:str=models.CharField(max_length=225,null=True)
-#     description:str=models.TextField(blank=True, null=True)
-#     created=models.DateTimeField(auto_now_add=True)
-#     uuid=models.UUIDField(default=uuid.uuid4,unique=True,editable=None)
-    
-#     # Das Feld für das Hochladen von mehreren Video-Dateien
-#     videos=models.ManyToManyField('Video', help_text="Eine oder mehre Videos hochladen")
-#     # Define fields for videos directly in the Movie model
-#     flyer=models.ImageField(upload_to='flyers',blank=True,null=True, help_text="Vorschaubild für den Film")
-    
-#     type=models.CharField(max_length=10,choices=MOVIE_TYPE,help_text="Einzel Film oder Serie(Veranstaltungsreihe)")
-    
-#     age_limit=models.CharField(verbose_name="Status",max_length=20,choices=AGE_CHOICES,blank=True,null=True)
-    
-#     institut=models.ManyToManyField('Institute', verbose_name="Institute")
- 
-#     courses=models.ManyToManyField('Course', verbose_name="Kurse")
-  
-    
-#     categories=models.CharField(verbose_name="Kategorie",max_length=20,choices=MOVIE_CATEGORIES,blank=True,null=True)
-    
-#     def __str__(self):
-#         # Erstelle eine Liste der Institut-Titel aus den zugeordneten Instituten
-#         institute_titles = [institute.title for institute in self.institut.all()]
-#         # Erstelle eine Liste der Kurs-Titel aus den zugeordneten Kursen
-#         course_titles = [course.title for course in self.courses.all()]
-        
-#         return f"{self.title} - Alterslimit: {self.age_limit} - Institute: {', '.join(institute_titles)} - Kurse: {', '.join(course_titles)}"
     
 class Video(models.Model):
     title:str = models.CharField(max_length=225,blank=True,null=True)

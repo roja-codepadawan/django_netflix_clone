@@ -189,38 +189,112 @@ class MovieCoursFilter(SimpleListFilter):
 # Register your models here.
 @admin.register(CustomUser)
 class CustomUserAdmin(admin.ModelAdmin):
-   # list_display
+   """
+   Admin class for managing custom user model.
+
+   Attributes:
+      list_display (tuple): Tuple of fields to be displayed in the admin list view.
+      list_filter (tuple): Tuple of fields to be used for filtering in the admin list view.
+      search_fields (list): List of fields to be used for searching in the admin list view.
+      fieldsets (tuple): Tuple of fieldsets to be displayed in the admin detail view.
+
+   Methods:
+      get_form(self, request, obj=None, **kwargs): Returns the form to be used for the admin view.
+      display_name(self, obj): Returns the display name of the user.
+      display_age(self, obj): Returns the display age of the user.
+      display_institut(self, obj): Returns the display institute(s) of the user.
+      display_course(self, obj): Returns the display course(s) of the user.
+   """
+
    list_display = ("display_name", "display_age", "display_institut", "display_course")
-   # list_filter
    list_filter = (UserAgeFilter, UserInstitutFilter, UserCoursFilter)
-   # search_fields
    search_fields = ["username"]
-   
+
    fieldsets = (
-      ("Personal Information", {"fields": ("username", "age")}),
-      # Institue & Kurse für die Autorisierung des Zugriffs aus die Inhalte
+      ("Personal Information", {
+         "fields": (
+            "username", "age", "email", "date_joined"
+            )
+         }
+       ),
       ("Education - Inhalt Zugriffssteuerung basierend auf Instituten und Kursen für den Benutzer (User)", {
-         "fields": ("institut", "courses"),
-         "classes": ("collapse",),
+         "fields": (
+            "institut", "courses"
+            ),
+         "classes": (
+            "expanded",
+            ),
+      }),
+      ("Permissions", {
+         "fields": (
+            "is_active", "is_staff", "is_superuser", "groups"
+         ),
+         "classes": (
+            "collapse",
+         ),
       }),
    )
    
-   def get_form(self, request, obj=None, **kwargs):
-        form = super().get_form(request, obj, **kwargs)
-        # customize form layout here
-        return form
+   def get_fieldsets(self, request, obj=None):
+      fieldsets = super().get_fieldsets(request, obj)
+      if not obj or not obj.is_superuser:
+         return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
+      return fieldsets
 
-   def display_name(self,obj):
+   def get_form(self, request, obj=None, **kwargs):
+      """
+      Returns the form to be used for the admin view.
+
+      Args:
+         request (HttpRequest): The current request.
+         obj (object, optional): The object being edited, or None if it's a new object.
+         **kwargs: Additional keyword arguments.
+
+      Returns:
+         form (Form): The form to be used for the admin view.
+      """
+      form = super().get_form(request, obj, **kwargs)
+      # customize form layout here
+      return form
+
+   def display_name(self, obj):
+      """
+      Returns the display name of the user.
+
+      Args:
+         obj (object): The user object.
+
+      Returns:
+         str: The display name of the user.
+      """
       return obj.username
-   
+
    display_name.short_description = "User"
-   
+
    def display_age(self, obj):
+      """
+      Returns the display age of the user.
+
+      Args:
+         obj (object): The user object.
+
+      Returns:
+         str: The display age of the user.
+      """
       return obj.age
 
    display_age.short_description = "Status"
-   
+
    def display_institut(self, obj):
+      """
+      Returns the display institute(s) of the user.
+
+      Args:
+         obj (object): The user object.
+
+      Returns:
+         str: The display institute(s) of the user.
+      """
       institute = obj.institut.all()
       if institute:
          return ', '.join([institute.title for institute in institute])
@@ -228,13 +302,22 @@ class CustomUserAdmin(admin.ModelAdmin):
          return "Kein Institut ausgewählt"
 
    display_institut.short_description = "Institut"
-   
+
    def display_course(self, obj):
+      """
+      Returns the display course(s) of the user.
+
+      Args:
+         obj (object): The user object.
+
+      Returns:
+         str: The display course(s) of the user.
+      """
       courses = obj.courses.all()
       if courses:
-          return ', '.join([course.title for course in courses])
+         return ', '.join([course.title for course in courses])
       else:
-          return "Keine Kurse ausgewählt"
+         return "Keine Kurse ausgewählt"
 
    display_course.short_description = "Kurse"
    
@@ -254,7 +337,7 @@ class ProfileAdmin(admin.ModelAdmin):
       # Institue & Kurse für die Autorisierung des Zugriffs aus die Inhalte
       ("Education - Inhalt Zugriffssteuerung basierend auf Instituten und Kursen den Benutzer (Profil)", {
          "fields": ("institut", "courses"),
-         "classes": ("collapse",),
+         "classes": ("expanded",),
       }),
    )
     

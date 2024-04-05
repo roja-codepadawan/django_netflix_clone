@@ -1,43 +1,63 @@
 {% load static %}
-<nav class="flex text-gray-100 justify-between items-center py-3 px-4 fixed w-full z-50">
-        <div class="w-6/12">
-            <a href='/'>
-            
-            <img src="{% static 'Phil-II-flix_Logo.png' %}" alt="logo" class="w-5/12 md:w-2/12">
-            </a>
-        </div>
+<nav
+  id="navbar"
+  class="flex text-gray-100 justify-between py-3 px-4 fixed w-full z-50"
+>
+  <!-- Logo und andere Inhalte -->
+  <div class="w-6/12">
+    <a href="/">
+      <img
+        src="{% static 'Phil-II-flix_Logo.png' %}"
+        alt="logo"
+        class="w-5/12 md:w-2/12"
+      />
+    </a>
+  </div>
 
-        {% if AUTH != 'false'  %}
-        {% if request.user.is_authenticated %}
-        <div class="flex space-x-2"> <!-- Change space-x-16 to space-x-2 here -->
-            {% if request.user.age == 'Mitarbeiter' %}
-            <div>
-            <a href="{% url 'admin:index' %}">
-                <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md' style='margin: 8px;'> <!-- Add margin here -->
-                    Admin Portal
-                </button>
-            </a>
-            </div>
-            {% endif %}
-            <div> <!-- Remove ml-auto here -->
-            <form action="{% url 'account_logout' %}" method="post">
-                {% csrf_token %}
-                <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md' style='margin: 8px;'> <!-- Add margin here -->
-                    Abmelden
-                </button>
-            </form>
-            </div>
-        </div> <!-- Close the flex div here -->
-        {% else %}
-        <div>
-        <a href="{% url 'account_login' %}">
-            <!-- bg-primary_red -->
-            <button class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md'>
-                Einloggen
-            </button>
-        </a>
-        </div>
-        {% endif %}
+  <!-- Navigationselemente -->
+  {% if request.user.is_authenticated %}
+  <div class="flex mx-40">
+    <button
+      id="back-button"
+      class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md ml-2 mr-2"
+      onclick="goBack()"
+      style="display: none"
+    >
+      Zurück
+    </button>
+    {% if request.user.age == 'Mitarbeiter' %}
+    <a href="/admin">
+      <button
+        class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md ml-2 mr-2"
+      >
+        Admin Portal
+      </button>
+    </a>
     {% endif %}
+    <button
+      class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md ml-2 mr-2"
+      onclick="document.getElementById('logout-form').submit();"
+    >
+      Abmelden
+    </button>
+    <form
+      id="logout-form"
+      action="{% url 'account_logout' %}"
+      method="post"
+      style="display: none"
+    >
+      {% csrf_token %}
+    </form>
+  </div>
+  {% else %}
+  <div class="flex justify-end items-center">
+    <a href="{% url 'account_login' %}">
+      <button
+        class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md ml-2 mr-2"
+      >
+        Einloggen
+      </button>
+    </a>
+  </div>
+  {% endif %}
 </nav>
-   

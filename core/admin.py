@@ -209,11 +209,33 @@ class CustomUserAdmin(admin.ModelAdmin):
    list_display = ("display_name", "display_age", "display_institut", "display_course")
    list_filter = (UserAgeFilter, UserInstitutFilter, UserCoursFilter)
    search_fields = ["username"]
+   
+   def get_fieldsets(self, request, obj=None):
+    fieldsets = super().get_fieldsets(request, obj)
+    if not obj or not (obj.is_superuser or obj.is_staff):
+        return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
+    return fieldsets
+ 
+   def get_readonly_fields(self, request, obj=None):
+    readonly_fields = super().get_readonly_fields(request, obj)
+    if not request.user.is_superuser or not request.user.groups.filter(name='Support-Admis').exists():
+        return readonly_fields + ('is_superuser',)
+    return readonly_fields
+ 
+   def has_delete_permission(self, request, obj=None):
+    if obj is not None and obj.is_superuser:
+        return request.user.is_superuser and request.user.groups.filter(name='Support-Admis').exists()
+    return super().has_delete_permission(request, obj)
+ 
+   def has_change_permission(self, request, obj=None):
+    if obj is not None and obj.is_superuser:
+        return request.user.is_superuser and request.user.groups.filter(name='Support-Admis').exists()
+    return super().has_change_permission(request, obj)
 
    fieldsets = (
       ("Personal Information", {
          "fields": (
-            "username", "age", "email", "date_joined"
+            "username", "age", "email", "date_joined", "last_login",
             )
          }
        ),
@@ -235,11 +257,6 @@ class CustomUserAdmin(admin.ModelAdmin):
       }),
    )
    
-   def get_fieldsets(self, request, obj=None):
-      fieldsets = super().get_fieldsets(request, obj)
-      if not obj or not obj.is_superuser:
-         return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
-      return fieldsets
 
    def get_form(self, request, obj=None, **kwargs):
       """

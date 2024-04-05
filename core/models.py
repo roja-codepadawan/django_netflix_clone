@@ -66,6 +66,14 @@ class CustomUser(AbstractUser):
 
     courses = models.ManyToManyField('Course', verbose_name="Kurse")
     
+    def save_model(self, request, obj, form, change):
+        super().save_model(request, obj, form, change)
+        profile = obj.profile  # Assuming 'profile' is the related name for the user in the Profile model
+        profile.age = obj.age
+        profile.institut.set(obj.institut.all())
+        profile.courses.set(obj.courses.all())
+        profile.save()
+    
     def save(self, *args, **kwargs):
         # Speichern Sie zuerst den Benutzer
         super().save(*args, **kwargs)

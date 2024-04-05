@@ -218,18 +218,18 @@ class CustomUserAdmin(admin.ModelAdmin):
  
    def get_readonly_fields(self, request, obj=None):
     readonly_fields = super().get_readonly_fields(request, obj)
-    if not request.user.is_superuser or not request.user.groups.filter(name='Support-Admis').exists():
+    if not request.user.is_superuser or not request.user.groups.filter(name='Support-Admins') or request.user.groups.filter(name='admins').exists():
         return readonly_fields + ('is_superuser',)
     return readonly_fields
  
    def has_delete_permission(self, request, obj=None):
     if obj is not None and obj.is_superuser:
-        return request.user.is_superuser and request.user.groups.filter(name='Support-Admis').exists()
+        return request.user.is_superuser and request.user.groups.filter(name='Support-Admins') or request.user.groups.filter(name='admins').exists()
     return super().has_delete_permission(request, obj)
  
    def has_change_permission(self, request, obj=None):
     if obj is not None and obj.is_superuser:
-        return request.user.is_superuser and request.user.groups.filter(name='Support-Admis').exists()
+        return request.user.is_superuser and request.user.groups.filter(name='Admins').exists()
     return super().has_change_permission(request, obj)
 
    fieldsets = (

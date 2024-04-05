@@ -349,6 +349,29 @@ class ProfileAdmin(admin.ModelAdmin):
    # search_fields
    search_fields = ["name"]
    
+   def get_fieldsets(self, request, obj=None):
+    fieldsets = super().get_fieldsets(request, obj)
+    if not obj or not (obj.user.is_superuser or obj.user.is_staff):
+        return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
+    return fieldsets
+ 
+   def get_readonly_fields(self, request, obj=None):
+    readonly_fields = super().get_readonly_fields(request, obj)
+    if not request.user.is_superuser or not request.user.groups.filter(name='Support-Admins').exists() or not request.user.groups.filter(name='admins').exists():
+        return readonly_fields + ('user__is_superuser',)
+    return readonly_fields
+ 
+   def has_delete_permission(self, request, obj=None):
+    if obj is not None and obj.user.is_superuser:
+        return request.user.is_superuser and (request.user.groups.filter(name='Support-Admins').exists() or request.user.groups.filter(name='admins').exists())
+    return super().has_delete_permission(request, obj)
+ 
+   def has_change_permission(self, request, obj=None):
+    if obj is not None and obj.user.is_superuser:
+        return request.user.is_superuser and request.user.groups.filter(name='Admins').exists()
+    return super().has_change_permission(request, obj)
+   
+   
    fieldsets = (
       ("Personal Information", {"fields": ("name", "age")}),
       # Institue & Kurse für die Autorisierung des Zugriffs aus die Inhalte

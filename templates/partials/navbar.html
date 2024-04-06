@@ -1,63 +1,48 @@
 {% load static %}
-<nav
-  id="navbar"
-  class="flex text-gray-100 justify-between py-3 px-4 fixed w-full z-50"
->
-  <!-- Logo und andere Inhalte -->
-  <div class="w-6/12">
-    <a href="/">
-      <img
-        src="{% static 'Phil-II-flix_Logo.png' %}"
-        alt="logo"
-        class="w-5/12 md:w-2/12"
-      />
-    </a>
-  </div>
+<nav id="navbar" class="flex justify-between items-center text-gray-100 py-2 px-2 fixed w-full z-50">
 
-  <!-- Navigationselemente -->
-  {% if request.user.is_authenticated %}
-  <div class="flex mx-40">
-    <button
-      id="back-button"
-      class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md ml-2 mr-2"
-      onclick="goBack()"
-      style="display: none"
-    >
-      Zurück
-    </button>
-    {% if request.user.age == 'Mitarbeiter' %}
-    <a href="/admin">
-      <button
-        class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md ml-2 mr-2"
-      >
-        Admin Portal
-      </button>
+<!-- Logo area -->
+<div class="w-8/12">
+    <a href="/">
+        <img src="{% static 'Phil-II-flix_Logo.png' %}" alt="logo" class="w-5/12 md:w-2/12"/>
     </a>
+</div>
+ <!-- Middle area -->
+    <div class="w-1/2 mx-auto">
+        
+    </div>
+<!-- Dropdown menu area -->
+    <div class="w-1/4 text-right">
+    <!-- Navigationselemente -->
+    {% if request.user.is_authenticated %}
+    <div class="w-1/2 mx-auto bg-glass-white border-glass-border border-glass shadow-glass backdrop-blur rounded-glass">
+  
+        <!-- Dropdown Menu -->
+    <div class="relative inline-block text-left backdrop-blur">
+        <button class="py-2 px-4 bg-sky-500 hover:bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md mr-4 w-auto" onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Dropdown
+        </button>
+<div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 hidden bg-black bg-opacity-25 backdrop-blur-sm">
+    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700" role="menuitem">Zurück</a>
+        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700" role="menuitem">Abmelden</a>
+        {% if request.user.age == 'Mitarbeiter' %}
+        <a href="/admin" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 border-t border-gray-700" role="menuitem">Admin Portal</a>
+        {% endif %}
+    </div>
+</div>
+
+
+    </div>
+    </div>
+    {% else %}
+    <div class="flex justify-end items-center w-1/2">
+        <a href="{% url 'account_login' %}">
+            <button class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md mr-4 w-ful">
+                Einloggen
+            </button>
+        </a>
+    </div>
     {% endif %}
-    <button
-      class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md ml-2 mr-2"
-      onclick="document.getElementById('logout-form').submit();"
-    >
-      Abmelden
-    </button>
-    <form
-      id="logout-form"
-      action="{% url 'account_logout' %}"
-      method="post"
-      style="display: none"
-    >
-      {% csrf_token %}
-    </form>
   </div>
-  {% else %}
-  <div class="flex justify-end items-center">
-    <a href="{% url 'account_login' %}">
-      <button
-        class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md ml-2 mr-2"
-      >
-        Einloggen
-      </button>
-    </a>
-  </div>
-  {% endif %}
 </nav>

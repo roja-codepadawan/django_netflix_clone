@@ -4,10 +4,6 @@ PHIL II FLIX - Movie
 {% endblock title %}
 
 {% block content %}
-    <div>
-        <button id="back-button" class='py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md' onclick="goBack()" style="display: none;">Zurück</button>
-    </div>
-
     {% if full_video_url %}
         <video id="video-player" src="{{ full_video_url }}" controls class="w-full h-screen player"></video>
     {% else %}
@@ -16,26 +12,27 @@ PHIL II FLIX - Movie
 
    <script>
     // Get the video player, navbar, and back button elements
-var videoPlayer = document.getElementById('video-player');
-var navbar = document.getElementById('navbar');
-var backButton = document.getElementById('back-button');
+    var videoPlayer = document.getElementById('video-player');
+    var navbar = document.getElementById('navbar');
+    var backButton = document.getElementById('nav-back-button'); // Change this to the ID of the back button in the navbar
 
-// Add event listeners for the play and pause events
-videoPlayer.addEventListener('play', function() {
-    // Hide the navbar and back button when the video is playing
-    navbar.style.display = 'none';
-    backButton.style.display = 'none';
-});
+    // Add event listeners for the play and pause events
+    videoPlayer.addEventListener('play', function() {
+        // Hide the navbar and back button when the video is playing
+        navbar.style.display = 'none';
+        backButton.style.display = 'none';
+    });
 
-videoPlayer.addEventListener('pause', function() {
-    // Show the navbar and back button when the video is paused
-    navbar.style.display = 'flex';
-    backButton.style.display = 'block';
-});
+    videoPlayer.addEventListener('pause', function() {
+        // Show the navbar and back button when the video is paused
+        navbar.style.display = 'flex';
+        backButton.style.display = 'block';
+    });
 
-// Function to navigate back
-function goBack() {
-    window.history.back();
-}
+    // Add event listener for the click event
+    backButton.addEventListener('click', function() {
+        // Navigate back when the back button is clicked
+        window.history.back();
+    });
 </script>
 {% endblock content %}

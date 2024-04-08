@@ -11360,3 +11360,557 @@ institute profile set: [1, 2, 3, 4]
 --------
 courses profile liste: [1, 2, 3, 4, 5, 1]
 courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-07 12:51:43.501805----
+_state: <django.db.models.base.ModelState object at 0x7f0e6d63b4f0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-07 13:31:14.586752----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-07 21:19:02.785167----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 09:35:24.572398----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 09:41:23.065123----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:13:04.234825----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:13:13.429227----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:13:16.525418----
+_state: <django.db.models.base.ModelState object at 0x7f3cd1397be0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:14:24.246390----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:14:27.627216----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:15:36.202182----
+_state: <django.db.models.base.ModelState object at 0x7f4b344d9180>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:15:42.788212----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:15:45.949525----
+_state: <django.db.models.base.ModelState object at 0x7f4b34382aa0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:15:52.624597----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:16:00.371839----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:16:02.711953----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:16:09.333206----
+_state: <django.db.models.base.ModelState object at 0x7f4b341fb490>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:17:09.608401----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:17:21.296329----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:17:25.026574----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:17:33.982927----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:17:35.489953----
+_state: <django.db.models.base.ModelState object at 0x7f64aa25b6a0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:17:37.831556----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:17:43.014270----
+_state: <django.db.models.base.ModelState object at 0x7f64aa4b1150>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:20:24.854456----
+_state: <django.db.models.base.ModelState object at 0x7ff06853d1e0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:20:26.597710----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:20:28.235836----
+_state: <django.db.models.base.ModelState object at 0x7ff068506f50>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:20:38.332384----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:20:39.818536----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:21:44.444206----
+_state: <django.db.models.base.ModelState object at 0x7ff06845c4f0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:21:46.415098----
+_state: <django.db.models.base.ModelState object at 0x7ff06844fe20>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:23:05.365223----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:23:08.311254----
+_state: <django.db.models.base.ModelState object at 0x7fe659c991e0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-08 10:23:16.192260----
+_state: <django.db.models.base.ModelState object at 0x7fe659b8b4c0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----

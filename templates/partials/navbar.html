@@ -24,7 +24,7 @@
         </button>
 <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 hidden bg-black bg-opacity-25 backdrop-blur-sm">
     <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700" role="menuitem">Zurück</a>
+        <a id="nav-back-button" href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700" role="menuitem">Zurück</a>
         <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700" role="menuitem">Abmelden</a>
         {% if request.user.age == 'Mitarbeiter' %}
         <a href="/admin" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 border-t border-gray-700" role="menuitem">Admin Portal</a>

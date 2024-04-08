@@ -150,7 +150,7 @@ class Movie(models.Model):
     def __str__(self):
         institute_titles = [institute.title for institute in self.institut.all()]
         course_titles = [course.title for course in self.courses.all()]
-        return f"{self.title} - Alterslimit: {self.age_limit} - Institute: {', '.join(institute_titles)} - Kurse: {', '.join(course_titles)}"
+        return f"{self.title} - Alterslimit: {self.age_limit} - Institute: {', '.join(institute_titles)} - Kurse: {', '.join(course_titles)}" 
     
     
 class Video(models.Model):

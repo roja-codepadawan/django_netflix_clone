@@ -14088,3 +14088,9 @@ Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/django/template/base.py", line 531, in invalid_block_tag
     raise self.error(
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+
+----------
+WARNING 2024-04-10 13:55:57,996 log Not Found: /apple-touch-icon-precomposed.png
+
+----------
+WARNING 2024-04-10 13:55:58,043 log Not Found: /apple-touch-icon.png

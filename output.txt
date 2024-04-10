@@ -11914,3 +11914,1157 @@ url: /media/movies/media_root.mp4
 full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
 
 ----End of Block----
+
+----2024-04-08 10:39:45.742179----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:44:01.705849----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 10:47:19.113336----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 12:09:28.488776----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 12:11:52.999290----
+profil: Profile object (7)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 1]
+courses profile set: [1]
+
+----2024-04-08 12:12:00.865587----
+_state: <django.db.models.base.ModelState object at 0x7f4fa7587c40>
+id: 1
+title: S_W_1
+description: 
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/pexels-confinedriley-11099732_gyQXrni.jpg
+type: single
+age_limit: Studierende
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-sascha-5799767_1080p.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-sascha-5799767_1080p.mp4
+
+----End of Block----
+
+----2024-04-08 12:48:06.687883----
+profil: Profile object (6)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 1]
+institute profile set: [1]
+
+--------
+courses profile liste: [2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 14:22:42.416731----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 14:44:34.721430----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-08 15:26:48.604525----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:26:17.484982----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:26:22.542641----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:27:39.276988----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:28:52.338414----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:28:54.479731----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:29:15.330466----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:29:16.262904----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:29:21.615526----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:29:27.442359----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:30:05.744195----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:30:06.978804----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:34:51.848176----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:39:58.635172----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:45:19.165445----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:45:20.094783----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:45:30.997276----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:45:54.329735----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:46:35.338274----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:46:36.202554----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:49:13.487850----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 10:49:56.125559----
+_state: <django.db.models.base.ModelState object at 0x7fe2d21150c0>
+id: 2
+title: M_W_2
+description: 
+created: 2023-12-06 12:57:22.191434+00:00
+uuid: 04c04151-9b43-4982-a2d9-2d53fcd3ec6c
+flyer: flyers/pexels-mathias-reding-18026958.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-asia-culture-center-5552640.jpg
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-asia-culture-center-5552640.jpg
+
+----End of Block----
+
+----2024-04-09 10:49:59.762618----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:41:34.083648----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:42:14.053022----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:43:02.970946----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:43:03.852703----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:43:17.239433----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:43:17.984574----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:43:28.683439----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:44:12.404115----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:44:13.041164----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:51:46.108043----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:51:49.825041----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:52:33.126765----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:52:33.490149----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:52:33.968599----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:52:39.433486----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:54:39.756902----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:54:52.033431----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:55:42.170097----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:58:51.089527----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:59:29.835425----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:59:34.594029----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:59:39.329409----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 11:59:42.857092----
+_state: <django.db.models.base.ModelState object at 0x7ff180169150>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-09 12:00:03.097832----
+_state: <django.db.models.base.ModelState object at 0x7fbe5176d0c0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-09 12:00:09.789634----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:00:12.868630----
+_state: <django.db.models.base.ModelState object at 0x7fbe51670d90>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-09 12:00:57.143194----
+_state: <django.db.models.base.ModelState object at 0x7f56a22911e0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-09 12:01:02.146076----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:01:53.274203----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:01:57.175886----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:02:00.842760----
+_state: <django.db.models.base.ModelState object at 0x7f56a2119f00>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-09 12:02:32.066518----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:03:13.788480----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:03:19.482813----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:03:44.412570----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:05:23.749887----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:05:29.398562----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:05:34.391398----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:06:15.063553----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:06:25.934858----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:07:05.347486----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:11:31.475456----
+_state: <django.db.models.base.ModelState object at 0x7f69308390c0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-09 12:12:32.882086----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:13:22.270432----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-09 12:13:33.466029----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-10 08:35:15.621804----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-10 09:45:19.538315----
+profil: Profile object (6)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 1]
+institute profile set: [1]
+
+--------
+courses profile liste: [2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]

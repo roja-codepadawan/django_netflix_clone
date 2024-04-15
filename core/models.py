@@ -50,6 +50,9 @@ class Profile(models.Model):
     institut=models.ManyToManyField('Institute', verbose_name="Institute")
 
     courses = models.ManyToManyField('Course', verbose_name="Kurse")
+    
+    def __str__(self):
+        return self.name
 
 
 @receiver(post_save, sender=Profile)

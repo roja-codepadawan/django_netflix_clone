@@ -274,7 +274,7 @@ class CustomUserAdmin(admin.ModelAdmin):
    fieldsets = (
       ("Personal Information", {
          "fields": (
-            "username", "age", "email", "date_joined", "last_login",
+            "username", "age", "email", "date_joined", "last_login", "profiles",
             )
          }
        ),

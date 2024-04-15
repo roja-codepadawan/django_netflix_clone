@@ -142,6 +142,12 @@ class Movie(models.Model):
     videos = models.ManyToManyField('Video', help_text="Eine oder mehrere Videos hochladen - ")
     flyer = models.ImageField(upload_to='flyers', blank=True, null=True, help_text="Vorschaubild für den Film -")
     type = models.CharField(max_length=10, choices=MOVIE_TYPE, help_text="Einzel Film oder Serie(Veranstaltungsreihe)")
+    # age_limit = ArrayField(
+    #     models.CharField(max_length=20, choices=AGE_CHOICES),
+    #     verbose_name="Status",
+    #     blank=True,
+    #     null=True,
+    # )
     age_limit = models.CharField(verbose_name="Status", max_length=20, choices=AGE_CHOICES, blank=True, null=True)
     institut = models.ManyToManyField('Institute', verbose_name="Institute")
     courses = models.ManyToManyField('Course', verbose_name="Kurse")

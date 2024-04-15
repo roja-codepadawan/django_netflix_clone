@@ -27,7 +27,7 @@
         <a id="nav-back-button" href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700" role="menuitem">Zurück</a>
         <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700" role="menuitem">Abmelden</a>
         {% if request.user.age == 'Mitarbeiter' %}
-        <a href="/admin" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 border-t border-gray-700" role="menuitem">Admin Portal</a>
+        <a href="/admin" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 border-t border-gray-700" role="menuitem">Zum CMS</a>
         {% endif %}
     </div>
 </div>
@@ -38,7 +38,7 @@
     {% else %}
     <div class="flex justify-end items-center w-1/2">
         <a href="{% url 'account_login' %}">
-            <button class="py-2 px-4 bg-sky-700 text-gray-100 md:font-semibold md:text-xl rounded-md mr-4 w-ful">
+            <button class="bg-sky-700 md:font-extrabold flex justify-center items-center py-2 px-2 md:px-4 rounded-md md:text-1xl">
                 Einloggen
             </button>
         </a>

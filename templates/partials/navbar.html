@@ -29,17 +29,29 @@
         </button>
     <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 hidden bg-black bg-opacity-25 backdrop-blur-sm">
     <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-      
-        <a id="nav-back-button" href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700" role="menuitem" class="text-left">
-            
-            <span class="ml-3 font-medium">
-               <ion-icon name="arrow-back-outline">&ensp;&ensp;</ion-icon> Zurück 
-            </span>
-        </a>
+      <a href="/show-movie" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 text-left" role="menuitem">
+
+    <!-- <span class="ml-3 font-medium">
+        <ion-icon name="film-outline">&ensp;&ensp;</ion-icon> MovieList 
+    </span>
+</a> -->
+
+
+ <a id="nav-back-button" href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 text-left" role="menuitem" onclick="goBack(event)">
+    <span class="ml-3 font-medium">
+        <ion-icon name="arrow-back-outline">&ensp;&ensp;</ion-icon> Zurück 
+    </span>
+</a>
+
+<script>
+function goBack(e) {
+    e.preventDefault();
+    window.history.back();
+}
+</script>
   
         <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700" role="menuitem"><ion-icon name="exit-outline"></ion-icon> Abmelden</a>
         {% if request.user.age == 'Mitarbeiter' %}
-
         <a href="/admin" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 border-t border-gray-700" role="menuitem"><ion-icon name="person-outline"></ion-icon> Zum CMS</a>
         {% endif %}
     </div>

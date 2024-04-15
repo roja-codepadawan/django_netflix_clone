@@ -14918,3 +14918,6 @@ Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 712, in get_form
     raise FieldError(
 django.core.exceptions.FieldError: Unknown field(s) (profile) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin.
+
+----------
+WARNING 2024-04-15 21:23:41,753 log Not Found: /show-movie

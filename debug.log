@@ -14493,3 +14493,386 @@ Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 698, in _reverse_with_prefix
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'watch' with no arguments not found. 1 pattern(s) tried: ['watch/(?P<profile_id>[^/]+)/\\Z']
+
+----------
+WARNING 2024-04-15 11:59:46,161 log Not Found: /apple-touch-icon-precomposed.png
+
+----------
+WARNING 2024-04-15 11:59:46,203 log Not Found: /apple-touch-icon.png
+
+----------
+ERROR 2024-04-15 19:53:47,815 log Internal Server Error: /admin/core/profile/1/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1575, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/utils.py", line 97, in flatten_fieldsets
+    for name, opts in fieldsets:
+TypeError: 'NoneType' object is not iterable
+
+----------
+ERROR 2024-04-15 19:53:51,504 log Internal Server Error: /admin/core/profile/9/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1575, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/utils.py", line 97, in flatten_fieldsets
+    for name, opts in fieldsets:
+TypeError: 'NoneType' object is not iterable
+
+----------
+ERROR 2024-04-15 19:54:00,610 log Internal Server Error: /admin/core/profile/8/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1575, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/utils.py", line 97, in flatten_fieldsets
+    for name, opts in fieldsets:
+TypeError: 'NoneType' object is not iterable
+
+----------
+ERROR 2024-04-15 20:19:02,173 log Internal Server Error: /admin/core/customuser/1/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 238, in get_fieldsets
+    if not obj or not (request.is_superuser or request.is_staff):
+AttributeError: 'WSGIRequest' object has no attribute 'is_superuser'
+
+----------
+ERROR 2024-04-15 20:19:03,795 log Internal Server Error: /admin/core/customuser/1/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 238, in get_fieldsets
+    if not obj or not (request.is_superuser or request.is_staff):
+AttributeError: 'WSGIRequest' object has no attribute 'is_superuser'
+
+----------
+ERROR 2024-04-15 20:19:07,347 log Internal Server Error: /admin/core/customuser/6/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 238, in get_fieldsets
+    if not obj or not (request.is_superuser or request.is_staff):
+AttributeError: 'WSGIRequest' object has no attribute 'is_superuser'
+
+----------
+ERROR 2024-04-15 20:20:08,154 log Internal Server Error: /admin/core/customuser/1/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 238, in get_fieldsets
+    if not obj or not (request.is_superuser or request.is_staff):
+AttributeError: 'WSGIRequest' object has no attribute 'is_superuser'
+
+----------
+ERROR 2024-04-15 20:20:13,916 log Internal Server Error: /admin/core/customuser/1/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 238, in get_fieldsets
+    if not obj or not (request.is_superuser or request.is_staff):
+AttributeError: 'WSGIRequest' object has no attribute 'is_superuser'
+
+----------
+ERROR 2024-04-15 20:20:18,795 log Internal Server Error: /admin/core/customuser/6/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 238, in get_fieldsets
+    if not obj or not (request.is_superuser or request.is_staff):
+AttributeError: 'WSGIRequest' object has no attribute 'is_superuser'
+
+----------
+ERROR 2024-04-15 20:22:06,617 log Internal Server Error: /admin/core/customuser/1/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 243, in get_fieldsets
+    return fieldsets
+NameError: name 'fieldsets' is not defined
+
+----------
+ERROR 2024-04-15 20:22:08,227 log Internal Server Error: /admin/core/customuser/1/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 243, in get_fieldsets
+    return fieldsets
+NameError: name 'fieldsets' is not defined
+
+----------
+ERROR 2024-04-15 20:23:21,251 log Internal Server Error: /admin/core/customuser/1/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 244, in get_fieldsets
+    return fieldsets
+UnboundLocalError: local variable 'fieldsets' referenced before assignment
+
+----------
+ERROR 2024-04-15 20:23:26,337 log Internal Server Error: /admin/core/customuser/1/change/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "/opt/www/django_philflix/core/admin.py", line 244, in get_fieldsets
+    return fieldsets
+UnboundLocalError: local variable 'fieldsets' referenced before assignment

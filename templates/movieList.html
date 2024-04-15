@@ -79,14 +79,14 @@ PHIL II FLIX - MovieList
            
                     {% for category in categories %}
                     <h2 class="text-gray-200 text-2xl font-bold mb-4">{{ category }}</h2>
-                    <div class="flex   items-center min-w-full  movie_lis">
+                    <div class="flex items-center min-w-full movie_lis">
                         {% for movie in movies %}
                         {% if movie.categories == category %}
                         <div>
                             <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
                                 <div class=" h-40 w-40 m-4  bg-sky-700 overflow-hidden flex-shrink-0 rounded-md">
                                     <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
-                                    <p class="text-gray-200 text-lg font-bold mt-2 absolute bottom-0 left-0 right-0 text-center">{{ movie.title }}</p>
+                                    <p class="text-gray-200 text-lg font-bold mt-2 absolute bottom-0 left-0 right-0 text-center" style="overflow-wrap: break-all;">{{ movie.title }}</p>
                                 </div>
                             </a>
                             <br> <!-- Hier wird das <br> nach jeder Kategorie hinzugefügt -->

@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser, User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 import uuid
+# from django.contrib.postgres.fields import ArrayFiel
 
 """
 null=True: um sicherzustellen, dass das Feld nicht NULL (leer) sein kann
@@ -145,6 +146,12 @@ class Movie(models.Model):
     # age_limit = ArrayField(
     #     models.CharField(max_length=20, choices=AGE_CHOICES),
     #     verbose_name="Status",
+    #     blank=True,
+    #     null=True,
+    # )
+    # age_limit = models.CharField(
+    #     verbose_name="Status",
+    #     max_length=255,
     #     blank=True,
     #     null=True,
     # )

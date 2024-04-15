@@ -13220,3 +13220,1147 @@ institute profile set: [1, 2, 3, 4]
 --------
 courses profile liste: [1, 2, 3, 4, 5, 1]
 courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:30:47.391322----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:30:49.383165----
+_state: <django.db.models.base.ModelState object at 0x7f3c84c490c0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-15 10:31:51.907202----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:31:58.557288----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:34:40.545360----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:34:45.885626----
+_state: <django.db.models.base.ModelState object at 0x7f9d7e4f18a0>
+id: 15
+title: Dokumentarreihe Wahle
+description: 
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_yIlC0k8.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-15 10:34:53.572536----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:34:57.934793----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:35:02.671523----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:35:05.595225----
+_state: <django.db.models.base.ModelState object at 0x7f9d7e0f3850>
+id: 15
+title: Dokumentarreihe Wahle
+description: 
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_yIlC0k8.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-15 10:35:36.044181----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:35:58.958173----
+_state: <django.db.models.base.ModelState object at 0x7f9d7e6075b0>
+id: 15
+title: Dokumentarreihe Wahle
+description: 
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_TJvX5yJ.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-15 10:36:02.919546----
+_state: <django.db.models.base.ModelState object at 0x7f9d7e6103d0>
+id: 15
+title: Dokumentarreihe Wahle
+description: 
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_TJvX5yJ.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-15 10:36:06.021596----
+_state: <django.db.models.base.ModelState object at 0x7f9d7dcdea40>
+id: 15
+title: Dokumentarreihe Wahle
+description: 
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_TJvX5yJ.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-15 10:36:14.062797----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:39:52.732543----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:41:05.390323----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:41:38.442793----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:42:47.593820----
+_state: <django.db.models.base.ModelState object at 0x7f9d7dba6aa0>
+id: 16
+title: Wahl
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2024-04-15 08:41:02.894235+00:00
+uuid: 993f6bcb-2f89-4d18-b3ae-f9f64d916e6f
+flyer: flyers/D2F6FCE8-19C8-4F7E-8EB4-A52A5404CEDA.jpeg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo_WPWizdo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo_WPWizdo.mp4
+
+----End of Block----
+
+----2024-04-15 10:45:39.730699----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:45:40.844808----
+_state: <django.db.models.base.ModelState object at 0x7f9d7db67be0>
+id: 13
+title: movie
+description: test
+created: 2024-04-02 09:41:39.756267+00:00
+uuid: 3f56c5a6-567c-411d-b8fc-70303cd10bb2
+flyer: flyers/pexels-sakshi-patwa-5324309.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/media_root.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/media_root.mp4
+
+----End of Block----
+
+----2024-04-15 10:45:57.156357----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:46:00.656771----
+_state: <django.db.models.base.ModelState object at 0x7f9d7dd3fd00>
+id: 15
+title: Dokumentarreihe Wahle
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_OYT1cnG.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+----End of Block----
+
+----2024-04-15 10:46:56.708217----
+_state: <django.db.models.base.ModelState object at 0x7facf4a2d1e0>
+id: 15
+title: Dokumentarreihe Wahle
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_OYT1cnG.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+----End of Block----
+
+----2024-04-15 10:46:59.223127----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:47:02.940778----
+_state: <django.db.models.base.ModelState object at 0x7facf48fc730>
+id: 15
+title: Dokumentarreihe Wahle
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_OYT1cnG.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+----End of Block----
+
+----2024-04-15 10:47:50.893764----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:48:26.827779----
+_state: <django.db.models.base.ModelState object at 0x7fd835359150>
+id: 15
+title: Dokumentarreihe Wahle
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_OYT1cnG.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+----End of Block----
+
+----2024-04-15 10:48:41.425589----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:51:56.460069----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:51:59.924557----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:52:03.955602----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:54:03.569437----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:54:04.298862----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:54:05.281285----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:54:09.302302----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:55:02.180848----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:55:03.239875----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 10:55:09.681285----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:01:54.598226----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:01:57.606882----
+_state: <django.db.models.base.ModelState object at 0x7fcb5791fd00>
+id: 15
+title: Dokumentarreihe Wahle
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_OYT1cnG.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+----End of Block----
+
+----2024-04-15 11:02:00.325515----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:03:00.095946----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:03:03.813486----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:03:09.571515----
+_state: <django.db.models.base.ModelState object at 0x7f74c047d870>
+id: 15
+title: Dokumentarreihe Wahle
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2024-04-15 08:34:17.603835+00:00
+uuid: 6787dc2f-a114-4298-9289-610c31d43c74
+flyer: flyers/doku_wahle_flyer_OYT1cnG.jpeg
+type: seasonal
+age_limit: Mitarbeiter
+categories: Dokumentarfilm
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo.mp4
+
+----End of Block----
+
+----2024-04-15 11:03:17.473513----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:04:39.111099----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:04:39.647309----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:04:44.980368----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:04:57.901418----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:06:17.081457----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:07:54.204580----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:10:56.774732----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:12:04.790845----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:12:15.020736----
+_state: <django.db.models.base.ModelState object at 0x7f5e4edf0e50>
+id: 10
+title: Welcome Personal
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2023-12-11 14:43:13.186197+00:00
+uuid: 8aaa77eb-0a77-49de-a795-de6d32ee106b
+flyer: flyers/pexels-pixabay-276175_68wet5k.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Willkommen
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo_WPWizdo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo_WPWizdo.mp4
+
+----End of Block----
+
+----2024-04-15 11:12:19.266714----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:12:57.795847----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:12:59.863130----
+_state: <django.db.models.base.ModelState object at 0x7f7d9aa3a050>
+id: 10
+title: Welcome Personal
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2023-12-11 14:43:13.186197+00:00
+uuid: 8aaa77eb-0a77-49de-a795-de6d32ee106b
+flyer: flyers/pexels-pixabay-276175_68wet5k.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Willkommen
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo_WPWizdo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo_WPWizdo.mp4
+
+----End of Block----
+
+----2024-04-15 11:13:10.629422----
+_state: <django.db.models.base.ModelState object at 0x7f7d9aacc670>
+id: 10
+title: Welcome Personal
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2023-12-11 14:43:13.186197+00:00
+uuid: 8aaa77eb-0a77-49de-a795-de6d32ee106b
+flyer: flyers/pexels-pixabay-276175_68wet5k.jpg
+type: single
+age_limit: Mitarbeiter
+categories: Willkommen
+
+--------
+url: /media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo_WPWizdo.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/Sony_Whale_in_Tonga_HDR_UHD_4K_Demo_WPWizdo.mp4
+
+----End of Block----
+
+----2024-04-15 11:13:14.821138----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:17:43.106827----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 11:48:15.394617----
+profil: Profile object (12)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [1, 1]
+institute profile set: [1]
+
+--------
+courses profile liste: [1, 1]
+courses profile set: [1]
+
+----2024-04-15 11:48:24.708214----
+profil: Profile object (12)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [1, 1]
+institute profile set: [1]
+
+--------
+courses profile liste: [1, 1]
+courses profile set: [1]
+
+----2024-04-15 11:50:44.819233----
+profil: Profile object (12)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [1, 1]
+institute profile set: [1]
+
+--------
+courses profile liste: [1, 1]
+courses profile set: [1]
+
+----2024-04-15 11:51:18.952333----
+profil: Profile object (12)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [4, 1]
+institute profile set: [1, 4]
+
+--------
+courses profile liste: [1, 2, 1]
+courses profile set: [1, 2]
+
+----2024-04-15 11:52:43.375466----
+profil: Profile object (12)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [4, 1]
+institute profile set: [1, 4]
+
+--------
+courses profile liste: [1, 2, 1]
+courses profile set: [1, 2]
+
+----2024-04-15 11:54:33.239041----
+profil: Profile object (12)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [4, 1]
+institute profile set: [1, 4]
+
+--------
+courses profile liste: [1, 2, 1]
+courses profile set: [1, 2]
+
+----2024-04-15 11:55:00.882898----
+profil: Profile object (12)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [4, 1]
+institute profile set: [1, 4]
+
+--------
+courses profile liste: [1, 2, 1]
+courses profile set: [1, 2]
+
+----2024-04-15 11:55:25.320398----
+profil: Profile object (12)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 1]
+courses profile set: [1, 2]
+
+----2024-04-15 11:55:42.816414----
+_state: <django.db.models.base.ModelState object at 0x7f7d99e361d0>
+id: 1
+title: Welcome Studi
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+created: 2023-12-06 10:24:46.496629+00:00
+uuid: 58ea6415-34e7-49e7-ac3b-049c85bd0864
+flyer: flyers/D2F6FCE8-19C8-4F7E-8EB4-A52A5404CEDA_ygYRpfD.jpeg
+type: seasonal
+age_limit: Studierende
+categories: Willkommen
+
+--------
+url: /media/movies/pexels-tima-miroshnichenko-6550419_2160p_n4R9SzS.mp4
+
+--------
+full_url: https://phil2flix.uni-giessen.de/media/movies/pexels-tima-miroshnichenko-6550419_2160p_n4R9SzS.mp4
+
+----End of Block----
+
+----2024-04-15 12:01:58.897975----
+profil: Profile object (12)
+
+--------
+age profile: Studierende
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 1]
+courses profile set: [1, 2]
+
+----2024-04-15 13:01:39.479652----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 13:01:42.347791----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]
+
+----2024-04-15 13:01:50.560015----
+profil: Profile object (1)
+
+--------
+age profile: Mitarbeiter
+
+--------
+institute profile liste: [1, 2, 3, 4, 1]
+institute profile set: [1, 2, 3, 4]
+
+--------
+courses profile liste: [1, 2, 3, 4, 5, 1]
+courses profile set: [1, 2, 3, 4, 5]

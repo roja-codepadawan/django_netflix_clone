@@ -19,7 +19,7 @@ PHIL II FLIX -  Detail Page
                 </h2>
                 <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
                     {{movie.description |slice:":50"}}...
-                    {% lorem 1 %}
+                    <!-- {% lorem 1 %} -->
                 </p>
                 <div class="flex my-4">
                     <a href="{% url 'core:play' movie_id=movie.uuid %}">

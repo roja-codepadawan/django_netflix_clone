@@ -183,6 +183,7 @@ class MovieCoursFilter(SimpleListFilter):
          return queryset.filter(courses=selected_value)
       return queryset
 
+
 ####################
 #  Admin Register  #
 ####################
@@ -210,11 +211,11 @@ class CustomUserAdmin(admin.ModelAdmin):
    list_filter = (UserAgeFilter, UserInstitutFilter, UserCoursFilter)
    search_fields = ["username"]
    
-   # def get_fieldsets(self, request, obj=None):
-   #    fieldsets = super().get_fieldsets(request, obj)
-   #    if not request.user.is_superuser or not request.user.is_staff:
-   #       return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
-   #    return fieldsets
+   def get_fieldsets(self, request, obj=None):
+      fieldsets = super().get_fieldsets(request, obj)
+      if not request.user.is_superuser or not request.user.is_staff:
+         return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
+      return fieldsets
 
    # def get_readonly_fields(self, request, obj=None):
    #    readonly_fields = super().get_readonly_fields(request, obj)
@@ -232,18 +233,34 @@ class CustomUserAdmin(admin.ModelAdmin):
    #       return True
    #    return super().has_change_permission(request, obj)
    
-   def get_fieldsets(self, request, obj=None):
-    fieldsets = super().get_fieldsets(request, obj)
-    if not obj or not (obj.is_superuser or obj.is_staff):
-        return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
-    return fieldsets
+   # def get_fieldsets(self, request, obj=None):
+   #    if not obj or not (request.user.is_superuser or request.user.is_staff):
+   #       fieldsets = super().get_fieldsets(request, obj)
+   # # def get_fieldsets(self, request, obj=None):
+   # #    fieldsets = super().get_fieldsets(request, obj)
+   # #    if not obj or not (request.is_superuser or request.is_staff):
+   #    # if not obj or not (obj.is_superuser or obj.is_staff):
+   #       return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
+   #    return fieldsets
  
    def get_readonly_fields(self, request, obj=None):
-    readonly_fields = super().get_readonly_fields(request, obj)
-    if not request.user.is_superuser or not request.user.groups.filter(name='Support-Admins') or request.user.groups.filter(name='Admin').exists():
-        return readonly_fields + ('is_superuser',)
-    return readonly_fields
- 
+      readonly_fields = super().get_readonly_fields(request, obj)
+      if not request.user.is_superuser or not request.user.groups.filter(name='Support-Admins') or request.user.groups.filter(name='Admin').exists():
+         return readonly_fields + ('is_superuser',)
+      return readonly_fields
+   
+   """
+   def has_delete_permission(self, request, obj=None):
+      if request.user.is_superuser:
+        return True
+      return super().has_delete_permission(request, obj)
+    
+   def has_change_permission(self, request, obj=None):
+      if request.user.is_superuser:
+        return True
+      return super().has_change_permission(request, obj)
+   """
+   
    def has_delete_permission(self, request, obj=None):
     if obj is not None and obj.is_superuser:
         return request.user.is_superuser and request.user.groups.filter(name='Support-Admins') or request.user.groups.filter(name='Admin').exists()
@@ -372,10 +389,16 @@ class ProfileAdmin(admin.ModelAdmin):
    search_fields = ["name"]
    
    def get_fieldsets(self, request, obj=None):
-    fieldsets = super().get_fieldsets(request, obj)
-    if not obj or not (obj.user.is_superuser or obj.user.is_staff):
-        return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
-    return fieldsets
+      fieldsets = super().get_fieldsets(request, obj)
+      if obj is not None and request.user.is_superuser:
+         # if not request.user.is_superuser:
+         return fieldsets[:-1]  # Exclude the last fieldset ("Permissions") for non-superusers
+      return fieldsets  # Superusers see all fieldsets
+   # def get_fieldsets(self, request, obj=None):
+   #  fieldsets = super().get_fieldsets(request, obj)
+   #  if not obj or not (obj.user.is_superuser or obj.user.is_staff):
+   #      return fieldsets[:-1]  # Exclude the last fieldset ("Permissions")
+   #  return fieldsets
  
    def get_readonly_fields(self, request, obj=None):
     readonly_fields = super().get_readonly_fields(request, obj)
@@ -383,10 +406,23 @@ class ProfileAdmin(admin.ModelAdmin):
         return readonly_fields + ('user__is_superuser',)
     return readonly_fields
  
+
    def has_delete_permission(self, request, obj=None):
-    if obj is not None and obj.user.is_superuser:
+    if obj is not None and request.user.is_superuser:
         return request.user.is_superuser and (request.user.groups.filter(name='Support-Admins').exists() or request.user.groups.filter(name='Admin').exists())
     return super().has_delete_permission(request, obj)
+ 
+   """
+   def has_delete_permission(self, request, obj=None):
+      if request.user.is_superuser:
+        return True
+      return super().has_delete_permission(request, obj)
+    
+   def has_change_permission(self, request, obj=None):
+      if request.user.is_superuser:
+        return True
+      return super().has_change_permission(request, obj)
+   """
  
    def has_change_permission(self, request, obj=None):
     if obj is not None and obj.user.is_superuser:

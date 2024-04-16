@@ -5,28 +5,31 @@ PHIL II FLIX - Movie
 
 {% block content %}
     {% if full_video_url %}
-        <video id="video-player" src="{{ full_video_url }}" controls class="w-full h-screen player"></video>
+        <video id="video-player" src="{{ full_video_url }}" controls class="w-full h-screen player" tyle="position: relative; z-index: 1;"></video>
     {% else %}
         <!-- Code to execute if full_video_url does not exist  -->
     {% endif %}
 
    <script>
-    // Get the video player, navbar, and back button elements
+    // Get the video player, navbar, back button, and logo elements
     var videoPlayer = document.getElementById('video-player');
     var navbar = document.getElementById('navbar');
     var backButton = document.getElementById('nav-back-button'); // Change this to the ID of the back button in the navbar
+    var logo = document.getElementById('logo'); // Change this to the ID of the logo
 
     // Add event listeners for the play and pause events
     videoPlayer.addEventListener('play', function() {
-        // Hide the navbar and back button when the video is playing
+        // Hide the navbar, back button, and logo when the video is playing
         navbar.style.display = 'none';
         backButton.style.display = 'none';
+        logo.style.display = 'none'; // Hide the logo
     });
 
     videoPlayer.addEventListener('pause', function() {
-        // Show the navbar and back button when the video is paused
+        // Show the navbar, back button, and logo when the video is paused
         navbar.style.display = 'flex';
         backButton.style.display = 'block';
+        logo.style.display = 'none'; // Show the logo
     });
 
     // Add event listener for the click event
@@ -34,5 +37,5 @@ PHIL II FLIX - Movie
         // Navigate back when the back button is clicked
         window.history.back();
     });
-</script>
+    </script>
 {% endblock content %}

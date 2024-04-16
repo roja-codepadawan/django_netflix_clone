@@ -2,7 +2,7 @@
 <nav id="navbar" class="flex justify-between items-center text-gray-100 py-2 px-2 fixed w-full z-50">
 
 <!-- Logo area -->
-<div class="w-8/12">
+<div class="w-8/12" id="logo" style="position: absolute; z-index: -1;">
     <a href="/">
         <img src="{% static 'Phil-II-flix_Logo.png' %}" alt="logo" class="w-5/12 md:w-2/12"/>
     </a>
@@ -27,9 +27,9 @@
                 Menü 
             </span>
         </button>
-    <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 hidden bg-black bg-opacity-25 backdrop-blur-sm">
-    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-      <a href="/show-movie" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 text-left" role="menuitem">
+    <div class="origin-top-right absolute right-0 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 hidden bg-black bg-opacity-25 backdrop-blur-sm">
+    <!-- <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+      <a href="/show-movie" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 text-left" role="menuitem"> -->
 
     <!-- <span class="ml-3 font-medium">
         <ion-icon name="film-outline">&ensp;&ensp;</ion-icon> MovieList 
@@ -39,7 +39,7 @@
 
  <a id="nav-back-button" href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 text-left" role="menuitem" onclick="goBack(event)">
     <span class="ml-3 font-medium">
-        <ion-icon name="arrow-back-outline">&ensp;&ensp;</ion-icon> Zurück 
+        <ion-icon class=" text-white" name="arrow-back-outline">&ensp;&ensp;</ion-icon> Zurück 
     </span>
 </a>
 
